@@ -1,0 +1,35 @@
+{% set pageTitle = "NHS One Architecture" %}
+{% set pageDescription = "One Architecture" %}
+{% set pageSection = "One Architecture" %}
+{% set subSection = "One Architecture" %}
+{% set landingPage = false %}
+{% set beta = true %}
+{% set hideContact = "true" %}
+{% set dateUpdated = "June 2026" %}
+
+
+{% extends "includes/app-layout.njk" %}
+{% block breadcrumb %}
+  {% include "one-architecture/_breadcrumb.njk" %}
+{% endblock %}
+{% block bodyContent %}
+
+        <p>
+          The NHS One Architecture Model is a collaborative framework that aims to bring coherence and alignment across the health and care system. It defines shared commitments for designing and delivering digital services that are user-centric, trustworthy, and future-focused. The model is being co-produced with industry, clinicians, policymakers, and service users to ensure it reflects diverse needs and supports safe, effective, and inclusive care. The initiative is part of a broader effort to shift from analogue to digital, addressing the biggest healthcare challenges and improving patient outcomes through modern technology practices and capabilities.
+        </p>
+<section class="nhsuk-section">
+    <div class="nhsuk-width-container app-width-container">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mailto:trg.mailbox@nhs.net">Leave details to be contacted</a></h2>
+              <p class="nhsuk-card__description">Leave details so we can contact you</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+        </section>
+{% endblock %}
