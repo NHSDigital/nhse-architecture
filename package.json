@@ -72,7 +72,7 @@
     "eslint-plugin-mocha": "^9.0.0",
     "husky": "^8.0.3",
     "iframe-resizer": "^4.3.2",
-    "jest": "^27.1.0",
+    "jest": "^30.4.2",
     "nodemon": "^2.0.19",
     "sass-embedded": "^1.88.0",
     "sass-lint": "^1.13.1",
