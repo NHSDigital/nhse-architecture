@@ -45,7 +45,7 @@
   "license": "MIT",
   "dependencies": {
     "accessible-autocomplete": "^2.0.3",
-    "axios": "^1.15.2",
+    "axios": "^1.18.0",
     "basic-auth": "^2.0.1",
     "browser-sync": "^3.0.3",
     "cheerio": "^1.0.0-rc.10",
