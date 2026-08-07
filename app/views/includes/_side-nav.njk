@@ -31,6 +31,23 @@
   { title: "Documentation", url: "#D" }
 ] %}
 
+{% set dsSAFRequirementsS = [
+  { title: "S01", url: "/solution-architecture-framework/s/s01" },
+  { title: "S02", url: "/solution-architecture-framework/s/s02" },
+  { title: "S03", url: "/solution-architecture-framework/s/s03" },
+  { title: "S04", url: "/solution-architecture-framework/s/s04" }
+] %}
+
+{% set dsSAFRequirementsNF = [
+  { title: "NF01", url: "/solution-architecture-framework/nf/nf01" },
+  { title: "NF02", url: "/solution-architecture-framework/nf/nf02" },
+  { title: "NF03", url: "/solution-architecture-framework/nf/nf03" },
+  { title: "NF04", url: "/solution-architecture-framework/nf/nf04" },
+  { title: "NF05", url: "/solution-architecture-framework/nf/nf05" },
+  { title: "NF06", url: "/solution-architecture-framework/nf/nf06" }
+  
+] %}
+
 {% set dsInformation = [
   { title: "Data", url: "/useful-information/data" },
   { title: "Platform and Infrastructure", url: "/useful-information/platform-and-infrastructure" },
@@ -100,5 +117,21 @@
 
   {% endif %}
 
+{%- if subSection == "SAF - Detailed - NF" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsNF %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+    {%- if pageTitle == "Requirements" and item.title == "Requirements"%}
+    {% for SAFitem in dsSAFRequirements %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+       </li> </ul>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
 
 </nav>
