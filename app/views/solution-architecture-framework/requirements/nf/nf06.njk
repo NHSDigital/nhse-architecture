@@ -1,0 +1,163 @@
+{% set pageTitle = "NF06 - Disaster Recovery & Business Continuity" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
+{% set pageDescription = "" %}
+{% set beta = true %}
+{% set hideContact = "false" %}
+{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2>Requirement</h2>
+
+<blockquote>
+<p><strong>NF06 Disaster Recovery &amp; Business Continuity</strong>. There should be clear requirements (commensurate with service levels) around DR &amp; BC (and a pragmatic approach taken with regards DR/BC events planned for). Continuity plans and supporting documentation should reflect the requirements, technical &amp; architecture constraints etc.</p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about ensuring the service can continue operating, or be recovered,
+following a significant disruption.
+</p>
+
+<p>
+The solution should have clearly defined Disaster Recovery (DR) and Business Continuity (BC)
+requirements that are appropriate for the service criticality and agreed service levels.
+Recovery arrangements should be documented, understood, achievable and aligned to the
+actual architecture.
+</p>
+
+<p>
+In simple terms:<br>
+<strong>The organisation knows how the service will continue or recover during major incidents, and there is evidence that the plans are realistic and aligned to the solution design.</strong>
+</p>
+
+<h2>Scoring rubric table – NF06 Disaster Recovery &amp; Business Continuity</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">No evidence that DR or BC requirements have been defined. No documented recovery approach exists.</td>
+            <td class="nhsuk-table__cell">No continuity plans, recovery procedures, architecture recovery documentation or ownership.</td>
+            <td class="nhsuk-table__cell">Significant risk of prolonged outage, failure to recover critical services and unmanaged operational impact.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">Limited evidence that DR and BC have been considered. Recovery arrangements are largely informal or based on assumptions.</td>
+            <td class="nhsuk-table__cell">Draft notes, informal discussions, supplier statements or undocumented recovery expectations.</td>
+            <td class="nhsuk-table__cell">High-risk gaps. Recovery responsibilities, dependencies and recovery methods are unclear.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">Some elements of the DR and BC requirement are met. Recovery arrangements exist for parts of the solution but coverage is incomplete.</td>
+            <td class="nhsuk-table__cell">Partial continuity plans, infrastructure recovery documentation, some dependency analysis or supplier commitments.</td>
+            <td class="nhsuk-table__cell">Significant notable gaps in scope, testing, ownership, documentation or recovery coverage.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">Much of the requirement is met. Recovery requirements are documented and linked to the solution architecture. Key recovery processes have been identified.</td>
+            <td class="nhsuk-table__cell">DR strategy, continuity plans, operational runbooks, dependency mapping, architecture documentation and evidence of limited testing or tabletop exercises.</td>
+            <td class="nhsuk-table__cell">Notable gaps remain in coverage, validation, documentation currency or supplier recovery arrangements. Mitigating action is required.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence. Recovery expectations, responsibilities and processes are documented, maintained and periodically reviewed.</td>
+            <td class="nhsuk-table__cell">Approved DR and BC plans, recovery objectives, governance reviews, test reports, maintained recovery procedures and dependency analysis.</td>
+            <td class="nhsuk-table__cell">Minor gaps only. Residual risks are documented, understood and actively managed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">Comprehensive evidence that the requirement is met and exceeds expectations in several areas. DR and BC capability is mature, governed and continuously improved.</td>
+            <td class="nhsuk-table__cell">Regular recovery exercises, defined improvement actions, operational playbooks, supplier assurance evidence, governance reporting and measurable recovery outcomes.</td>
+            <td class="nhsuk-table__cell">Minimal gaps. Recovery capability is routinely validated and refined through lessons learned.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Defined recovery requirements</strong><br>
+        Evidence that recovery expectations have been documented and are proportionate to service criticality.
+    </li>
+
+    <li>
+        <strong>Documented continuity and recovery plans</strong><br>
+        Recovery procedures, continuity plans, escalation routes and supporting operational artefacts.
+    </li>
+
+    <li>
+        <strong>Alignment to architecture</strong><br>
+        Evidence that DR and BC arrangements reflect the actual technical design, dependencies and constraints.
+    </li>
+
+    <li>
+        <strong>Ownership and governance</strong><br>
+        Clear accountability for maintaining, reviewing and approving continuity arrangements.
+    </li>
+
+    <li>
+        <strong>Testing and validation</strong><br>
+        Evidence that recovery plans have been exercised, tested or otherwise validated.
+    </li>
+
+    <li>
+        <strong>Third-party and dependency coverage</strong><br>
+        Critical suppliers, shared services and integrations are included within recovery planning.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally indicates that documented recovery arrangements exist and
+there is a credible recovery approach. However, there are still notable weaknesses such as
+untested plans, incomplete dependency analysis, outdated documentation or gaps in service coverage.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that plans are actively maintained, reviewed and tested,
+and that recovery arrangements reflect the architecture and operating model.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that Disaster Recovery and Business Continuity are embedded
+within operational governance. Recovery exercises are performed regularly, lessons learned drive
+improvements, supplier assurance is in place and there is strong evidence that recovery objectives
+can be achieved under realistic scenarios.
+</p>
+
+<p>
+<strong>Suggested evidence examples (not SAF-mandated artefacts):</strong>
+</p>
+<ul>
+<li>Disaster Recovery Strategy</li>
+<li>Business Continuity Plan</li>
+<li>Service continuity requirements</li>
+<li>Recovery runbooks</li>
+<li>Major incident procedures</li>
+<li>Dependency maps</li>
+<li>DR test reports</li>
+<li>Tabletop exercise outcomes</li>
+<li>Supplier continuity assurances</li>
+<li>Risk assessments and remediation plans</li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% set pageTitle = "NF05 - Audit & Logging" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
+{% set pageDescription = "" %}
+{% set beta = true %}
+{% set hideContact = "false" %}
+{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2>Requirement</h2>
+
+<blockquote>
+<p><strong>NF05 Audit &amp; logging</strong> requirements should be defined, and the solution can support them.</p>
+
+ <p><a href="https://www.ncsc.gov.uk/collection/device-security-guidance/managing-deployed-devices/logging-and-protective-monitoring">NCSC Logging and Protective Monitoring</a></p>
+        <p><a href="https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles/principle-13-audit-information-and-alerting-for-customers">NCSC Principle 13: Audit information and alerting for customers</a></p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about ensuring that the solution generates, retains and makes available the audit and logging information needed to support operational management, security monitoring, incident investigation, compliance and governance activities.
+</p>
+
+<p>
+The service should have clearly defined audit and logging requirements. The architecture should demonstrate how logs and audit records are generated, protected, retained, accessed and used. Logging arrangements should be proportionate to the sensitivity, criticality and risk profile of the service.
+</p>
+
+<p>
+In simple terms:<br>
+<strong>The organisation knows what needs to be logged, why it needs to be logged, and can demonstrate that the solution captures and manages audit information effectively.</strong>
+</p>
+
+<h2>Scoring rubric table – NF05 Audit &amp; Logging</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">No evidence that audit or logging requirements have been defined. The solution provides little or no ability to investigate operational or security events.</td>
+            <td class="nhsuk-table__cell">No logging standards, audit requirements, monitoring design, retention policies or operational procedures.</td>
+            <td class="nhsuk-table__cell">Significant service risk. Security incidents, operational failures and compliance issues may not be detectable or investigable.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">Limited evidence that audit and logging have been considered. Logging is inconsistent, incomplete or largely dependent on default platform capabilities.</td>
+            <td class="nhsuk-table__cell">Informal requirements, limited system logs, undocumented assumptions, supplier assertions or isolated logging implementations.</td>
+            <td class="nhsuk-table__cell">High-risk gaps. Important events may not be recorded and audit coverage is insufficient to support investigations.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">Some audit and logging requirements have been identified and partially implemented. Coverage exists for selected components but is incomplete.</td>
+            <td class="nhsuk-table__cell">Partial logging standards, basic audit trails, limited retention policies, selected monitoring dashboards or security logging capabilities.</td>
+            <td class="nhsuk-table__cell">Significant notable gaps in event coverage, retention arrangements, governance, access controls or operational use of logs.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">Much of the requirement is met with an acceptable level of evidence. Key audit and logging requirements are defined and implemented across most critical service components.</td>
+            <td class="nhsuk-table__cell">Documented logging requirements, security and operational logs, audit trail specifications, retention policies, monitoring arrangements and incident investigation processes.</td>
+            <td class="nhsuk-table__cell">Notable gaps remain in coverage, consistency, governance, retention management, log protection or integration with monitoring processes. Mitigating action is required.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence. Audit and logging requirements are maintained, governed and aligned to operational and security needs.</td>
+            <td class="nhsuk-table__cell">Approved logging standards, documented event catalogues, retention schedules, access controls, monitoring integration, governance reviews and evidence of regular use during operational and security activities.</td>
+            <td class="nhsuk-table__cell">Minor gaps only. Remaining risks are known, documented and actively managed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">Comprehensive evidence that the requirement is met and exceeds expectations in several areas. Audit and logging capabilities are mature, consistently applied and actively support operational improvement, security monitoring and compliance activities.</td>
+            <td class="nhsuk-table__cell">Enterprise-aligned logging strategy, centralised logging, automated analysis, defined audit controls, continuous review processes, monitoring integration and evidence that audit data informs operational and security decision-making.</td>
+            <td class="nhsuk-table__cell">Minimal gaps. Logging and audit capabilities are routinely reviewed, validated and continuously improved.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+
+    <li>
+        <strong>Defined audit requirements</strong><br>
+        Evidence that the organisation has identified which user, system, security and administrative activities require auditing.
+    </li>
+
+    <li>
+        <strong>Defined logging requirements</strong><br>
+        Evidence that logging requirements are documented, understood and aligned to operational and security needs.
+    </li>
+
+    <li>
+        <strong>Coverage across the solution</strong><br>
+        Evidence that critical applications, services, integrations and infrastructure components generate appropriate logs and audit records.
+    </li>
+
+    <li>
+        <strong>Retention and protection</strong><br>
+        Evidence that logs are retained appropriately and protected against unauthorised access, modification or deletion.
+    </li>
+
+    <li>
+        <strong>Operational and security use</strong><br>
+        Evidence that logging information is used to support monitoring, incident management, troubleshooting and security investigations.
+    </li>
+
+    <li>
+        <strong>Governance and maintenance</strong><br>
+        Evidence that logging standards, requirements and controls are reviewed and maintained as the solution evolves.
+    </li>
+
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means that audit and logging requirements have been documented and largely implemented, but there are notable weaknesses such as inconsistent coverage, gaps in retention arrangements, unclear ownership or limited evidence that logs are actively used.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that logging and audit controls are governed, maintained and routinely used by operational and security teams. Coverage should be largely complete, with only minor gaps remaining.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that audit and logging capabilities are embedded within operational practice. Logging data is actively analysed, supports continuous improvement and is consistently used to strengthen service reliability, security and compliance.
+</p>
+
+<p>
+<strong>Suggested examples of evidence (not SAF-mandated artefacts):</strong>
+</p>
+
+<ul>
+    <li>Audit and logging requirements specification.</li>
+    <li>Logging standards or policies.</li>
+    <li>Audit trail design documentation.</li>
+    <li>Security monitoring requirements.</li>
+    <li>Retention and archival policies.</li>
+    <li>Logging architecture diagrams.</li>
+    <li>Monitoring and alerting dashboards.</li>
+    <li>Incident investigation reports.</li>
+    <li>Security operations procedures.</li>
+    <li>Governance review records.</li>
+</ul>
+
+
+{% endblock %}

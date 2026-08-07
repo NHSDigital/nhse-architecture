@@ -1,0 +1,163 @@
+{% set pageTitle = "NF03 - Volume & Performance Model" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
+{% set pageDescription = "" %}
+{% set beta = true %}
+{% set hideContact = "false" %}
+{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+
+<h2>Requirement</h2>
+
+<blockquote>
+<p>
+<strong>NF03 An overall volume and performance model should exist and includes business-realistic exceptional scenarios.</strong>
+</p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about understanding how much demand a solution must handle and whether
+the architecture can meet expected performance levels under both normal and exceptional conditions.
+</p>
+
+<p>
+A documented volume and performance model should describe expected users, transactions,
+data volumes, growth assumptions and workload patterns. The model should also consider
+realistic exceptional scenarios such as seasonal peaks, major operational events,
+service incidents or unexpected demand spikes.
+</p>
+
+<p>
+In simple terms:<br>
+<strong>The team understands how much load the service must handle today and in the future, and has evidence that the solution can perform under realistic operating conditions.</strong>
+</p>
+
+<h2>Scoring rubric table – NF03 Volume &amp; Performance Modelling</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">No evidence that volume or performance requirements have been considered. Expected service demand is unknown.</td>
+            <td class="nhsuk-table__cell">No volume model, performance requirements, sizing assumptions or capacity planning artefacts.</td>
+            <td class="nhsuk-table__cell">Significant service risk. The solution may fail to meet user demand, suffer performance degradation or experience service outages under load.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">Limited evidence that volumes and performance have been considered. Assumptions are informal, undocumented or based on estimates without validation.</td>
+            <td class="nhsuk-table__cell">Informal discussions, supplier estimates, undocumented assumptions or basic capacity figures.</td>
+            <td class="nhsuk-table__cell">High-risk gaps. Demand assumptions may be inaccurate and performance risks are poorly understood.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">Some elements of a volume and performance model exist. Normal operating conditions may be documented but exceptional scenarios are incomplete or absent.</td>
+            <td class="nhsuk-table__cell">Partial workload analysis, user estimates, basic performance requirements, limited capacity planning or historical usage data.</td>
+            <td class="nhsuk-table__cell">Significant notable gaps in demand forecasting, growth assumptions, exceptional scenario modelling or architectural validation.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">Much of the requirement is met. A documented volume and performance model exists and includes key business scenarios.</td>
+            <td class="nhsuk-table__cell">Performance requirements, transaction forecasts, growth projections, workload models, architecture design assumptions and evidence of performance testing.</td>
+            <td class="nhsuk-table__cell">Notable gaps remain in scenario coverage, forecasting confidence, dependency analysis or validation against real-world usage patterns. Mitigating action is required.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence. The model is maintained, reviewed and includes realistic exceptional scenarios and future growth assumptions.</td>
+            <td class="nhsuk-table__cell">Approved performance model, capacity planning documentation, scenario analysis, performance test results, architecture reviews and documented assumptions.</td>
+            <td class="nhsuk-table__cell">Minor gaps only. Remaining performance risks are understood, documented and actively managed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">Comprehensive evidence that the requirement is met and exceeds expectations in several areas. Volume and performance modelling is actively used to inform architecture, operational planning and investment decisions.</td>
+            <td class="nhsuk-table__cell">Mature forecasting models, capacity management processes, multiple exceptional scenario assessments, trend analysis, performance engineering practices, periodic review cycles and evidence of continuous improvement.</td>
+            <td class="nhsuk-table__cell">Minimal gaps. Performance risks are proactively identified, monitored and addressed before affecting service delivery.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Documented volume model</strong><br>
+        Evidence that expected user numbers, transactions, data volumes and workload patterns have been identified and documented.
+    </li>
+
+    <li>
+        <strong>Performance requirements</strong><br>
+        Evidence that measurable performance expectations have been defined and agreed.
+    </li>
+
+    <li>
+        <strong>Exceptional scenarios</strong><br>
+        Evidence that realistic peak loads, operational incidents, seasonal events or growth scenarios have been considered.
+    </li>
+
+    <li>
+        <strong>Alignment to architecture</strong><br>
+        Evidence that the solution design can support the expected workload and performance requirements.
+    </li>
+
+    <li>
+        <strong>Validation and testing</strong><br>
+        Evidence that modelling assumptions have been validated through testing, analysis or operational data.
+    </li>
+
+    <li>
+        <strong>Future growth planning</strong><br>
+        Evidence that projected growth and changing demand patterns have been considered.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means that a credible volume and performance model exists and supports most architectural decisions, but there are notable gaps in forecast quality, exceptional scenario coverage, testing evidence or maintenance.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that the model is actively maintained, reviewed and used to support capacity planning and architecture decisions. Exceptional business scenarios should be explicitly considered and supported by evidence.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that volume and performance modelling is embedded within delivery and operational processes. Forecasts are regularly reviewed, validated against operational data and used proactively to identify and mitigate future performance risks.
+</p>
+
+<p>
+<strong>Suggested examples of evidence (not SAF-mandated artefacts):</strong>
+</p>
+
+<ul>
+    <li>Volume and performance model.</li>
+    <li>Non-functional requirements specification.</li>
+    <li>User and transaction forecasts.</li>
+    <li>Capacity planning documentation.</li>
+    <li>Workload modelling assumptions.</li>
+    <li>Performance test reports.</li>
+    <li>Load testing and stress testing results.</li>
+    <li>Growth forecasts.</li>
+    <li>Architecture review documentation.</li>
+    <li>Operational trend and usage reports.</li>
+</ul>
+
+
+
+{% endblock %}

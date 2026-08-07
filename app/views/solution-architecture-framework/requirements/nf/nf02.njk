@@ -1,0 +1,161 @@
+{% set pageTitle = "NF02 - Reliability & Resilience" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
+{% set pageDescription = "" %}
+{% set beta = true %}
+{% set hideContact = "false" %}
+{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2>Requirement</h2>
+
+<blockquote>
+<p>
+<strong>NF02 Reliability &amp; Resilience</strong> needs should be defined (in terms of standard NHS England service levels) and solution mechanisms to meet these needs are defined including metrics such as Recovery Time Objective (RTO) and Recovery Point Objective (RPO).
+</p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about ensuring that reliability and resilience expectations are understood,
+documented and reflected in the solution design.
+</p>
+
+<p>
+The service should have clearly defined availability, recovery and resilience requirements.
+The architecture should include mechanisms that enable those requirements to be met. This includes
+documented recovery objectives such as RTO and RPO where applicable.
+</p>
+
+<p>
+In simple terms:<br>
+<strong>The team understands how reliable the service needs to be and can demonstrate how the architecture delivers those reliability and resilience requirements.</strong>
+</p>
+
+<h2>Scoring rubric table – NF02 Reliability &amp; Resilience</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">No evidence that reliability or resilience requirements have been defined. The architecture does not demonstrate how service continuity will be maintained.</td>
+            <td class="nhsuk-table__cell">No service level requirements, resilience requirements, recovery objectives, architecture evidence or operational documentation.</td>
+            <td class="nhsuk-table__cell">Significant service risk. Service reliability expectations are unknown and recovery capability cannot be assessed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">Limited evidence that reliability and resilience have been considered. Requirements are informal, assumed or inconsistently documented.</td>
+            <td class="nhsuk-table__cell">Informal discussions, supplier statements, draft documents or undocumented assumptions regarding availability and recovery.</td>
+            <td class="nhsuk-table__cell">High-risk gaps. Recovery expectations, availability targets and resilience mechanisms are unclear or unverified.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">Some reliability and resilience requirements have been defined. Elements of the architecture support resilience objectives, but significant gaps remain.</td>
+            <td class="nhsuk-table__cell">Partial non-functional requirements, draft service levels, limited RTO/RPO definitions, documented backup or failover arrangements.</td>
+            <td class="nhsuk-table__cell">Significant notable gaps in requirements coverage, architecture alignment, operational readiness or validation.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">Much of the requirement is met. Reliability and resilience requirements are documented and the architecture contains mechanisms intended to meet them.</td>
+            <td class="nhsuk-table__cell">Approved non-functional requirements, documented service levels, recovery objectives, resilience patterns, architecture diagrams, risk assessments and operational procedures.</td>
+            <td class="nhsuk-table__cell">Notable gaps remain in coverage, testing, dependency management, operational capability or evidence that objectives can be achieved. Mitigating action is required.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence. Reliability and resilience requirements are maintained, understood, and reflected throughout the architecture and operating model.</td>
+            <td class="nhsuk-table__cell">Approved and maintained non-functional requirements, documented service level targets, defined and reviewed RTO/RPO values, resilience architecture documentation, governance reviews and resilience testing evidence.</td>
+            <td class="nhsuk-table__cell">Minor gaps only. Remaining risks are known, documented and actively managed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">Comprehensive evidence that the requirement is met and exceeds expectations. Reliability and resilience are embedded throughout design, delivery and operations.</td>
+            <td class="nhsuk-table__cell">Mature resilience strategy, architecture patterns aligned to service objectives, regular resilience testing, documented lessons learned, evidence of continual improvement, service-level reporting and governance oversight.</td>
+            <td class="nhsuk-table__cell">Minimal gaps. Reliability objectives are demonstrably achieved and resilience capability is continually reviewed and improved.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Defined service level requirements</strong><br>
+        Evidence that availability, reliability and recovery expectations have been formally documented.
+    </li>
+
+    <li>
+        <strong>Recovery objectives</strong><br>
+        Evidence that RTO, RPO or equivalent recovery expectations have been defined and agreed.
+    </li>
+
+    <li>
+        <strong>Architectural resilience mechanisms</strong><br>
+        Evidence that the design includes appropriate resilience measures such as redundancy, failover, replication or recovery processes.
+    </li>
+
+    <li>
+        <strong>Alignment between requirements and design</strong><br>
+        Evidence that the architecture can realistically meet the stated service level objectives.
+    </li>
+
+    <li>
+        <strong>Risk and dependency management</strong><br>
+        Evidence that resilience risks, single points of failure and critical dependencies have been identified and managed.
+    </li>
+
+    <li>
+        <strong>Validation and testing</strong><br>
+        Evidence that resilience assumptions, recovery arrangements and service objectives have been tested or validated.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> usually means that reliability and resilience requirements have been defined and the architecture contains mechanisms intended to meet them, but there are notable gaps in testing, validation, dependency management or operational assurance.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that requirements are actively maintained, reviewed and aligned to the architecture. Recovery objectives are understood, documented and supported by operational processes and governance.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that resilience is treated as an ongoing capability rather than a design exercise. The organisation regularly validates resilience measures, learns from incidents and exercises, and continuously improves the architecture and operational processes.
+</p>
+
+<p>
+<strong>Suggested examples of evidence (not SAF-mandated artefacts):</strong>
+</p>
+
+<ul>
+    <li>Non-functional requirements specification.</li>
+    <li>Service level objectives (SLOs).</li>
+    <li>Availability and resilience requirements.</li>
+    <li>RTO and RPO definitions.</li>
+    <li>Architecture decision records.</li>
+    <li>Resilience architecture diagrams.</li>
+    <li>Failover and recovery procedures.</li>
+    <li>Resilience testing reports.</li>
+    <li>Operational readiness reviews.</li>
+    <li>Service continuity risk assessments.</li>
+</ul>
+
+
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% set pageTitle = "NF04 - Sustainability Measures" %}
+{% set pageSection = "Standards and technology" %}
+{% set subSection = "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
+{% set pageDescription = "" %}
+{% set beta = true %}
+{% set hideContact = "false" %}
+{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "solution-architecture-framework/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+<h2>Requirement</h2>
+
+<blockquote>
+<p><strong>NF04</strong> Methods to measure sustainability to establish baseline and show improvement should be defined.</p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about understanding the environmental sustainability impact of a solution and ensuring that improvements can be measured over time.
+</p>
+
+<p>
+The solution should have defined methods for measuring sustainability performance. A baseline should be established so that future improvements can be demonstrated. The approach should be proportionate to the nature of the service and aligned to organisational sustainability objectives where applicable.
+</p>
+
+<p>
+In simple terms:<br>
+<strong>The team understands how sustainable the solution is today and has a defined way to measure and demonstrate improvement over time.</strong>
+</p>
+
+<h2>Scoring rubric table – NF04 Sustainability Measurement</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">No evidence that sustainability has been considered or measured.</td>
+            <td class="nhsuk-table__cell">No sustainability objectives, measurements, baseline data or assessment artefacts.</td>
+            <td class="nhsuk-table__cell">Significant risk that sustainability impacts are unknown and opportunities for improvement cannot be identified.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">Limited evidence that sustainability has been discussed, but no structured measurement approach exists.</td>
+            <td class="nhsuk-table__cell">Informal discussions, undocumented assumptions or high-level statements regarding sustainability.</td>
+            <td class="nhsuk-table__cell">High-risk gaps. No measurable baseline exists and improvement claims cannot be evidenced.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">Some elements of sustainability measurement have been identified, but the approach is incomplete or inconsistently applied.</td>
+            <td class="nhsuk-table__cell">Partial assessments, limited metrics, supplier sustainability information or draft sustainability objectives.</td>
+            <td class="nhsuk-table__cell">Significant notable gaps in measurement scope, baseline data, governance or ongoing monitoring.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">Much of the requirement is met. Sustainability measures have been identified and a baseline has been established for key areas.</td>
+            <td class="nhsuk-table__cell">Sustainability assessments, documented baseline metrics, architectural decisions considering sustainability factors, and periodic reporting.</td>
+            <td class="nhsuk-table__cell">Notable gaps remain in coverage, data quality, target setting or evidence of sustained improvement. Mitigating action is required.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">Most of the requirement is met with good levels of evidence. Sustainability metrics are maintained, reviewed and used to inform decision-making.</td>
+            <td class="nhsuk-table__cell">Approved sustainability measures, maintained baselines, improvement targets, governance review records and periodic reporting against objectives.</td>
+            <td class="nhsuk-table__cell">Minor gaps only. Remaining sustainability risks and assumptions are understood and actively managed.</td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">Comprehensive evidence that the requirement is met and exceeds expectations in several areas. Sustainability measurement is embedded within architecture, delivery and operational processes.</td>
+            <td class="nhsuk-table__cell">Mature sustainability framework, established metrics and trends, continuous improvement initiatives, governance oversight and evidence that sustainability data influences strategic and architectural decisions.</td>
+            <td class="nhsuk-table__cell">Minimal gaps. Sustainability performance is actively monitored, reported and improved.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Defined measurement approach</strong><br>
+        Evidence that sustainability will be measured through agreed methods, metrics or assessment techniques.
+    </li>
+
+    <li>
+        <strong>Established baseline</strong><br>
+        Evidence that current sustainability performance has been assessed and documented.
+    </li>
+
+    <li>
+        <strong>Improvement tracking</strong><br>
+        Evidence that sustainability changes can be measured over time against the baseline.
+    </li>
+
+    <li>
+        <strong>Governance and ownership</strong><br>
+        Evidence that sustainability measurements are reviewed and have clear ownership.
+    </li>
+
+    <li>
+        <strong>Use in decision-making</strong><br>
+        Evidence that sustainability considerations influence architecture, technology or operational decisions.
+    </li>
+
+    <li>
+        <strong>Ongoing maintenance</strong><br>
+        Evidence that metrics, assumptions and reporting are maintained and updated as the solution evolves.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means that sustainability measurements exist and a baseline has been established, but there are notable gaps in governance, reporting, target setting or evidence of improvement.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that sustainability metrics are maintained, reviewed and actively used when making architecture or operational decisions. Improvement activities should be measurable and supported by governance.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that sustainability measurement is embedded within normal delivery and operational practices. Trends are monitored over time, improvements are demonstrable and sustainability data is routinely used to influence planning and decision-making.
+</p>
+
+<p>
+<strong>Suggested examples of evidence (not SAF-mandated artefacts):</strong>
+</p>
+
+<ul>
+    <li>Sustainability assessment.</li>
+    <li>Carbon impact baseline.</li>
+    <li>Cloud sustainability reporting.</li>
+    <li>Technology efficiency assessments.</li>
+    <li>Sustainability objectives and targets.</li>
+    <li>Architecture decision records referencing sustainability considerations.</li>
+    <li>Operational efficiency reporting.</li>
+    <li>Supplier sustainability reports.</li>
+    <li>Sustainability trend analysis.</li>
+    <li>Governance review records.</li>
+</ul>
+
+
+
+{% endblock %}
