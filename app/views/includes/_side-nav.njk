@@ -32,20 +32,63 @@
 ] %}
 
 {% set dsSAFRequirementsS = [
-  { title: "S01", url: "/solution-architecture-framework/s/s01" },
-  { title: "S02", url: "/solution-architecture-framework/s/s02" },
-  { title: "S03", url: "/solution-architecture-framework/s/s03" },
-  { title: "S04", url: "/solution-architecture-framework/s/s04" }
+  { title: "S01 - Executive Alignment", url: "/solution-architecture-framework/requirements/s/s01" },
+  { title: "S02 - Capability Model", url: "/solution-architecture-framework/requirements/s/s02" },
+  { title: "S03 - Product Vision and Roadmap", url: "/solution-architecture-framework/requirements/s/s03" },
+  { title: "S04 - Meeting Needs", url: "/solution-architecture-framework/requirements/s/s04" }
+] %}
+
+{% set dsSAFRequirementsDM = [
+  { title: "DM01 - Debt", url: "/solution-architecture-framework/requirements/dm/dm01" },
+  { title: "DM02 - External Controls", url: "/solution-architecture-framework/requirements/dm/dm02" },
+  { title: "DM03 - Risk and Issues", url: "/solution-architecture-framework/requirements/dm/dm03" },
+  { title: "DM04 - Stakeholder Involvement", url: "/solution-architecture-framework/requirements/dm/dm04" },
+  { title: "DM05 - Governance Process", url: "/solution-architecture-framework/requirements/dm/dm05" },
+  { title: "DM06 - Governance Approach", url: "/solution-architecture-framework/requirements/dm/dm06" },
+  { title: "DM07 - Decision Records", url: "/solution-architecture-framework/requirements/dm/dm07" },
+  { title: "DM08 - Decision Making", url: "/solution-architecture-framework/requirements/dm/dm08" }
+] %}
+
+{% set dsSAFRequirementsSD = [
+  { title: "SD01 - Design Methodology", url: "/solution-architecture-framework/requirements/sd/sd01" },
+  { title: "SD02 - NHSE Principles", url: "/solution-architecture-framework/requirements/sd/sd02" },
+  { title: "SD03 - Standards Compliance", url: "/solution-architecture-framework/requirements/sd/sd03" },
+  { title: "SD04 - Good Practice", url: "/solution-architecture-framework/requirements/sd/sd04" },
+  { title: "SD05 - Commodoties", url: "/solution-architecture-framework/requirements/sd/sd05" },
+  { title: "SD06 - API First", url: "/solution-architecture-framework/requirements/sd/sd06" },
+  { title: "SD07 - Equal Treatment", url: "/solution-architecture-framework/requirements/sd/sd07" },
+  { title: "SD08 - Patterns", url: "/solution-architecture-framework/requirements/sd/sd08" },
+  { title: "SD09 - Standards Selection", url: "/solution-architecture-framework/requirements/sd/sd09" },
+  { title: "SD10 - API Lifecycle", url: "/solution-architecture-framework/requirements/sd/sd10" },
+  { title: "SD11 - Policy Adherence", url: "/solution-architecture-framework/requirements/sd/sd11" },
+  { title: "SD12 - Well Architected Framework", url: "/solution-architecture-framework/requirements/sd/sd12" }
+] %}
+
+{% set dsSAFRequirementsT = [
+  { title: "T01 - Tech Radar", url: "/solution-architecture-framework/requirements/t/t01" },
+  { title: "T02 - Appropriate Tech", url: "/solution-architecture-framework/requirements/t/t02" },
+  { title: "T03 - Vendor Lock-in", url: "/solution-architecture-framework/requirements/t/t03" }
 ] %}
 
 {% set dsSAFRequirementsNF = [
-  { title: "NF01", url: "/solution-architecture-framework/nf/nf01" },
-  { title: "NF02", url: "/solution-architecture-framework/nf/nf02" },
-  { title: "NF03", url: "/solution-architecture-framework/nf/nf03" },
-  { title: "NF04", url: "/solution-architecture-framework/nf/nf04" },
-  { title: "NF05", url: "/solution-architecture-framework/nf/nf05" },
-  { title: "NF06", url: "/solution-architecture-framework/nf/nf06" }
-  
+  { title: "NF01 - Observability", url: "/solution-architecture-framework/requirements/nf/nf01" },
+  { title: "NF02 - Reliability & Resilience", url: "/solution-architecture-framework/requirements/nf/nf02" },
+  { title: "NF03 - Volume & Performance Model", url: "/solution-architecture-framework/requirements/nf/nf03" },
+  { title: "NF04 - Sustainability Measures", url: "/solution-architecture-framework/requirements/nf/nf04" },
+  { title: "NF05 - Audit & Logging", url: "/solution-architecture-framework/requirements/nf/nf05" },
+  { title: "NF06 - Disaster Recovery & Business Continuity", url: "/solution-architecture-framework/requirements/nf/nf06" }
+] %}
+
+{% set dsSAFRequirementsRU = [
+  { title: "RU01 - Appropriateness", url: "/solution-architecture-framework/requirements/ru/ru01" },
+  { title: "RU02 - Identification", url: "/solution-architecture-framework/requirements/ru/ru02" },
+  { title: "RU03 - Required Reuse", url: "/solution-architecture-framework/requirements/ru/ru03" }
+] %}
+
+{% set dsSAFRequirementsD = [
+  { title: "D01 - Document Storage", url: "/solution-architecture-framework/requirements/d/d01" },
+  { title: "D02 - Open Publication", url: "/solution-architecture-framework/requirements/d/d02" },
+  { title: "D03 - Document Scope", url: "/solution-architecture-framework/requirements/d/d03" }
 ] %}
 
 {% set dsInformation = [
@@ -114,24 +157,83 @@
        </li> </ul>
     {% endfor %}
   </ul>
+{% endif %}
 
-  {% endif %}
+{%- if subSection == "Solution Architecture Framework - Requirements - Strategic Alignment, Vision, and Roadmap" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsS %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
 
-{%- if subSection == "SAF - Detailed - NF" %}
+{%- if subSection == "Solution Architecture Framework - Requirements - Decision Making & Governance" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsDM %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{%- if subSection == "Solution Architecture Framework - Requirements - Solution Design & Methods" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsSD %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{%- if subSection == "Solution Architecture Framework - Requirements - Technology Choices" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsT %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{%- if subSection == "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
     <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsNF %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
        <ul class="app-side-nav__list app-side-nav__list--nested">
-    {%- if pageTitle == "Requirements" and item.title == "Requirements"%}
-    {% for SAFitem in dsSAFRequirements %}
-      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
-    {% endfor %}
-    {% endif %}
-       </li> </ul>
+      </li> </ul>
     {% endfor %}
   </ul>
+{% endif %}
 
-  {% endif %}
+{%- if subSection == "Solution Architecture Framework - Requirements - Reuse Principles and Development of Shared Services" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsRU %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{%- if subSection == "Solution Architecture Framework - Requirements - Documentation" %}
+    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in dsSAFRequirementsD %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+      </li> </ul>
+    {% endfor %}
+  </ul>
+{% endif %}
 
 </nav>
