@@ -54,7 +54,7 @@
   { title: "SD02 - NHSE Principles", url: "/solution-architecture-framework/requirements/sd/sd02" },
   { title: "SD03 - Standards Compliance", url: "/solution-architecture-framework/requirements/sd/sd03" },
   { title: "SD04 - Good Practice", url: "/solution-architecture-framework/requirements/sd/sd04" },
-  { title: "SD05 - Commodoties", url: "/solution-architecture-framework/requirements/sd/sd05" },
+  { title: "SD05 - Commodities", url: "/solution-architecture-framework/requirements/sd/sd05" },
   { title: "SD06 - API First", url: "/solution-architecture-framework/requirements/sd/sd06" },
   { title: "SD07 - Equal Treatment", url: "/solution-architecture-framework/requirements/sd/sd07" },
   { title: "SD08 - Patterns", url: "/solution-architecture-framework/requirements/sd/sd08" },
@@ -164,8 +164,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsS %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -175,8 +173,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsDM %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -186,8 +182,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsSD %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -197,8 +191,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsT %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -208,8 +200,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsNF %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -219,8 +209,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsRU %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
@@ -230,8 +218,6 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in dsSAFRequirementsD %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-       <ul class="app-side-nav__list app-side-nav__list--nested">
-      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
