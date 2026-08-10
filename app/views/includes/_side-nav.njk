@@ -196,11 +196,6 @@
       <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
     {% endfor %}
     {% endif %}
-     {%- if item.title == "Solution Design & Methods"%}
-    {% for SAFitem in dsSAFRequirementsSD %}
-      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
-    {% endfor %}
-    {% endif %}
     {%- if item.title == "Reuse Principles and Development of Shared Services"%}
     {% for SAFitem in dsSAFRequirementsRU %}
       <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
