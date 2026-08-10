@@ -159,67 +159,58 @@
   </ul>
 {% endif %}
 
-{%- if subSection == "Solution Architecture Framework - Requirements - Strategic Alignment, Vision, and Roadmap" %}
+{%- if pageSection == "Solution Architecture Framework - Requirements" %}
     <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsS %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    <li class="app-side-nav__item"><a class="app-side-nav__link" href="/solution-architecture-framework/requirements">Requirements</a></li>
+    {% for item in dsSAFRequirements %}
+     <strong><li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">{{ item.title }}</strong>
+       <ul class="app-side-nav__list app-side-nav__list--nested">
+    {%- if item.title == "Strategic Alignment, Vision and Roadmap"%}
+    {% for SAFitem in dsSAFRequirementsS %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+    {%- if item.title == "Decision Making & Governance"%}
+    {% for SAFitem in dsSAFRequirementsDM %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+    {%- if item.title == "Documentation"%}
+    {% for SAFitem in dsSAFRequirementsD %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+    {%- if item.title == "Non-Functional Profile"%}
+    {% for SAFitem in dsSAFRequirementsNF %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+     {%- if item.title == "Technology Choices"%}
+    {% for SAFitem in dsSAFRequirementsT %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+    {%- if item.title == "Solution Design & Methods"%}
+    {% for SAFitem in dsSAFRequirementsSD %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+     {%- if item.title == "Solution Design & Methods"%}
+    {% for SAFitem in dsSAFRequirementsSD %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+    {%- if item.title == "Reuse Principles and Development of Shared Services"%}
+    {% for SAFitem in dsSAFRequirementsRU %}
+      <li class="app-side-nav__item{% if SAFitem.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ SAFitem.url }}">{{ SAFitem.title }}</a></li>
+    {% endfor %}
+    {% endif %}
+      </li> </ul>
     {% endfor %}
   </ul>
 {% endif %}
 
-{%- if subSection == "Solution Architecture Framework - Requirements - Decision Making & Governance" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsDM %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
 
-{%- if subSection == "Solution Architecture Framework - Requirements - Solution Design & Methods" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsSD %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-{%- if subSection == "Solution Architecture Framework - Requirements - Technology Choices" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsT %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-{%- if subSection == "Solution Architecture Framework - Requirements - Non-Functional Profile" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsNF %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-{%- if subSection == "Solution Architecture Framework - Requirements - Reuse Principles and Development of Shared Services" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsRU %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-{%- if subSection == "Solution Architecture Framework - Requirements - Documentation" %}
-    <h2 class="app-side-nav__heading">Solution Architecture Framework</h2>
-    <ul class="nhsuk-list app-side-nav__list">
-    {% for item in dsSAFRequirementsD %}
-      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
 
 </nav>
