@@ -1,10 +1,10 @@
 {% set pageTitle = "SD02 - NHSE Principles" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The solution should be compliant with NHS England principles, policy, patterns and best practice." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,197 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that solution designs align with established NHS England architectural principles, organisational policies, approved patterns and recognised best practices.
+</p>
+
+<p>
+The intent is to encourage consistency across the NHS England technology estate and reduce the risks that arise when teams create bespoke approaches that diverge from agreed standards. Compliance should be deliberate and demonstrable, rather than assumed.
+</p>
+
+<p>
+Where deviations from principles, policies or patterns are necessary, they should be documented, assessed and approved through appropriate governance processes.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Design solutions in line with NHS England's agreed ways of working, and justify any exceptions.
+</p>
+
+<h2>Scoring rubric table – SD02 Compliance with Principles, Policies, Patterns and Best Practice</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that NHS England principles, policies, patterns or best practices have been considered during solution design.
+</td>
+<td class="nhsuk-table__cell">
+No compliance assessment.<br>
+No architecture rationale.<br>
+No governance evidence.<br>
+No documented alignment activity.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The solution may conflict with organisational standards, increase technical debt or create operational and governance issues.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of relevant principles, policies or patterns. Alignment is assumed rather than evidenced.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+Limited architecture review activity.<br>
+No structured compliance assessment.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Important requirements may be missed and non-compliance may remain unidentified.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some relevant principles, policies or patterns have been considered, but assessments are incomplete or inconsistently applied.
+</td>
+<td class="nhsuk-table__cell">
+Partial compliance assessments.<br>
+Basic architecture reviews.<br>
+Some references to policies or patterns.<br>
+Limited exception documentation.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important standards may not have been assessed or supporting evidence may be missing.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates alignment with relevant principles, policies and approved patterns. Most significant areas have supporting evidence.
+</td>
+<td class="nhsuk-table__cell">
+Architecture compliance assessments.<br>
+Solution Design Overview documentation.<br>
+Architecture Decision Records.<br>
+Governance review outputs.<br>
+Documented alignment to organisational standards.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some requirements may not have been assessed, deviations may lack approval, or evidence may be incomplete.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most relevant principles, policies, patterns and best practices have been assessed and the solution demonstrates strong alignment.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive compliance assessment.<br>
+Documented policy and pattern alignment.<br>
+Approved exception records.<br>
+Governance reviews.<br>
+Traceability between requirements and solution design decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining deviations are understood, documented and considered low risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar compliance. Alignment to principles, policies, patterns and best practice is embedded throughout solution design and governance activities.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive compliance evidence.<br>
+Regular review against evolving standards.<br>
+Well-managed exception process.<br>
+Architecture governance endorsement.<br>
+Evidence that compliance considerations actively influence design decisions.<br>
+Contribution to organisational best practice and reuse of approved patterns.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Compliance is proactively managed and supports long-term architectural consistency.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Compliance assessment</strong> – Has the team evaluated the solution against relevant NHS England principles, policies and patterns?
+</li>
+
+<li>
+<strong>Evidence of alignment</strong> – Can the team demonstrate how the design complies with organisational expectations?
+</li>
+
+<li>
+<strong>Use of approved patterns</strong> – Are recognised architecture or solution patterns being used where appropriate?
+</li>
+
+<li>
+<strong>Exception management</strong> – Are departures from approved standards documented, justified and approved?
+</li>
+
+<li>
+<strong>Governance involvement</strong> – Has compliance been reviewed through appropriate architecture governance processes?
+</li>
+
+<li>
+<strong>Ongoing maintenance</strong> – Is compliance periodically reviewed as requirements, policies and architecture evolve?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that the solution appears broadly compliant and there is reasonable supporting evidence, but assessments may be incomplete, governance evidence may be limited or some exceptions may not be fully documented.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear and structured evidence that relevant principles, policies and patterns have been assessed and that any deviations have been consciously managed through governance.
+</p>
+
+<p>
+A score of <strong>5</strong> requires compliance to be embedded within the architecture lifecycle. Evidence should show proactive management of standards alignment, effective governance and consistent use of approved patterns and best practices across the solution.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture compliance assessments</li>
+<li>Solution Design Overview (SDO) documents</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Policy compliance reviews</li>
+<li>Pattern selection assessments</li>
+<li>Architecture governance papers</li>
+<li>Design Authority or TRG review outputs</li>
+<li>Approved exception or waiver records</li>
+<li>Technical standards assessments</li>
+<li>Architecture review and assurance reports</li>
+</ul>
 
 
 

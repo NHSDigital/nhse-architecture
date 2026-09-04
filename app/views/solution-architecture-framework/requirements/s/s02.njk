@@ -1,10 +1,10 @@
 {% set pageTitle = "S02 - Capability Model" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Strategic Alignment, Vision, and Roadmap" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "We should be able to demonstrate which capabilities from the NHSE Business Capability Model the solution is realising, and any potential duplication identified." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,263 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+        <h2 id="description-heading">Requirement description</h2>
+
+        <p>
+            The solution should be mapped to the relevant capabilities in the NHSE
+            Business Capability Model. The mapping should show what the solution enables,
+            supports or changes. It should also identify where the same or a similar
+            capability may already be provided elsewhere.
+        </p>
+
+        <p>
+            This allows assessors to understand the solution’s place in the wider
+            organisation and the risk of investing in overlapping capabilities.
+        </p>
+
+        <p class="summary">
+            <strong>In simple terms:</strong><br>
+            Can the team show which business capabilities the solution realises and
+            demonstrate that possible duplication has been identified and considered?
+        </p>
+        <h2 id="rubric-heading">Scoring rubric: Business capability mapping and duplication</h2>
+
+        <table class="nhsuk-table" aria-label="Scoring rubric">
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">Score</th>
+                    <th role="columnheader" class="" scope="col">What it looks like</th>
+                    <th role="columnheader" class="" scope="col">Typical evidence</th>
+                    <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row score-0">
+                    <td class="nhsuk-table__cell score">0</td>
+                    <td class="nhsuk-table__cell">
+                        No evidence that the solution has been considered against the
+                        NHSE Business Capability Model. The team cannot identify which
+                        capabilities the solution realises.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        No capability mapping.<br>
+                        No recorded capability analysis.<br>
+                        No assessment of existing or overlapping solutions.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Significant risk of duplicated investment.<br>
+                        The purpose and organisational fit of the solution are unclear.<br>
+                        Opportunities to reuse existing capabilities may be missed.
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row score-1">
+                    <td class="nhsuk-table__cell score">1</td>
+                    <td class="nhsuk-table__cell">
+                        The team has an informal view of the relevant business
+                        capabilities, but this has not been mapped or validated.
+                        Duplication is discussed only at a general level.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Verbal descriptions.<br>
+                        Informal workshop notes.<br>
+                        Unstructured references to capabilities or similar services.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        High-risk gaps in coverage and traceability.<br>
+                        Capability names may not align with the current model.<br>
+                        Existing provision may not have been identified.
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row score-2">
+                    <td class="nhsuk-table__cell score">2</td>
+                    <td class="nhsuk-table__cell">
+                        Some solution functions have been mapped to business
+                        capabilities. The mapping is incomplete, inconsistent or not
+                        based on an agreed version of the capability model. Some possible
+                        duplication has been identified, but it has not been fully analysed.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Partial capability-to-solution mapping.<br>
+                        Early architecture diagrams or spreadsheets.<br>
+                        A list of potentially similar products or services.<br>
+                        Initial workshop outputs.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        A significant number of capabilities or solution components
+                        remain unmapped.<br>
+                        Duplication analysis lacks owners, conclusions or actions.<br>
+                        The evidence may not be maintained.
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row score-3">
+                    <td class="nhsuk-table__cell score">3</td>
+                    <td class="nhsuk-table__cell">
+                        Much of the solution is mapped to the relevant business
+                        capabilities using an identifiable version of the model.
+                        Potential duplication has been reviewed for the main capabilities.
+                        Notable gaps remain and require mitigating action.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        A documented capability-to-solution mapping covering most of
+                        the solution scope.<br>
+                        References to the capability model version used.<br>
+                        A comparison with known existing solutions or services.<br>
+                        Recorded duplication risks, assumptions and proposed actions.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Some components or capability relationships remain unclear.<br>
+                        The duplication review may be limited to the immediate
+                        directorate or portfolio.<br>
+                        Actions may lack agreed owners, dates or governance oversight.
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row score-4">
+                    <td class="nhsuk-table__cell score">4</td>
+                    <td class="nhsuk-table__cell">
+                        Most of the solution is clearly and consistently mapped to the
+                        current agreed capability model. The mapping has a named owner,
+                        is maintained and is used in architecture or planning decisions.
+                        Potential duplication has been assessed and the outcome is
+                        recorded. Remaining gaps do not present significant risk.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        A maintained capability map linked to solution architecture
+                        artefacts.<br>
+                        Clear ownership and review dates.<br>
+                        Evidence of stakeholder or architecture governance review.<br>
+                        Documented analysis of overlapping capability provision.<br>
+                        Decisions to reuse, consolidate, differentiate or accept
+                        duplication, with rationale.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Minor mapping or coverage gaps only.<br>
+                        A small number of dependencies may still require validation.<br>
+                        Residual duplication risks are understood and controlled.
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row score-5">
+                    <td class="nhsuk-table__cell score">5</td>
+                    <td class="nhsuk-table__cell">
+                        Comprehensive and maintained evidence shows how the solution
+                        realises business capabilities at an appropriate level of detail.
+                        Capability mapping is embedded in governance, portfolio planning
+                        and architecture decision-making. Duplication is proactively
+                        identified and the approach is considered exemplary.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Complete, version-controlled capability-to-solution mapping.<br>
+                        Traceability from capabilities to architecture components,
+                        roadmap items and investment decisions.<br>
+                        Evidence of review with relevant capability owners and governance
+                        bodies.<br>
+                        Cross-portfolio analysis of overlapping provision.<br>
+                        Measurable actions to reuse, consolidate or retire duplicate
+                        capability provision.<br>
+                        Evidence that findings have improved the wider capability model
+                        or organisational planning.
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        Minimal gaps.<br>
+                        Any accepted duplication has a clear rationale, owner and review
+                        mechanism.<br>
+                        Changes to the solution or capability model are actively monitored.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="source-note">
+            The score progression follows the SAF model from no supporting evidence and
+            significant service risk at score 0, through to comprehensive, above-expectation
+            evidence and exemplar practice at score 5.
+            
+        </p>
+        <h2 id="assessor-heading">What assessors should look for</h2>
+
+        <ol>
+            <li>
+                <strong>Capability coverage:</strong>
+                The solution’s main functions and components are mapped to named
+                capabilities in the NHSE Business Capability Model.
+            </li>
+            <li>
+                <strong>Model currency:</strong>
+                The evidence identifies which version or baseline of the capability
+                model was used.
+            </li>
+            <li>
+                <strong>Traceability:</strong>
+                The mapping is connected to relevant solution architecture, scope,
+                roadmap or investment decisions.
+            </li>
+            <li>
+                <strong>Duplication analysis:</strong>
+                Existing solutions that realise the same or similar capabilities have
+                been identified and considered.
+            </li>
+            <li>
+                <strong>Decision and rationale:</strong>
+                The team has recorded whether to reuse, consolidate, differentiate or
+                accept overlapping capability provision.
+            </li>
+            <li>
+                <strong>Ownership and maintenance:</strong>
+                The mapping has an owner, review arrangements and evidence that it is
+                updated when the solution or capability model changes.
+            </li>
+            <li>
+                <strong>Governance and use:</strong>
+                The evidence has been reviewed by relevant stakeholders and is actively
+                used in delivery, planning or architecture decisions.
+            </li>
+        </ol>
+
+        <p>
+            Assessors should focus on the outcome and the sufficiency of the evidence,
+            rather than requiring one fixed document format. The SAF states that a
+            requirement may be met in different ways and that assessment should be
+            risk-based. 
+        </p>
+        <h2 id="difference-heading">What separates a 3 from a 4 or 5</h2>
+
+        <p>
+            A <strong>score of 3</strong> usually means that most of the solution has
+            been mapped and the main duplication risks have been considered, but notable
+            gaps remain. The mapping may not cover the full solution, may not be regularly
+            maintained, or may not have clear ownership and governance.
+        </p>
+
+        <p>
+            A <strong>score of 4</strong> requires a maintained mapping, clear ownership,
+            stakeholder or governance review, and evidence that duplication analysis has
+            informed decisions. Gaps should be minor and should not present significant risk.
+        </p>
+
+        <p>
+            A <strong>score of 5</strong> requires comprehensive traceability and
+            proactive cross-portfolio analysis. Capability information should be embedded
+            in governance and planning, and there should be evidence that the practice
+            improves wider organisational decision-making. Score 5 is exemplar practice,
+            not simply the absence of gaps.
+        </p>
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+
+            <ul>
+                <li>A capability-to-solution matrix</li>
+                <li>Architecture model view</li>
+                <li>Heat map</li>
+                <li>Portfolio overlap assessment</li>
+                <li>Capability owner review</li>
+                <li>Architecture decision record</li>
+                <li>Documented reuse assessment</li>
+            </ul>
 
 
 

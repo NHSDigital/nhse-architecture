@@ -1,10 +1,10 @@
 {% set pageTitle = "D03 - Document Scope" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Documentation" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The architecture documentation should be appropriate in scope and quality for the solution" %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,230 @@
 
 {% block bodyContent %}
 
+<h2>Requirement</h2>
+
+<blockquote>
+<p>
+<strong>D03</strong> : The architecture documentation should be appropriate in scope and quality for the solution covering (but not exclusively):
+</p>
+
+<ul>
+<li>Architecture Vision</li>
+<li>Architecture Roadmap</li>
+<li>Layer Diagrams</li>
+<li>Capability Model and Solution Mapping</li>
+<li>Non-functional requirements</li>
+<li>Conceptual Architecture</li>
+<li>Logical Architecture</li>
+<li>Physical Architecture (including network, infrastructure etc.)</li>
+<li>Solution Design Overview (SDO)</li>
+<li>Key Architecture Decisions (KADs)</li>
+<li>Data Models</li>
+<li>Data Flows</li>
+<li>API Specifications</li>
+<li>Volume and Performance Models</li>
+<li>Architecture Decision Records</li>
+<li>Assumptions, Risks, Issues and Dependencies</li>
+</ul>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that sufficient architecture documentation exists to understand, govern, operate, support and evolve the solution.
+</p>
+
+<p>
+The scope and depth of documentation should be proportionate to the size, complexity, risk and criticality of the service. Not every solution will require the same level of detail, but assessors should expect evidence that key architecture views, decisions, requirements and dependencies have been documented where relevant.
+</p>
+
+<p>
+Documentation should support delivery teams, operational teams, governance groups and future architects who need to understand how and why the solution has been designed.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+The architecture should be documented well enough for people to understand the solution, maintain it, govern it and change it safely.
+</p>
+
+<h2>Scoring rubric table – D03 Architecture Documentation Completeness and Quality</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No meaningful architecture documentation exists or documentation is insufficient to understand the solution.
+</td>
+<td class="nhsuk-table__cell">
+No architecture artefacts.<br>
+Missing diagrams.<br>
+No documented decisions.<br>
+No design documentation.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Knowledge is dependent on individuals and the solution cannot be effectively governed, operated or evolved.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited architecture documentation exists but it is fragmented, incomplete or largely undocumented.
+</td>
+<td class="nhsuk-table__cell">
+Basic diagrams.<br>
+Partial design notes.<br>
+Informal documentation.<br>
+Limited architecture rationale.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Critical aspects of the design may be undocumented and difficult to validate or support.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some key architecture artefacts exist and provide partial coverage of the solution, but significant gaps remain.
+</td>
+<td class="nhsuk-table__cell">
+Some architectural views.<br>
+Partial solution documentation.<br>
+Incomplete non-functional requirements.<br>
+Limited ADRs or design records.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important architecture areas, dependencies or operational considerations may not be documented.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the expected architecture documentation exists and provides an acceptable understanding of the solution.
+</td>
+<td class="nhsuk-table__cell">
+Solution Design Overview.<br>
+Architecture diagrams.<br>
+Roadmaps.<br>
+Key Architecture Decisions.<br>
+Documented requirements.<br>
+Dependencies and risks captured.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some architecture views may be incomplete, outdated or lack sufficient detail for governance or operational purposes.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most relevant architecture artefacts are available, maintained and of good quality. Documentation supports governance, delivery and operational activities.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive architecture document set.<br>
+Logical and physical architectures.<br>
+Data flows and models.<br>
+API specifications.<br>
+Non-functional requirements.<br>
+Architecture Decision Records.<br>
+Maintained roadmap and supporting artefacts.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Missing artefacts are low risk and do not materially affect understanding of the solution.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar architecture documentation. Documentation is maintained, trusted and actively used throughout the solution lifecycle.
+</td>
+<td class="nhsuk-table__cell">
+Complete architecture repository.<br>
+Strong traceability across artefacts.<br>
+Current and maintained architecture views.<br>
+Comprehensive decision records.<br>
+Operational and governance usage evidence.<br>
+Documentation supporting delivery, support, assurance and future evolution activities.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Documentation provides a clear, authoritative view of the solution and supports continuous improvement.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Coverage</strong> – Does the documentation cover the important architecture domains relevant to the solution?
+</li>
+
+<li>
+<strong>Quality</strong> – Are diagrams, models and specifications understandable, accurate and usable?
+</li>
+
+<li>
+<strong>Decision visibility</strong> – Are key architecture decisions and rationale documented?
+</li>
+
+<li>
+<strong>Operational value</strong> – Can delivery, support and governance teams use the documentation to understand and manage the solution?
+</li>
+
+<li>
+<strong>Non-functional considerations</strong> – Are performance, resilience, security, scalability and operational requirements documented where relevant?
+</li>
+
+<li>
+<strong>Maintenance</strong> – Is the documentation current and aligned to the implemented solution?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that most key architecture documentation exists and provides a reasonable understanding of the solution, but there are important gaps, inconsistencies or areas that are no longer fully current.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a broadly complete architecture document set that covers the major solution views, decisions, requirements and dependencies. Documentation should be maintained and actively support governance and delivery activities.
+</p>
+
+<p>
+A score of <strong>5</strong> requires architecture documentation to be comprehensive, well-maintained and demonstrably used across delivery, operations, governance and future architecture planning. Artefacts should be connected, traceable and dependable enough to be considered an authoritative source of information.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture Vision documents</li>
+<li>Architecture Roadmaps</li>
+<li>Capability models and solution mappings</li>
+<li>Conceptual, logical and physical architecture diagrams</li>
+<li>Solution Design Overview (SDO) documents</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Key Architecture Decision logs</li>
+<li>Data models and data flow diagrams</li>
+<li>API specifications and interface catalogues</li>
+<li>Volume and performance models</li>
+<li>Non-functional requirements specifications</li>
+<li>Risk, dependency and assumption registers</li>
+<li>Architecture governance submissions and reviews</li>
+</ul>
 
 
 

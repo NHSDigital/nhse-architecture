@@ -1,10 +1,10 @@
 {% set pageTitle = "SD07 - Equal Treatment" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "We should treat internal (NHS England) and external consumers equally." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,143 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is focused on interoperability, fairness of access, and API/product design consistency.
+Internal NHS England consumers should not receive preferential treatment compared to external consumers unless there is a documented and justified reason.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>Design services, APIs and capabilities so that internal and external consumers can access and use them through the same standards, interfaces, processes and governance arrangements wherever practical.</strong>
+</p>
+
+<h2>Scoring rubric – Equal Treatment of Consumers</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence of equal treatment. Internal consumers are provided with capabilities or access methods that external consumers cannot reasonably access.
+            </td>
+            <td class="nhsuk-table__cell">
+                No documented API strategy, no consumer analysis, no published interfaces or standards.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant interoperability risk, duplicated integrations, vendor lock-in, inconsistent consumer experience.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited awareness of the requirement. Some discussion exists but solutions are designed primarily around internal users.
+            </td>
+            <td class="nhsuk-table__cell">
+                Informal design discussions, unsupported assumptions, isolated examples of reuse.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Internal and external access models differ without documented rationale.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some interfaces and standards are shared across consumer groups but significant exceptions exist.
+            </td>
+            <td class="nhsuk-table__cell">
+                API specifications, interface documentation, partial consumer analysis, incomplete standards adoption.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable inconsistencies. Different onboarding approaches, authentication models, documentation quality or support arrangements.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Much of the solution follows a common consumer model. Most interfaces are available on a consistent basis to internal and external consumers.
+            </td>
+            <td class="nhsuk-table__cell">
+                Documented API strategy, consumer personas, architecture diagrams, onboarding processes, design rationale for known exceptions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Some notable gaps remain. Certain services, data sets or capabilities continue to favour one consumer group and require mitigation.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                Most consumer interactions follow common patterns, standards and governance. Any differences are documented, reviewed and justified.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained API catalogue, common onboarding process, documented standards, governance approvals, stakeholder feedback showing consistent treatment.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Remaining exceptions present low risk and have agreed remediation or justification.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar implementation. The solution is demonstrably designed consumer-first, with internal and external consumers using the same patterns, interfaces and lifecycle processes wherever possible.
+            </td>
+            <td class="nhsuk-table__cell">
+                Published standards, reusable API patterns, consumer engagement evidence, service metrics, architecture reviews, governance records, continuous improvement activities, documented exception management.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Consistent access model</strong> – Internal and external consumers use the same or equivalent interfaces, APIs and integration patterns where practical.
+    </li>
+    <li>
+        <strong>Consumer-centred design</strong> – Consumer needs are considered regardless of organisational boundary.
+    </li>
+    <li>
+        <strong>Standards and governance</strong> – Common onboarding, documentation, security, support and lifecycle processes exist.
+    </li>
+    <li>
+        <strong>Justified exceptions</strong> – Any differences are documented with clear rationale and risk assessment.
+    </li>
+    <li>
+        <strong>Evidence of active use</strong> – The approach is being applied in delivery decisions and is not simply documented.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally demonstrates that the principle is understood and mostly implemented, but exceptions remain and are not always governed consistently.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that exceptions are consciously managed, reviewed and justified through governance.
+</p>
+
+<p>
+A score of <strong>5</strong> requires demonstrable exemplar practice, including common standards, measurable adoption, consumer engagement, maintained documentation and evidence that equal treatment of consumers influences architecture and delivery decisions.
+</p>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "SD11 - Policy Adherence" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Solutions should adhere to the policies below."%}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,194 @@
 
 {% block bodyContent %}
 
+<h2>Requirement</h2>
+<blockquote>
+<p>
+<strong>SD11:</strong> Solutions should adhere to:
+</p>
+
+        <ol class="nhsuk-list nhsuk-list--number">
+          <li><a href="https://www.security.gov.uk/guidance/secure-by-design/">Government "Secure by Design" policy</a></li>
+          <li><a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework">NCSC CAF</a></li>
+          <li><a href="https://www.ncsc.gov.uk/collection/cyber-assessment-framework/caf-objective-b/principle-b2-identity-and-access-control">Access Control Guidelines</a></li>
+          <li><a href="https://www.ncsc.gov.uk/guidance/authentication-methods-choosing-the-right-type">Policy - Strong Auth/MFA</a></li>
+          <li><a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/nhs-and-social-care-data-off-shoring-and-the-use-of-public-cloud-services/guidance">Storage and Processing of Data Outside of the UK - Information Governance Policy</a></li>
+          <li>NHS England's API strategy and policy statements. E.g. <a href="https://aalto.digital.nhs.uk/#/document/viewer/b61e0f92-b168-4173-8344-353360f4250e?library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">API Landscape policy document (Word, Aalto.digital.nhs.uk)</a></li>
+        </ol>
+
+<p>(Note there are overlaps with the Engineering red lines; ensure a consistent response and do not repeat assessments)</p>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with designing solutions that comply with key security, identity, access management, data protection and API governance requirements.
+</p>
+
+<p>
+The focus is not simply whether security controls exist. Assessors should consider whether the solution design demonstrates alignment with recognised policies and frameworks and whether this alignment is evidenced, reviewed and maintained.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>The solution should demonstrate that security, identity, access management, data protection and API governance requirements have been considered and built into the architecture.</strong>
+</p>
+
+<h2>Scoring rubric table – Security, Identity and API Policy Compliance</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence that relevant security, identity, access control, data protection or API policy requirements have been considered.
+            </td>
+            <td class="nhsuk-table__cell">
+                No security architecture artefacts, no compliance assessments, no documented controls or policy mappings.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant service risk. Security, privacy, regulatory and operational risks are unmanaged.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited evidence that the requirements have been considered. Controls are largely informal or implemented without documented architectural justification.
+            </td>
+            <td class="nhsuk-table__cell">
+                Isolated security controls, informal design discussions, unsupported compliance claims.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Key policies may not be understood and compliance cannot be demonstrated.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some relevant controls and design decisions are documented. Elements of the referenced policies and frameworks have been addressed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Partial threat assessments, architecture diagrams, security requirements, policy references within design documentation.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps remain. Coverage is incomplete, inconsistent or not evidenced across the solution.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Much of the requirement is met. The solution demonstrates alignment with most applicable policies and frameworks and there is acceptable supporting evidence.
+            </td>
+            <td class="nhsuk-table__cell">
+                Security architecture documentation, access control design, authentication approach, API governance artefacts, compliance reviews, design authority discussions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain. Some controls, policy mappings or assurance activities are incomplete and require mitigating action.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                Most applicable requirements have been addressed and can be demonstrated through maintained architecture and assurance evidence. Compliance activities are actively governed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Policy compliance assessments, security design reviews, documented access control model, MFA implementation approach, API governance evidence, architecture governance approvals.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Residual risks are understood, documented and actively managed.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar evidence that the solution aligns with applicable security, identity, access management, data protection and API governance requirements. Compliance is continuously maintained and demonstrably influences architecture decisions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained compliance mappings, governance records, security assurance evidence, design reviews, exception management records, continuous improvement activity, measurable security and compliance outcomes.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Secure by Design principles</strong> – Evidence that security requirements have been incorporated into architectural decisions from the outset.
+    </li>
+
+    <li>
+        <strong>Cyber assurance alignment</strong> – Evidence that relevant security risks, controls and assurance activities have been identified and documented.
+    </li>
+
+    <li>
+        <strong>Identity and access management</strong> – Evidence that authentication, authorisation and access controls are appropriate for the service.
+    </li>
+
+    <li>
+        <strong>Strong authentication</strong> – Evidence that authentication approaches align with applicable MFA and identity policies.
+    </li>
+
+    <li>
+        <strong>Data location and information governance</strong> – Evidence that data storage and processing considerations are understood and documented where applicable.
+    </li>
+
+    <li>
+        <strong>API governance</strong> – Evidence that API-related policy requirements have been considered within the solution design.
+    </li>
+
+    <li>
+        <strong>Governance and assurance</strong> – Evidence that compliance is reviewed, maintained and managed through appropriate governance processes.
+    </li>
+
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally demonstrates that security, identity, access management and API governance requirements have been considered and that acceptable evidence exists for most areas. However, there are still notable gaps, incomplete assurance activities or missing compliance evidence that require mitigation.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a stronger level of assurance. Relevant policies are demonstrably addressed, documentation is maintained, governance reviews have occurred and residual risks are clearly understood.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that compliance is embedded within the architecture lifecycle. Controls are actively reviewed, exceptions are managed, evidence is routinely maintained and security and governance considerations demonstrably influence decision-making.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+    <li>Security architecture documentation</li>
+    <li>Threat modelling outputs</li>
+    <li>Cyber risk assessments</li>
+    <li>Identity and access management design documentation</li>
+    <li>Role-based access control models</li>
+    <li>MFA implementation evidence</li>
+    <li>Data residency and information governance assessments</li>
+    <li>API standards compliance reviews</li>
+    <li>Architecture Decision Records (ADRs)</li>
+    <li>Design authority papers and governance approvals</li>
+</ul>
 
 
 

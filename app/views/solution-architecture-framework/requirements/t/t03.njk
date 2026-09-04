@@ -1,10 +1,10 @@
 {% set pageTitle = "T03 - Vendor Lock-in" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Technology Choices" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "An appraisal should be made of any vendor lock considerations and associated risks, and these are understood and accepted/mitigated." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,194 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
 
+<p>
+This requirement is concerned with understanding and managing the risks associated with vendor lock-in.
+</p>
 
+<p>
+Many technologies, products and cloud services introduce varying degrees of dependency on a supplier. Such dependencies are not automatically a problem, but they should be consciously assessed. Teams should understand the consequences of becoming dependent on a supplier's technology, commercial model, skills ecosystem, data formats, APIs or hosting platform.
+</p>
+
+<p>
+Where vendor lock-in risks exist, they should either be mitigated or consciously accepted through appropriate governance and decision-making processes.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Teams should know where supplier dependency exists, understand the risks it creates and have a clear rationale for either accepting or reducing those risks.
+</p>
+
+<h2>Scoring rubric table – T03 Vendor Lock-In Assessment</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that vendor lock-in has been considered as part of technology selection or architecture design.
+</td>
+<td class="nhsuk-table__cell">
+No supplier dependency assessment.<br>
+No technology risk analysis.<br>
+No documented architecture rationale.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Technology choices may create unmanaged dependencies and future cost, migration or operational challenges.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of vendor lock-in risks. Dependencies may be acknowledged informally but are not assessed or documented.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+Supplier recommendations accepted without challenge.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Technology decisions could create long-term constraints that are poorly understood.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some assessment of supplier dependency exists, but analysis is incomplete, inconsistent or lacks evidence.
+</td>
+<td class="nhsuk-table__cell">
+Partial options appraisal.<br>
+Basic supplier assessment.<br>
+Limited discussion of migration or exit considerations.<br>
+Some architecture rationale.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important lock-in risks may not be fully understood, quantified or managed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the vendor lock-in position is understood. Significant dependencies have been identified and key risks have been documented.
+</td>
+<td class="nhsuk-table__cell">
+Technology options assessment.<br>
+Architecture Decision Records.<br>
+Vendor risk analysis.<br>
+Documented rationale for technology selection.<br>
+Some mitigation planning.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Exit strategies, migration approaches or formal risk acceptance may not be fully defined.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most vendor lock-in risks have been assessed and either mitigated or formally accepted through governance processes.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive supplier dependency assessment.<br>
+Documented mitigation plans.<br>
+Governance review of lock-in risks.<br>
+Exit or migration considerations.<br>
+Cost and operational impact analysis.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining dependencies are understood and present limited risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar management of vendor lock-in considerations. Dependencies are actively governed and influence architecture and investment decisions.
+</td>
+<td class="nhsuk-table__cell">
+Formal lock-in assessment methodology.<br>
+Comprehensive technology and supplier evaluations.<br>
+Documented exit strategies.<br>
+Regular review of supplier dependency risks.<br>
+Governance-supported acceptance or mitigation decisions.<br>
+Evidence that lock-in considerations actively influence solution design and procurement decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Supplier dependencies are transparent, strategically managed and regularly reviewed.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Identification of dependencies</strong> – Has the team identified where supplier-specific technologies, services or platforms are being used?
+</li>
+
+<li>
+<strong>Risk understanding</strong> – Are commercial, technical, operational and migration risks documented and understood?
+</li>
+
+<li>
+<strong>Options analysis</strong> – Were alternative products, technologies or architectures considered?
+</li>
+
+<li>
+<strong>Mitigation measures</strong> – Have actions been defined to reduce unnecessary lock-in where appropriate?
+</li>
+
+<li>
+<strong>Risk acceptance</strong> – Where lock-in is considered acceptable, is this documented and supported by governance?
+</li>
+
+<li>
+<strong>Future flexibility</strong> – Has the team considered future migration, portability, interoperability or replacement scenarios?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means that supplier dependencies have been recognised and documented, but mitigation plans, exit considerations or governance approval may be incomplete.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a structured assessment of lock-in risks, documented mitigation or acceptance decisions and evidence that supplier dependency has been considered during architecture and technology selection.
+</p>
+
+<p>
+A score of <strong>5</strong> requires vendor lock-in management to be an established part of architecture governance and technology decision-making. The organisation can demonstrate that dependency risks are routinely assessed, reviewed and used to influence long-term architecture strategy.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Technology options appraisals</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Vendor dependency assessments</li>
+<li>Supplier risk assessments</li>
+<li>Commercial and procurement evaluations</li>
+<li>Migration or exit strategy documentation</li>
+<li>Architecture review outputs</li>
+<li>Technology governance records</li>
+<li>Solution Design Overview documents</li>
+<li>Risk registers containing vendor lock-in risks</li>
+</ul>
 
 {% endblock %}

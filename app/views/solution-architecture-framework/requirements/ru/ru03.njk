@@ -1,10 +1,10 @@
 {% set pageTitle = "RU03 - Required Reuse" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Reuse Principles and Development of Shared Services" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "We should reuse capabilities as defined below." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,297 @@
 
 {% block bodyContent %}
 
+<h2>Requirement</h2>
+
+<blockquote>
+<p>
+<strong>RU03</strong> : We should reuse capabilities as defined below.
+</p>
+<h3>Capabilities</h3>
+ <table class="nhsuk-table" aria-label="Dimensions">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Capability
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Reuse
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Cohorting</td>
+                    <td class="nhsuk-table__cell">CaaS</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Citizen Messaging</td>
+                    <td class="nhsuk-table__cell">NHS Notify</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Staff Messaging</td>
+                    <td class="nhsuk-table__cell">GOV.Notify and NHS.net Connect</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Application Messaging</td>
+                    <td class="nhsuk-table__cell">MESH or alternative as required</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Demographics/MPI</td>
+                    <td class="nhsuk-table__cell">PDS</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Eventing</td>
+                    <td class="nhsuk-table__cell">MNS</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">API Management</td>
+                    <td class="nhsuk-table__cell">NHSE API Management Platform (which uses Apigee underneath)</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Identity</td>
+                    <td class="nhsuk-table__cell">CIS2 Auth/NHS Mail SSO/NHS login</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Logging &amp; Monitoring</td>
+                    <td class="nhsuk-table__cell">Splunk/Sentinel/Cribl/Grafana (tbc &ndash; pending ODIN)</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Data Analytics</td>
+                    <td class="nhsuk-table__cell">FDP/CDP/DPS - FDP First</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Public facing web presence</td>
+                    <td class="nhsuk-table__cell">NHS.uk</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Patient Flags</td>
+                    <td class="nhsuk-table__cell">Flags service</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">Organisational Data</td>
+                    <td class="nhsuk-table__cell">ODS</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Shared Services</h3>
+              <table class="nhsuk-table" aria-label="Requirements">
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+            Capability
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                  Reuse
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">Auditing</td>
+                  <td class="nhsuk-table__cell">Standard Audit tools/PARS (when live)</td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">Cyber Security Monitoring</td>
+                  <td class="nhsuk-table__cell">CSOC</td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">Service Management &amp; Support</td>
+                  <td class="nhsuk-table__cell">ServiceNow</td>
+                </tr>
+              </tbody>
+            </table>
+</blockquote>
+
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that teams make use of existing NHS England shared capabilities rather than creating duplicate solutions.
+</p>
+
+<p>
+The objective is to increase consistency, reduce duplication, improve interoperability and maximise value from existing investments. Where an approved shared capability exists for a particular need, teams should normally adopt it unless there is a justified reason not to do so.
+</p>
+
+<p>
+If a shared service is not used, the rationale, risks and alternative approach should be clearly documented and understood.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Use established NHS England shared services wherever they meet the need, and be able to justify any exceptions.
+</p>
+
+<h2>Scoring rubric table – RU03 Use of Shared Capabilities</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that shared service reuse has been considered. New or duplicate capabilities have been developed despite the existence of shared alternatives.
+</td>
+<td class="nhsuk-table__cell">
+No reuse assessment.<br>
+No architecture rationale.<br>
+Locally developed capabilities duplicating shared services.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Increased duplication, cost, support burden and inconsistency across the organisation.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of available shared services. Reuse considerations are informal and not evidenced.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Assumptions regarding capability suitability.<br>
+No documented assessment.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Teams may miss opportunities for reuse or select inappropriate solutions.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some shared capabilities have been considered or used, but assessment and adoption are incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial reuse assessments.<br>
+Use of some shared services.<br>
+Limited documentation of exceptions.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Duplicate capabilities may still exist and exception decisions may not be adequately justified.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates use of appropriate shared services. Most exceptions are documented and supported by rationale.
+</td>
+<td class="nhsuk-table__cell">
+Reuse assessments.<br>
+Solution architecture documentation.<br>
+Architecture Decision Records.<br>
+Evidence of shared platform adoption.<br>
+Documented exception decisions.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some reuse opportunities may not have been fully assessed or supporting evidence may be incomplete.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most applicable shared capabilities have been adopted and integrated appropriately. Exceptions are clearly documented and governed.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive reuse assessment.<br>
+Architecture review evidence.<br>
+Documented alignment to shared service catalogue.<br>
+Governance approval of justified exceptions.<br>
+Traceability between requirements and selected shared services.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining deviations are understood, justified and low risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar use of shared capabilities. Reuse is actively prioritised and contributes to organisational consistency, efficiency and interoperability.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive service reuse strategy.<br>
+Adoption of relevant shared services across the solution.<br>
+Well-documented exception management.<br>
+Architecture governance evidence.<br>
+Evidence that reuse has reduced duplication and improved alignment.<br>
+Lessons learned contributing to wider organisational reuse practices.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Reuse principles are embedded within architecture and delivery practices.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Shared capability awareness</strong> – Has the team assessed the available NHS England shared services relevant to their solution?
+</li>
+
+<li>
+<strong>Reuse adoption</strong> – Are appropriate shared capabilities being used rather than creating duplicate functionality?
+</li>
+
+<li>
+<strong>Justified exceptions</strong> – Where a shared service has not been used, is there a documented rationale?
+</li>
+
+<li>
+<strong>Governance</strong> – Have reuse and exception decisions been reviewed through appropriate architecture governance processes?
+</li>
+
+<li>
+<strong>Interoperability and consistency</strong> – Does the solution contribute to a more consistent architecture landscape through reuse?
+</li>
+
+<li>
+<strong>Evidence of assessment</strong> – Can the team demonstrate how shared service options were evaluated?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that shared capabilities have been adopted in many areas and that exceptions are broadly understood, but assessment evidence, governance or traceability may be incomplete.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that all relevant shared capabilities have been systematically considered and adopted wherever appropriate. Exceptions should be documented, justified and subject to governance review.
+</p>
+
+<p>
+A score of <strong>5</strong> requires reuse to be embedded within architecture decision-making. The service demonstrates strong alignment with NHS England shared capability strategy, actively avoids duplication and can demonstrate wider organisational benefits from reuse.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Reuse assessments against the NHS England shared capability catalogue</li>
+<li>Solution Design Overview documents</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Architecture review outputs</li>
+<li>Design Authority papers and approvals</li>
+<li>Identity, messaging, API management or shared platform adoption evidence</li>
+<li>Documented exception assessments</li>
+<li>Governance decisions approving deviations</li>
+<li>Solution architecture diagrams showing shared service integration</li>
+<li>Business cases identifying reuse benefits</li>
+</ul>
 
 
 

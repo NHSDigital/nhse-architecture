@@ -1,10 +1,12 @@
 {% set pageTitle = "DM01 - Debt" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Where a solution or part of solution is seen as tactical, short term or introduces / persists tech & architecture debt, remediation plans should be in place and agreed with the relevant stakeholders and governance groups. 
+Architecture Debt should be identified with implications, rationale and future mitigation plans (recorded in an Architecture Debt Register).
+Plans should be realistic and funded." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +15,196 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is focused on the identification, management and reduction of technical and architectural debt. Where tactical decisions have been made, or where known architectural shortcomings exist, they should be documented, understood, owned and actively managed.
+</p>
+
+<p>
+Debt should not simply be acknowledged. There should be a realistic remediation plan, stakeholder agreement, governance visibility and evidence that delivery, funding and timescales have been considered.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+If a team knowingly introduces or carries architecture debt, they should know what it is, why it exists, what risks it creates, who has accepted it, and how and when it will be addressed.
+</p>
+
+<h2>Scoring rubric table – DM01 Architecture Debt Management</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that architecture or technical debt is identified or managed. Tactical decisions are undocumented and unmanaged.
+</td>
+<td class="nhsuk-table__cell">
+No debt register.<br>
+No remediation plans.<br>
+No governance discussion.<br>
+No ownership identified.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Debt may accumulate unnoticed. Operational, security, resilience or cost impacts are unknown.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness that debt exists. Some concerns may have been raised informally but no structured process is in place.
+</td>
+<td class="nhsuk-table__cell">
+Meeting notes mentioning debt.<br>
+Informal emails.<br>
+Ad hoc backlog items.<br>
+Unapproved actions.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. No agreed remediation approach. Risks, costs and impacts are poorly understood.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some debt items have been identified and partially documented. Remediation activity exists but is incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial debt register.<br>
+Incomplete RAID entries.<br>
+Draft remediation plans.<br>
+Some assigned owners.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Coverage is incomplete. Funding, governance approval or delivery commitment is unclear.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the known debt is documented. Risks, rationale and mitigation actions are generally understood. Stakeholder engagement has occurred.
+</td>
+<td class="nhsuk-table__cell">
+Architecture Debt Register covering most known items.<br>
+Documented rationale for tactical decisions.<br>
+Named owners.<br>
+Remediation plans with indicative timescales.<br>
+Evidence of governance discussion.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some debt items lack funding, delivery commitment, prioritisation or target dates. Governance oversight may be inconsistent.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most debt is actively managed through a maintained process. Remediation plans are realistic, prioritised and supported by stakeholders.
+</td>
+<td class="nhsuk-table__cell">
+Maintained Architecture Debt Register.<br>
+Impact assessments.<br>
+Prioritised remediation roadmap.<br>
+Governance approval records.<br>
+Funding route identified.<br>
+Evidence of periodic review.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. A small number of lower-priority items may not yet have confirmed remediation dates.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar debt management. Debt is actively measured, reviewed and reduced through governance and delivery processes.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive Architecture Debt Register.<br>
+Clear categorisation and prioritisation.<br>
+Funded remediation plans.<br>
+Governance reporting and review cycles.<br>
+Architecture KPIs or measures showing debt reduction.<br>
+Evidence that debt information informs investment and delivery decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Debt is transparently managed with continuous improvement in place.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Identification of debt</strong> – Is technical and architecture debt formally recognised and recorded?
+</li>
+
+<li>
+<strong>Quality of remediation planning</strong> – Are actions specific, achievable, prioritised and linked to delivery plans?
+</li>
+
+<li>
+<strong>Ownership and accountability</strong> – Does every significant debt item have an identified owner?
+</li>
+
+<li>
+<strong>Funding and feasibility</strong> – Is there evidence that remediation activities are affordable, planned and realistically deliverable?
+</li>
+
+<li>
+<strong>Governance and stakeholder agreement</strong> – Have relevant stakeholders and governance groups reviewed and accepted the approach?
+</li>
+
+<li>
+<strong>Risk awareness</strong> – Are business, operational, security, resilience and cost implications documented and understood?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically means the organisation understands its debt position and has documented most major issues, but remediation remains partially planned, unfunded or inconsistently governed.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that debt management is operationalised, with maintained registers, governance oversight, prioritised plans and credible funding or delivery routes.
+</p>
+
+<p>
+A score of <strong>5</strong> requires debt management to be embedded within normal governance and investment processes. Debt information is actively used to influence architecture decisions, prioritisation and delivery planning, with evidence of continuous improvement and debt reduction over time.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture Debt Register</li>
+<li>Architecture remediation plan</li>
+<li>Roadmaps showing debt reduction activities</li>
+<li>RAID logs containing architecture debt items</li>
+<li>Governance or Design Authority minutes</li>
+<li>TRG, PDG or programme governance outputs</li>
+<li>Architecture Decision Records explaining tactical choices</li>
+<li>Funding approvals or delivery commitments</li>
+<li>Product backlog items linked to remediation activities</li>
+<li>Periodic architecture review records</li>
+</ul>
 
 
 

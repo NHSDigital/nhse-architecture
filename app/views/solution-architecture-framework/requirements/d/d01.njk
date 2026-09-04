@@ -1,10 +1,10 @@
 {% set pageTitle = "D01 - Document Storage" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Documentation" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "All architecture documentation should be maintained (with supporting processes and change control) within the appropriate NHS England knowledge store(s) e.g. Aalto, SharePoint, Confluence." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,199 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that architecture documentation is stored, maintained and governed within approved NHS England knowledge repositories.
+</p>
+
+<p>
+Documentation should not be held solely on personal drives, local devices, email folders or unmanaged locations. Architecture artefacts should be version controlled, accessible to appropriate stakeholders and maintained through a defined change management process.
+</p>
+
+<p>
+The objective is to ensure architecture knowledge remains available, current, auditable and usable throughout the service lifecycle.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Architecture documentation should be stored in approved repositories, kept up to date and managed through controlled processes.
+</p>
+
+<h2>Scoring rubric table – D01 Architecture Documentation Management</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that architecture documentation is maintained or stored within approved knowledge repositories.
+</td>
+<td class="nhsuk-table__cell">
+Missing architecture documentation.<br>
+Files held locally or in personal storage.<br>
+No version control.<br>
+No evidence of maintenance activity.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Knowledge may be lost, inaccessible or inconsistent.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited architecture documentation exists and storage arrangements are informal or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Scattered documents.<br>
+Local copies.<br>
+Uncontrolled repositories.<br>
+Limited evidence of ownership or maintenance.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Documentation may quickly become outdated and difficult to locate.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some architecture documentation is stored within approved repositories, but coverage, governance or maintenance is inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial use of SharePoint, Aalto or Confluence.<br>
+Some version history.<br>
+Incomplete architecture document sets.<br>
+Limited evidence of review activity.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important documentation may be missing, duplicated or out of date.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the architecture documentation is maintained within approved repositories and is subject to basic governance and change control.
+</td>
+<td class="nhsuk-table__cell">
+Architecture artefacts stored within approved platforms.<br>
+Document ownership identified.<br>
+Version control in place.<br>
+Evidence of periodic updates.<br>
+Document review history.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some artefacts may be out of date, incomplete or subject to inconsistent change control.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most architecture documentation is maintained through defined processes and controlled within approved repositories.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive document repository.<br>
+Defined document ownership.<br>
+Document review cycle.<br>
+Change control records.<br>
+Version management.<br>
+Evidence that delivery teams actively use the repository.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Any documentation deficiencies are low risk and actively managed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar documentation management. Architecture knowledge is treated as a managed asset and is actively maintained throughout the service lifecycle.
+</td>
+<td class="nhsuk-table__cell">
+Complete architecture repository.<br>
+Clear ownership and governance.<br>
+Automated or well-controlled review processes.<br>
+Strong change management practices.<br>
+Traceability between documentation and delivery activities.<br>
+Evidence of continuous improvement and active consumption of architecture knowledge.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Documentation is accurate, accessible, governed and routinely used to support decision-making.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Approved storage location</strong> – Are architecture artefacts stored in approved NHS England repositories such as Aalto, SharePoint or Confluence?
+</li>
+
+<li>
+<strong>Maintenance</strong> – Is there evidence that documentation is reviewed and updated when architecture changes occur?
+</li>
+
+<li>
+<strong>Change control</strong> – Are document updates subject to version management or change control processes?
+</li>
+
+<li>
+<strong>Ownership</strong> – Are document owners identified and accountable for maintenance?
+</li>
+
+<li>
+<strong>Accessibility</strong> – Can relevant stakeholders locate and access documentation when required?
+</li>
+
+<li>
+<strong>Completeness</strong> – Does the repository contain the architecture artefacts required to understand and govern the solution?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that most architecture documents exist and are stored in approved repositories, but maintenance activities, ownership, coverage or change control are inconsistent.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that architecture documentation is actively governed, reviewed and maintained through defined processes. Ownership, change control and repository management should be clearly demonstrated.
+</p>
+
+<p>
+A score of <strong>5</strong> requires documentation management to be embedded within delivery and governance processes. Architecture artefacts are actively maintained, trusted by stakeholders and routinely used to support architecture decisions, assurance and service evolution.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture repositories in Aalto, SharePoint or Confluence</li>
+<li>Document ownership records</li>
+<li>Version history and change logs</li>
+<li>Document review schedules</li>
+<li>Architecture governance procedures</li>
+<li>Solution Design Overview documents</li>
+<li>Architecture roadmaps and models</li>
+<li>Document approval workflows</li>
+<li>Repository access and usage records</li>
+<li>Architecture quality review outputs</li>
+</ul>
 
 
 

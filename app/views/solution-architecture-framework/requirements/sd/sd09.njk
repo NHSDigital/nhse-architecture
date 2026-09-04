@@ -1,10 +1,10 @@
 {% set pageTitle = "SD09 - Standards Selection" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "We should adopt the right standards for API development, supported by user, consumer, and market / supplier engagement." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,171 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about ensuring API standards are selected and applied deliberately rather than arbitrarily. The standards adopted should meet user and consumer needs, support interoperability, align with industry practice, and be informed by engagement with consumers, suppliers and the wider market.
+</p>
+
+<p>
+The focus is not simply whether standards exist, but whether the chosen standards are appropriate, consistently applied and supported by evidence of engagement with those who will consume, integrate with, support or supply the API.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>Use recognised API standards, apply them consistently, and demonstrate that the approach has been informed by consumers, users and the market.</strong>
+</p>
+
+<h2>Scoring rubric table – API Standards Adoption</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence that API standards have been identified, selected or applied. API design appears inconsistent or bespoke.
+            </td>
+            <td class="nhsuk-table__cell">
+                No API standards documentation, no design guidance, no evidence of consumer engagement.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant interoperability, supportability and integration risk.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited evidence that standards have been considered. Adoption is informal or dependent on individual developer preference.
+            </td>
+            <td class="nhsuk-table__cell">
+                Verbal statements, isolated design guidance, undocumented implementation approaches.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Standards are inconsistently applied and consumer requirements are poorly understood.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some API standards are identified and partially implemented. Limited engagement has been undertaken with consumers or suppliers.
+            </td>
+            <td class="nhsuk-table__cell">
+                API specifications, partial design standards, workshop notes, stakeholder feedback from limited groups.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps remain. Adoption is inconsistent and there is little evidence that standards have been validated against market expectations.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Most APIs follow defined standards and guidance. Consumer needs have been considered and there is evidence of engagement and design rationale.
+            </td>
+            <td class="nhsuk-table__cell">
+                API design standards, API specifications, consumer feedback, design reviews, architecture documentation, stakeholder engagement records.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain. Some APIs or services diverge from standards, or engagement activities are incomplete or poorly evidenced.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                API standards are clearly defined, consistently applied and informed by consumer, supplier and stakeholder engagement. Deviations are documented and approved.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained API standards, governance records, architecture reviews, onboarding guidance, supplier engagement outcomes, API assurance activities.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Remaining deviations are understood, justified and subject to review.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar adoption of API standards. Standards are actively maintained, widely understood, informed by ongoing engagement and demonstrably influence delivery decisions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Published and governed API standards, measurable adoption metrics, regular consumer engagement, supplier feedback processes, architecture governance records, continuous improvement activities and evidence of standards evolution.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Defined API standards</strong> – Evidence that recognised API design standards, conventions or patterns have been established.
+    </li>
+
+    <li>
+        <strong>Consistent implementation</strong> – Evidence that standards are applied across APIs rather than on an exception basis.
+    </li>
+
+    <li>
+        <strong>Consumer engagement</strong> – Evidence that API consumers have influenced standards, usability, design or lifecycle decisions.
+    </li>
+
+    <li>
+        <strong>Supplier and market engagement</strong> – Evidence that wider industry practice, supplier capabilities and interoperability considerations have informed decisions.
+    </li>
+
+    <li>
+        <strong>Governance and assurance</strong> – Evidence that compliance with standards is reviewed and managed through architecture governance processes.
+    </li>
+
+    <li>
+        <strong>Management of exceptions</strong> – Evidence that departures from standards are documented, risk assessed and agreed.
+    </li>
+
+</ol>
 
 
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally indicates that standards exist and are used by most teams, with evidence that consumer needs have been considered. However, adoption may be inconsistent, governance may be weak, or engagement evidence may be incomplete.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that standards are consistently applied, deviations are managed through governance, and engagement activities have informed the standards being used.
+</p>
+
+<p>
+A score of <strong>5</strong> requires a mature and demonstrably effective approach. Standards are actively maintained, regularly reviewed, supported by ongoing consumer and supplier engagement, and evidenced as influencing real architectural and delivery decisions.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+    <li>API design standards and style guides</li>
+    <li>OpenAPI specifications</li>
+    <li>Consumer research and feedback reports</li>
+    <li>Developer portal standards and onboarding guidance</li>
+    <li>Architecture review outputs</li>
+    <li>Supplier engagement records</li>
+    <li>API governance and assurance reports</li>
+    <li>Documented exemption and waiver processes</li>
+</ul>
 
 {% endblock %}

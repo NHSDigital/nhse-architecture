@@ -1,10 +1,10 @@
 {% set pageTitle = "T02 - Appropriate Tech" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Technology Choices" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Technology choices should be appropriate to the problem and non-functional needs. I.e. we are as equally aware of over-engineering as we are of under-engineering." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,199 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with selecting technologies that are proportionate to the business problem and capable of meeting the service's non-functional requirements.
+</p>
+
+<p>
+Technology choices should be driven by user needs, business objectives and operational requirements. Teams should avoid selecting technologies that are unnecessarily complex, expensive or difficult to operate, while also avoiding solutions that are too simplistic to meet reliability, security, scalability, resilience or performance needs.
+</p>
+
+<p>
+The objective is to achieve an appropriate balance between capability, complexity, cost and risk.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Choose technology that is fit for purpose. Avoid both unnecessarily complicated solutions and solutions that are too limited for the service's needs.
+</p>
+
+<h2>Scoring rubric table – T02 Appropriate Technology Selection</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that technology choices have been assessed against business requirements or non-functional needs.
+</td>
+<td class="nhsuk-table__cell">
+No technology evaluation.<br>
+No non-functional requirements.<br>
+No architecture rationale.<br>
+No options assessment.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Technology choices may be incapable of meeting operational needs or may create unnecessary complexity and cost.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence that technology choices are aligned to the problem being solved. Decisions appear to be driven by preference, assumptions or convenience.
+</td>
+<td class="nhsuk-table__cell">
+Informal decision-making.<br>
+Undocumented technology choices.<br>
+Limited requirements analysis.<br>
+No assessment of non-functional needs.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Solutions may be over-engineered, under-engineered or unable to support business requirements.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some technology assessment has occurred and there is evidence that key requirements have been considered, but evaluation remains incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial options appraisal.<br>
+Some non-functional requirements documentation.<br>
+Limited architecture rationale.<br>
+Basic technology comparisons.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important operational, resilience, security, scalability or supportability considerations may not have been fully assessed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the technology selection process is aligned to the service requirements and non-functional needs. Most major decisions are supported by documented rationale.
+</td>
+<td class="nhsuk-table__cell">
+Technology assessments.<br>
+Architecture Decision Records.<br>
+Documented non-functional requirements.<br>
+Solution design documentation.<br>
+Options evaluations including trade-offs.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some assumptions may not be validated, or evidence of performance, scalability, resilience or supportability testing may be incomplete.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most technology choices are demonstrably proportionate to the business problem and supported by clear evidence that non-functional requirements can be met.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive options assessments.<br>
+Documented non-functional requirements.<br>
+Performance and scalability analysis.<br>
+Operational support assessments.<br>
+Architecture governance review.<br>
+Clear rationale for technology selection.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining uncertainties are understood and unlikely to present significant architectural risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar technology selection. Technology choices are demonstrably optimised for business need, operational characteristics and future sustainability.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive architecture assessments.<br>
+Traceability between requirements and technology choices.<br>
+Documented trade-off analysis.<br>
+Validated non-functional requirement alignment.<br>
+Evidence-based capacity and performance modelling.<br>
+Governance-supported technology decisions with periodic review.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Technology choices balance capability, cost, complexity and risk while supporting long-term service objectives.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Business fit</strong> – Do the selected technologies address the actual business problem and user needs?
+</li>
+
+<li>
+<strong>Non-functional alignment</strong> – Can the technology meet reliability, security, scalability, resilience, performance and operational requirements?
+</li>
+
+<li>
+<strong>Proportionality</strong> – Is the solution appropriately sized for the challenge, avoiding both over-engineering and under-engineering?
+</li>
+
+<li>
+<strong>Options analysis</strong> – Were alternative technology options considered before making a decision?
+</li>
+
+<li>
+<strong>Trade-offs</strong> – Are cost, complexity, operational burden and future support considerations documented?
+</li>
+
+<li>
+<strong>Evidence-based decision-making</strong> – Is there evidence supporting claims that the selected technology can meet expected service demands?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that technology choices appear reasonable and are supported by documented rationale, but important assumptions remain unvalidated or evidence of non-functional suitability is incomplete.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that the selected technology has been assessed against both business needs and non-functional requirements, with documented trade-offs and governance review.
+</p>
+
+<p>
+A score of <strong>5</strong> requires strong evidence that technology decisions are evidence-based, proportionate and optimised for both current and future needs. The organisation can demonstrate why the chosen approach achieves the right balance between functionality, cost, complexity and risk.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Technology options appraisals</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Non-functional requirements specifications</li>
+<li>Performance and capacity models</li>
+<li>Scalability assessments</li>
+<li>Operational support assessments</li>
+<li>Reliability and resilience analysis</li>
+<li>Architecture review outputs</li>
+<li>Solution Design Overview documents</li>
+<li>Governance papers supporting technology decisions</li>
+</ul>
 
 
 

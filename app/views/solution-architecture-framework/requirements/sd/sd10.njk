@@ -1,10 +1,10 @@
 {% set pageTitle = "SD10 - API Lifecycle" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The API follows the lifecycle policy best practice as set out within Sunsetting (deprecation and retirement) policy. This should include any enforcement arrangements." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,174 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
 
+<p>
+This requirement is concerned with the management of APIs throughout their lifecycle, particularly when APIs are changed, deprecated or retired.
+</p>
+
+<p>
+Consumers should receive appropriate notice of changes, lifecycle states should be clearly managed, and there should be defined enforcement arrangements to ensure consumers migrate away from deprecated APIs before retirement.
+</p>
+
+<p>
+The objective is to minimise disruption, reduce technical debt and ensure that API consumers can plan and manage change effectively.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>APIs should have a managed lifecycle with clear deprecation and retirement processes that are communicated, governed and enforced.</strong>
+</p>
+
+<h2>Scoring rubric table – API Lifecycle Management</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence that API lifecycle management exists. APIs can be changed, deprecated or retired without any documented process.
+            </td>
+            <td class="nhsuk-table__cell">
+                No lifecycle policy, no versioning strategy, no retirement approach, no consumer communications.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant service risk. API changes may cause unexpected consumer disruption, service failures and unmanaged technical debt.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited awareness of lifecycle management. Changes are handled informally and are largely dependent on individual teams.
+            </td>
+            <td class="nhsuk-table__cell">
+                Ad-hoc communications, informal retirement discussions, undocumented versioning approaches.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Consumers may receive insufficient notice and there is little evidence that deprecation is actively managed.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some lifecycle processes exist. Deprecation and retirement activities occur but are inconsistent across APIs.
+            </td>
+            <td class="nhsuk-table__cell">
+                Partial lifecycle guidance, some retirement plans, evidence of consumer notifications for selected APIs.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps. Lifecycle activities may not be consistently applied, governed or monitored.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Much of the lifecycle process is defined and followed. Deprecation and retirement activities are documented and communicated for most APIs.
+            </td>
+            <td class="nhsuk-table__cell">
+                API lifecycle documentation, versioning standards, retirement plans, consumer communications, change records.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain. Some APIs lack consistent lifecycle management, monitoring, consumer engagement or enforcement arrangements.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                Most APIs follow a defined lifecycle approach. Deprecation, retirement and enforcement arrangements are documented, governed and consistently applied.
+            </td>
+            <td class="nhsuk-table__cell">
+                Approved lifecycle policy, maintained API catalogue, migration plans, retirement schedules, consumer impact assessments, governance review records.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Remaining exceptions are understood, documented and subject to agreed remediation.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar lifecycle management. Lifecycle processes are actively monitored, governed and continuously improved. Consumer migration is effectively managed and supported.
+            </td>
+            <td class="nhsuk-table__cell">
+                Lifecycle metrics, regular governance reviews, documented enforcement mechanisms, migration tracking, consumer engagement plans, lessons learned, continuous improvement activities.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Defined lifecycle process</strong> – Evidence that API lifecycle states such as active, deprecated and retired are formally managed.
+    </li>
+
+    <li>
+        <strong>Deprecation management</strong> – Evidence that API consumers receive appropriate notification, guidance and migration support.
+    </li>
+
+    <li>
+        <strong>Retirement planning</strong> – Evidence that API retirement activities are planned, documented and communicated.
+    </li>
+
+    <li>
+        <strong>Version management</strong> – Evidence that API versioning aligns with lifecycle objectives and supports consumer transition.
+    </li>
+
+    <li>
+        <strong>Enforcement arrangements</strong> – Evidence that retirement and migration activities can be enforced where required and are not purely advisory.
+    </li>
+
+    <li>
+        <strong>Governance and oversight</strong> – Evidence that lifecycle activities are reviewed, owned and maintained over time.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that lifecycle management exists and is being followed for most APIs, with acceptable evidence of communications and retirement planning. However, notable gaps remain in consistency, governance, monitoring or enforcement.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that lifecycle activities are governed, consistently applied across APIs, and supported by documented enforcement and migration arrangements.
+</p>
+
+<p>
+A score of <strong>5</strong> requires a mature and demonstrably effective lifecycle management capability. API deprecation and retirement are actively managed using metrics, governance reviews, consumer engagement and continuous improvement processes.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+    <li>API lifecycle policy and standards</li>
+    <li>API catalogue showing lifecycle status</li>
+    <li>Versioning strategy documentation</li>
+    <li>Deprecation notices issued to consumers</li>
+    <li>Migration plans and transition guidance</li>
+    <li>Retirement schedules and implementation records</li>
+    <li>Consumer communications and engagement records</li>
+    <li>Governance approvals and review outputs</li>
+    <li>Metrics showing migration progress and consumer adoption</li>
+</ul>
 
 
 {% endblock %}

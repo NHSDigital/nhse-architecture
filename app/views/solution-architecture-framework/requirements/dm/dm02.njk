@@ -1,10 +1,10 @@
 {% set pageTitle = "DM02 - External Controls" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Spend control (GaTS) and associated Government Digital Services & Service Design related guidance should be followed whilst developing the solution and be evidenced for service design & spend control reviews." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,7 +13,193 @@
 {% endblock %}
 
 {% block bodyContent %}
+<h2>Requirement description</h2>
 
+<p>
+This requirement is concerned with demonstrating that the appropriate spend control, governance and service design processes have been followed during solution development.
+</p>
+
+<p>
+The focus is not simply on obtaining approval. Teams should be able to show that relevant guidance, assessments, reviews and artefacts have been produced and used to inform decisions throughout the lifecycle of the service.
+</p>
+
+<p>
+Evidence should support any service design, spend control, assurance or governance reviews that apply to the service.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+The team should be able to demonstrate that required spend control and service design processes have been followed and that evidence exists to support review and assurance activity.
+</p>
+
+<h2>Scoring rubric table – DM02 Spend Control and Service Design Governance</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that spend control, GaTS, service design or related governance requirements have been considered.
+</td>
+<td class="nhsuk-table__cell">
+No assurance artefacts.<br>
+No review evidence.<br>
+No governance records.<br>
+No documented compliance activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant risk of non-compliance, failed assurance reviews, duplicated effort, delayed approvals and poor governance.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of spend control or service design requirements. Activities are informal and largely undocumented.
+</td>
+<td class="nhsuk-table__cell">
+Ad hoc meeting notes.<br>
+Informal discussions.<br>
+Unstructured evidence held by individuals.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Insufficient evidence to support formal reviews. Significant risk of governance challenge.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some required activities have been completed, but evidence is incomplete, inconsistent or difficult to trace.
+</td>
+<td class="nhsuk-table__cell">
+Partial service design outputs.<br>
+Incomplete review packs.<br>
+Some governance records.<br>
+Limited evidence of compliance activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Required activities may have been missed and there is limited confidence that reviews could be successfully supported.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the required spend control and service design process has been followed. Evidence exists for most key activities and reviews.
+</td>
+<td class="nhsuk-table__cell">
+Documented service design artefacts.<br>
+Governance papers.<br>
+Review submissions.<br>
+Decision records.<br>
+Evidence of engagement with relevant assurance processes.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some artefacts are missing, outdated or lack approval records. Traceability between requirements and evidence may be incomplete.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most required governance, spend control and service design activities have been completed and are supported by clear, maintained evidence.
+</td>
+<td class="nhsuk-table__cell">
+Complete review packs.<br>
+Service design outputs.<br>
+Governance approvals.<br>
+Assurance feedback records.<br>
+Traceable evidence repository.<br>
+Evidence of actions being tracked and completed.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Any missing evidence is low risk and unlikely to affect assurance outcomes.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar evidence of adherence to spend control and service design guidance. Compliance is embedded within delivery governance and planning.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive and maintained assurance artefacts.<br>
+Clear audit trail of reviews and approvals.<br>
+Evidence repository linked to governance processes.<br>
+Lessons learned incorporated into delivery practices.<br>
+Early and proactive engagement with assurance stakeholders.<br>
+Regular review of compliance obligations.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Governance and assurance activities are well controlled and continually improved.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Process compliance</strong> – Has the team followed the relevant spend control, assurance and service design processes?
+</li>
+
+<li>
+<strong>Evidence quality</strong> – Is there clear, accessible evidence supporting review activities and decisions?
+</li>
+
+<li>
+<strong>Governance engagement</strong> – Has the service engaged with the appropriate governance and assurance groups where required?
+</li>
+
+<li>
+<strong>Traceability</strong> – Can decisions, reviews and approvals be traced back to supporting artefacts and activities?
+</li>
+
+<li>
+<strong>Maintenance</strong> – Is evidence current and maintained throughout the service lifecycle rather than produced retrospectively?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that the team has completed most required activities and can provide evidence for many of them, but gaps remain in completeness, traceability, maintenance or approval records.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence to be structured, maintained and routinely available to support governance reviews, with only minor gaps remaining.
+</p>
+
+<p>
+A score of <strong>5</strong> requires governance and assurance activities to be embedded within normal delivery processes. Evidence is comprehensive, maintained over time, easily traceable and demonstrates continuous improvement rather than simple compliance.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>GaTS submissions and supporting artefacts</li>
+<li>Service design review packs</li>
+<li>Governance and Design Authority papers</li>
+<li>TRG, PDG or programme review outputs</li>
+<li>Assurance review feedback and actions</li>
+<li>Architecture Decision Records</li>
+<li>Delivery approval records</li>
+<li>Requirements traceability evidence</li>
+<li>Risk, issue and dependency logs related to assurance activities</li>
+<li>Evidence repositories or compliance trackers</li>
+</ul>
 
 
 

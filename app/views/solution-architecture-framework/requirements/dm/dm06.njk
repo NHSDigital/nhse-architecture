@@ -1,10 +1,10 @@
 {% set pageTitle = "DM06 - Governance Approach" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The overall approach to architecture governance should be appropriate and commensurate with the nature of the solution." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,196 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that architecture governance is proportionate to the characteristics of the solution.
+</p>
+
+<p>
+Governance should reflect factors such as complexity, risk, scale, cost, service criticality, regulatory obligations, security considerations, architectural novelty and organisational impact. A small, low-risk change should not require the same governance as a large national platform handling critical health services.
+</p>
+
+<p>
+The objective is to apply enough governance to provide confidence and control without creating unnecessary bureaucracy.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+The governance model should match the level of risk, complexity and impact of the solution.
+</p>
+
+<h2>Scoring rubric table – DM06 Proportionate Architecture Governance</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No identifiable architecture governance approach exists, or governance is entirely absent regardless of solution risk or complexity.
+</td>
+<td class="nhsuk-table__cell">
+No governance model.<br>
+No architecture reviews.<br>
+No documented approvals.<br>
+No governance records.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Decisions are not appropriately scrutinised and governance obligations may be missed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited governance activities occur but they are informal, inconsistent or unrelated to solution risk and complexity.
+</td>
+<td class="nhsuk-table__cell">
+Ad hoc reviews.<br>
+Informal discussions.<br>
+Occasional governance engagement.<br>
+No documented rationale for governance decisions.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Governance may overlook significant risks or apply inappropriate levels of assurance.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some governance arrangements exist and are applied to parts of the solution, but there is limited evidence that governance has been tailored to the solution's characteristics.
+</td>
+<td class="nhsuk-table__cell">
+Partial governance documentation.<br>
+Some review records.<br>
+Inconsistent use of governance forums.<br>
+Limited evidence of risk-based governance decisions.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Governance may be excessive in some areas and insufficient in others.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the governance approach is appropriate for the solution. Key governance activities are in place and there is evidence that risk, complexity and impact have influenced governance decisions.
+</td>
+<td class="nhsuk-table__cell">
+Governance framework documentation.<br>
+Design Authority reviews.<br>
+Documented governance routes.<br>
+Evidence of governance proportionality discussions.<br>
+Risk and architecture assessments informing reviews.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some governance activities may be inconsistently applied or lack formal justification.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most governance arrangements are demonstrably aligned to solution risk, complexity and organisational impact. Governance activities are well controlled and consistently applied.
+</td>
+<td class="nhsuk-table__cell">
+Documented governance model.<br>
+Risk-based review approach.<br>
+Defined escalation criteria.<br>
+Regular governance reviews.<br>
+Evidence of tailoring governance to solution characteristics.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining weaknesses present limited risk and are actively managed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar governance approach. Governance is demonstrably risk-based, outcome-focused and continuously reviewed to ensure proportionality and effectiveness.
+</td>
+<td class="nhsuk-table__cell">
+Clearly defined governance strategy.<br>
+Documented governance tailoring decisions.<br>
+Evidence of continuous governance improvement.<br>
+Metrics or reviews demonstrating governance effectiveness.<br>
+Strong alignment between governance, delivery and risk management activities.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Governance consistently supports effective delivery and decision-making.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Proportionality</strong> – Is the level of governance appropriate for the solution's risk, complexity, scale and criticality?
+</li>
+
+<li>
+<strong>Risk-based decision making</strong> – Is there evidence that governance activities are influenced by identified risks and architectural concerns?
+</li>
+
+<li>
+<strong>Consistency</strong> – Are governance processes applied consistently across the solution lifecycle?
+</li>
+
+<li>
+<strong>Tailoring</strong> – Has governance been consciously adapted rather than applying a one-size-fits-all approach?
+</li>
+
+<li>
+<strong>Oversight and control</strong> – Do governance arrangements provide sufficient scrutiny, challenge and decision-making authority?
+</li>
+
+<li>
+<strong>Documentation</strong> – Is the governance approach documented and understood by delivery and architecture stakeholders?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically means the service is applying governance in a generally sensible way and most key reviews are taking place, but there is limited evidence that governance has been deliberately tailored to risk, complexity or organisational impact.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that governance decisions are risk-based and proportionate. The rationale for governance activities is documented and consistently applied across the service.
+</p>
+
+<p>
+A score of <strong>5</strong> requires governance to be demonstrably optimised for the solution. Evidence should show that governance effectiveness is regularly reviewed, governance processes evolve based on lessons learned, and governance actively improves architecture and delivery outcomes.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture governance framework</li>
+<li>Governance operating model</li>
+<li>Risk-based governance assessments</li>
+<li>Design Authority papers and minutes</li>
+<li>TRG or PDG submissions and outcomes</li>
+<li>Governance escalation criteria</li>
+<li>Architecture review schedules</li>
+<li>Governance decision logs</li>
+<li>Service risk assessments</li>
+<li>Architecture assurance reports</li>
+</ul>
 
 
 

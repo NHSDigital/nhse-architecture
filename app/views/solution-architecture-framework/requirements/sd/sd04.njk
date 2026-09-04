@@ -1,10 +1,10 @@
 {% set pageTitle = "SD04 - Good Practice" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Solution design should follow good practice design principles." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,213 @@
 
 {% block bodyContent %}
 
+<h2>Requirement</h2>
+
+<blockquote>
+<p>
+<strong>SD04</strong> : Solution design should follow good practice design principles. E.g.
+</p>
+
+<ul>
+<li>Separation of concerns</li>
+<li>Encapsulation / Modularisation</li>
+<li>Loose coupling</li>
+<li>High cohesion / single responsibility</li>
+<li>Design for flexibility/change</li>
+<li>Etc.</li>
+</ul>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that solutions are built using recognised software and architecture design principles that improve maintainability, scalability, resilience and adaptability.
+</p>
+
+<p>
+The solution should be structured in a way that reduces unnecessary dependencies, clearly separates responsibilities and enables change to be made safely and efficiently. The SAF provides examples including separation of concerns, modularisation, loose coupling, high cohesion and designing for future change.
+</p>
+
+<p>
+The objective is to avoid tightly coupled, fragile architectures that are difficult to maintain, extend or support.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+The solution should be designed using recognised engineering and architecture principles that make it easier to understand, operate and evolve over time.
+</p>
+
+<h2>Scoring rubric table – SD04 Application of Good Design Principles</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that recognised design principles have been considered. The solution appears tightly coupled, difficult to understand or highly dependent on specific components.
+</td>
+<td class="nhsuk-table__cell">
+No architecture rationale.<br>
+No design documentation.<br>
+No evidence of design review activity.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The solution may be difficult to maintain, scale, test or modify safely.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of good design practices. Some principles may be discussed, but they are not consistently reflected in the architecture.
+</td>
+<td class="nhsuk-table__cell">
+Informal design discussions.<br>
+Basic architecture diagrams.<br>
+Undocumented design assumptions.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Architecture decisions may create unnecessary dependencies, complexity or technical debt.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some recognised design principles are evident, but their application is incomplete or inconsistent across the solution.
+</td>
+<td class="nhsuk-table__cell">
+Partial architecture documentation.<br>
+Some modularisation.<br>
+Limited design reviews.<br>
+Evidence of good practice in selected areas only.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Poor separation of responsibilities or excessive coupling may remain in parts of the solution.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates recognised design principles and architectural reasoning. Most major components are structured appropriately.
+</td>
+<td class="nhsuk-table__cell">
+Architecture diagrams.<br>
+Solution Design Overview documentation.<br>
+Architecture review outputs.<br>
+Documented design rationale.<br>
+Evidence of modularisation and separation of concerns.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some components may still be tightly coupled or difficult to change without wider impact.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most of the solution demonstrates consistent application of good design principles. Architecture decisions support maintainability, scalability and future change.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive architecture documentation.<br>
+Clear component boundaries.<br>
+Documented design principles.<br>
+Architecture review evidence.<br>
+Evidence of loose coupling and high cohesion.<br>
+Design patterns applied appropriately.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining weaknesses present limited operational or architectural risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar application of good design principles. The architecture is clearly structured, maintainable and adaptable, with strong evidence that principles actively influence design decisions.
+</td>
+<td class="nhsuk-table__cell">
+Well-defined architecture principles.<br>
+Consistent modular design.<br>
+Documented architecture rationale.<br>
+Governance review evidence.<br>
+Low dependency between services and components.<br>
+Evidence that architecture evolves cleanly in response to changing requirements.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. The architecture demonstrates high quality engineering and long-term sustainability.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Separation of concerns</strong> – Are responsibilities clearly separated between services, components and layers?
+</li>
+
+<li>
+<strong>Modularity</strong> – Does the solution have well-defined components that can evolve independently?
+</li>
+
+<li>
+<strong>Loose coupling</strong> – Are dependencies minimised and managed appropriately?
+</li>
+
+<li>
+<strong>High cohesion</strong> – Does each component have a clear and focused responsibility?
+</li>
+
+<li>
+<strong>Design for change</strong> – Can the architecture accommodate future requirements without major redesign?
+</li>
+
+<li>
+<strong>Architecture rationale</strong> – Is there evidence that design principles have consciously influenced architecture decisions?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that recognised design principles are visible across much of the solution, but there are still notable areas of complexity, coupling or maintainability concern that require mitigation.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that good design principles are consistently applied across the architecture and that most major components are structured in a maintainable and scalable manner.
+</p>
+
+<p>
+A score of <strong>5</strong> requires design principles to be deeply embedded within architecture practices. The solution demonstrates a high degree of modularity, adaptability and maintainability, with architecture decisions consistently driven by recognised engineering principles.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Conceptual, logical and physical architecture diagrams</li>
+<li>Solution Design Overview (SDO) documents</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Domain models and bounded context diagrams</li>
+<li>Application and service decomposition diagrams</li>
+<li>Architecture governance reviews</li>
+<li>Design principles documentation</li>
+<li>API and integration specifications</li>
+<li>Code or solution structure reviews</li>
+<li>Technical debt and remediation assessments</li>
+</ul>
 
 
 

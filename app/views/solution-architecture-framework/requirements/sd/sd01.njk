@@ -1,10 +1,10 @@
 {% set pageTitle = "SD01 - Design Methodology" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "The solution should be aligned to stated strategy approved at an executive level. e.g. TD Design Authority, P&amp;P DA etc." %}
+{% set pageDescription = "An appropriate design methodology should be followed e.g. Domain Driven Design and should include NHS/CDDO Service Design and Secure by Design principles and methods." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,185 +14,185 @@
 
 {% block bodyContent %}
 
-<h1>SAF Requirement S01 Scoring Rubric</h1>
-
 <h2>Requirement description</h2>
 
 <p>
-This requirement assesses whether the solution is demonstrably supporting an approved strategic direction rather than evolving independently of organisational objectives.
+This requirement is concerned with ensuring that solution design follows recognised and appropriate design methods rather than being developed in an ad hoc manner.
 </p>
 
 <p>
-The solution should be traceable to one or more documented strategies, principles, policy positions, roadmaps or architecture directions that have executive sponsorship and approval.
+The selected design methodology should be suitable for the type of service being delivered and should incorporate service design, user-centred design and security considerations from the outset. The SAF specifically references approaches such as Domain Driven Design and requires consideration of NHS/CDDO Service Design and Secure by Design principles.
+</p>
+
+<p>
+The objective is to ensure that solutions are designed systematically, with a clear understanding of user needs, business domains, operational requirements and security considerations.
 </p>
 
 <p>
 <strong>In simple terms:</strong><br>
-Can the team clearly demonstrate that the solution exists to deliver an agreed organisational strategy and that architectural decisions remain aligned to it?
+Use recognised design methods and ensure service design and security are built into the solution from the beginning.
 </p>
 
-<h2>Scoring rubric – Strategic Alignment</h2>
+<h2>Scoring rubric table – SD01 Design Methodology and Design Principles</h2>
 
 <table class="nhsuk-table" aria-label="Scoring rubric">
-    <thead role="rowgroup" class="nhsuk-table__head">
-        <tr role="row">
-            <th role="columnheader" class="" scope="col">Score</th>
-            <th role="columnheader" class="" scope="col">What it looks like</th>
-            <th role="columnheader" class="" scope="col">Typical evidence</th>
-            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
-        </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>0</strong></td>
-            <td class="nhsuk-table__cell">
-                No identifiable strategy alignment. The team cannot explain which approved strategy the solution supports.
-            </td>
-            <td class="nhsuk-table__cell">
-                No strategy documents.<br>
-                No approval evidence.<br>
-                No linkage between solution and strategic objectives.
-            </td>
-            <td class="nhsuk-table__cell">
-                Significant risk of investment being misaligned with organisational priorities.<br>
-                Architecture decisions may be arbitrary or contradictory.
-            </td>
-        </tr>
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
 
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>1</strong></td>
-            <td class="nhsuk-table__cell">
-                Informal references to strategic intent exist, but alignment is largely assumed rather than evidenced.
-            </td>
-            <td class="nhsuk-table__cell">
-                Verbal statements.<br>
-                Meeting discussions.<br>
-                Unapproved drafts.
-            </td>
-            <td class="nhsuk-table__cell">
-                High risk that strategic assumptions are incorrect or outdated.<br>
-                Limited governance oversight.
-            </td>
-        </tr>
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that a design methodology has been followed. Solution design appears ad hoc or driven solely by implementation considerations.
+</td>
+<td class="nhsuk-table__cell">
+No design approach defined.<br>
+No service design evidence.<br>
+No security-by-design evidence.<br>
+No documented design activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The solution may fail to meet user needs, business objectives or security requirements.
+</td>
+</tr>
 
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>2</strong></td>
-            <td class="nhsuk-table__cell">
-                Some strategic alignment is documented, but coverage is incomplete or inconsistently applied.
-            </td>
-            <td class="nhsuk-table__cell">
-                Strategy documents referenced in project artefacts.<br>
-                Partial mapping between objectives and solution scope.
-            </td>
-            <td class="nhsuk-table__cell">
-                Significant gaps in traceability.<br>
-                Unclear stakeholder agreement.<br>
-                Some solution elements cannot be justified against strategy.
-            </td>
-        </tr>
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of structured design activity. Some design discussions may have taken place, but recognised methodologies are not consistently applied.
+</td>
+<td class="nhsuk-table__cell">
+Informal workshops.<br>
+Undocumented solution discussions.<br>
+Limited service design activity.<br>
+Minimal security consideration.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Design decisions may not be evidence-based and security or usability requirements may be overlooked.
+</td>
+</tr>
 
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>3</strong></td>
-            <td class="nhsuk-table__cell">
-                Much of the solution can be linked to documented strategic direction and stakeholders generally agree with the alignment.
-            </td>
-            <td class="nhsuk-table__cell">
-                Architecture vision.<br>
-                Business case references.<br>
-                Strategic objectives mapped to key solution capabilities.<br>
-                Evidence of review by directorate-level governance.
-            </td>
-            <td class="nhsuk-table__cell">
-                Notable gaps remain.<br>
-                Some strategic links are weak or undocumented.<br>
-                Changes in strategy may not be reflected promptly.
-            </td>
-        </tr>
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some elements of an appropriate design methodology have been applied, but adoption is incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial service design outputs.<br>
+Some design artefacts.<br>
+Limited domain modelling.<br>
+Basic security assessments.<br>
+Evidence of some structured design activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. User needs, domain understanding or security considerations may not be fully reflected in the design.
+</td>
+</tr>
 
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>4</strong></td>
-            <td class="nhsuk-table__cell">
-                Strategic alignment is clearly evidenced and actively maintained throughout delivery.
-            </td>
-            <td class="nhsuk-table__cell">
-                Approved strategy documents.<br>
-                Traceability between strategy, roadmap and solution design.<br>
-                Governance reviews.<br>
-                Documented rationale for major architectural decisions.
-            </td>
-            <td class="nhsuk-table__cell">
-                Minor gaps only.<br>
-                Residual risks are understood and managed.
-            </td>
-        </tr>
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution design follows a recognised methodology. Service design and security considerations are visible within the design process.
+</td>
+<td class="nhsuk-table__cell">
+Design methodology documentation.<br>
+User research outputs.<br>
+Service design artefacts.<br>
+Domain models.<br>
+Architecture design workshops.<br>
+Security requirements captured during design.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some design decisions may lack traceability to user needs, domain models or security principles.
+</td>
+</tr>
 
-        <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><strong>5</strong></td>
-            <td class="nhsuk-table__cell">
-                Alignment is comprehensive, demonstrable and exemplar. The solution actively helps realise strategic goals and informs future strategic planning.
-            </td>
-            <td class="nhsuk-table__cell">
-                Executive-approved strategy.<br>
-                Maintained traceability model.<br>
-                Roadmaps aligned across portfolios.<br>
-                Regular governance review.<br>
-                Evidence that strategy directly influences prioritisation and architecture decisions.
-            </td>
-            <td class="nhsuk-table__cell">
-                Minimal gaps.<br>
-                Strategic alignment is embedded in governance, delivery and investment decisions.
-            </td>
-        </tr>
-    </tbody>
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most design activities follow a defined and appropriate methodology. Service design and Secure by Design practices are integrated into solution development.
+</td>
+<td class="nhsuk-table__cell">
+Documented design approach.<br>
+Comprehensive service design artefacts.<br>
+Domain-driven design outputs where appropriate.<br>
+Threat modelling or security design activities.<br>
+Traceability between user needs and solution design.<br>
+Governance review of design outputs.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining issues are understood and unlikely to materially affect design quality.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar application of design methodologies. Service design, domain modelling and security practices are embedded throughout the solution lifecycle.
+</td>
+<td class="nhsuk-table__cell">
+Mature and well-documented design approach.<br>
+Strong integration of service design and architecture activities.<br>
+Comprehensive domain models.<br>
+Security-by-design embedded throughout delivery.<br>
+Evidence of iterative improvement based on user feedback.<br>
+Design decisions consistently informed by structured methods.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. The design process is repeatable, evidence-based and continuously improved.
+</td>
+</tr>
+
+</tbody>
 </table>
 
 <h2>What assessors should look for</h2>
 
 <ol>
-    <li>
-        <strong>Documented strategy alignment</strong> –
-        Is there a recognised strategy, policy or architectural direction that the solution is supporting?
-    </li>
-    <li>
-        <strong>Executive approval</strong> –
-        Has the referenced strategy been approved through appropriate executive governance?
-    </li>
-    <li>
-        <strong>Traceability</strong> –
-        Can architectural features, roadmap items or major decisions be linked back to strategic objectives?
-    </li>
-    <li>
-        <strong>Ongoing governance</strong> –
-        Is alignment periodically reviewed rather than assumed?
-    </li>
-    <li>
-        <strong>Stakeholder understanding</strong> –
-        Do delivery and business stakeholders have a consistent understanding of how the solution supports strategy?
-    </li>
+<li>
+<strong>Design methodology</strong> – Has an appropriate and recognised design methodology been adopted?
+</li>
+
+<li>
+<strong>Service design integration</strong> – Is there evidence that user needs and service design activities have informed the solution?
+</li>
+
+<li>
+<strong>Secure by Design</strong> – Have security requirements and design principles been considered from the outset?
+</li>
+
+<li>
+<strong>Domain understanding</strong> – Where appropriate, has the business domain been modelled and understood through structured techniques?
+</li>
+
+<li>
+<strong>Traceability</strong> – Can key design decisions be linked to user needs, business requirements or design activities?
+</li>
+
+<li>
+<strong>Consistency</strong> – Is the methodology applied consistently throughout the design process?
+</li>
 </ol>
 
 <h2>What separates a 3 from a 4 or 5</h2>
 
 <p>
-A score of <strong>3</strong> typically means the team can demonstrate reasonable strategic alignment, but evidence is incomplete, not consistently maintained, or dependent on stakeholder knowledge.
+A score of <strong>3</strong> generally indicates that recognised design practices have been adopted and there is evidence of service design and security consideration, but application is inconsistent or incomplete.
 </p>
 
 <p>
-A score of <strong>4</strong> normally requires clear traceability from strategy through to architecture and roadmap, supported by governance evidence.
+A score of <strong>4</strong> requires a clearly defined and consistently applied design methodology, with good evidence that service design and Secure by Design principles are influencing architecture decisions.
 </p>
 
 <p>
-A score of <strong>5</strong> requires alignment to be actively managed, widely understood, regularly reviewed, and demonstrably influencing investment, prioritisation and architectural decision-making.
+A score of <strong>5</strong> requires design methodology, service design and security practices to be embedded throughout the lifecycle. Evidence should demonstrate mature, repeatable and well-governed design practices that actively improve solution outcomes.
 </p>
-
-<div class="note">
-    S01 does not prescribe mandatory artefacts or evidence sources. Therefore assessors should focus on demonstrating the outcome of strategic alignment rather than requiring a specific document format.
-</div>
-
-<div class="note">
-    Suggested evidence examples (not source material):
-    Strategy papers, architecture vision documents, roadmaps, design authority approvals, business cases, investment papers, architecture decision records and strategic traceability mappings.
-</div>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "S03 - Product Vision and Roadmap" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Strategic Alignment, Vision, and Roadmap" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "A well-formed and maintained product vision and roadmap should exist with appropriate detail around architecture elements." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,226 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement assesses whether the product has a clear future direction that is
+understood by stakeholders and supported by an actively maintained roadmap.
+</p>
+
+<p>
+The product vision should explain why the product exists, what outcomes it is expected
+to deliver and how it supports strategic goals. The roadmap should describe how the
+product is expected to evolve over time, including major architectural changes,
+dependencies, risks and significant technical activities.
+</p>
+
+<p>
+The roadmap should be actively used to guide delivery and architecture decisions rather
+than existing purely as a static document.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Can the team clearly explain where the product is going, why it is going there, and how the architecture will evolve to support that journey?
+</p>
+
+<h2>Scoring rubric table – Product Vision and Roadmap</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">
+                No documented product vision or roadmap exists. Future direction is unclear
+                and architecture activities are reactive.
+            </td>
+            <td class="nhsuk-table__cell">
+                No vision document.<br>
+                No roadmap.<br>
+                No evidence of long-term planning.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant delivery and investment risk.<br>
+                Stakeholders may have conflicting expectations.<br>
+                Architectural decisions may be short-term and inconsistent.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">
+                There is limited evidence of a product vision or roadmap.
+                Direction exists largely through verbal understanding or informal material.
+            </td>
+            <td class="nhsuk-table__cell">
+                Meeting discussions.<br>
+                Slides or notes with high-level aspirations.<br>
+                Informal roadmap concepts.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps in ownership, governance and planning.<br>
+                Architectural priorities are poorly defined.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">
+                Some elements of a vision and roadmap exist, but they are incomplete,
+                outdated or only partially cover architecture considerations.
+            </td>
+            <td class="nhsuk-table__cell">
+                Draft roadmap.<br>
+                Product strategy paper.<br>
+                Partial milestone planning.<br>
+                Limited architecture work packages identified.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps remain.<br>
+                Dependencies, technology changes or architectural debt may not be visible.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">
+                A documented vision and roadmap exist and are used by the team.
+                Most major architecture activities and milestones are captured.
+                However, notable gaps remain that require mitigation.
+            </td>
+            <td class="nhsuk-table__cell">
+                Published vision statement.<br>
+                Roadmap covering near and medium-term delivery.<br>
+                Architecture workstreams and dependencies identified.<br>
+                Evidence of periodic review.
+            </td>
+            <td class="nhsuk-table__cell">
+                Some roadmap items lack sufficient detail.<br>
+                Ownership, funding, dependencies or architectural outcomes may not be fully defined.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">
+                A maintained vision and roadmap are actively used to guide product,
+                architecture and investment decisions.
+                Architecture milestones are clearly defined and regularly reviewed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Approved product vision.<br>
+                Maintained roadmap with review dates.<br>
+                Roadmap linked to architectural artefacts.<br>
+                Identified dependencies, risks and architectural debt activities.<br>
+                Stakeholder review evidence.
+            </td>
+            <td class="nhsuk-table__cell">
+                Only minor gaps exist.<br>
+                Risks are known and managed.<br>
+                Roadmap remains largely current and trusted.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">
+                The vision and roadmap are comprehensive, actively maintained and widely used.
+                Architecture planning is fully integrated into roadmap governance and delivery.
+                The roadmap is considered an exemplar.
+            </td>
+            <td class="nhsuk-table__cell">
+                Executive or governance-supported vision.<br>
+                Multi-horizon roadmap.<br>
+                Architecture milestones linked to strategic objectives.<br>
+                Traceability to capability evolution, technical debt remediation and investment planning.<br>
+                Evidence of continuous review and improvement.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal gaps.<br>
+                Changes are managed proactively.<br>
+                Roadmap enables confident planning and governance decisions.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Documented vision</strong> –
+        Is there a clearly articulated product vision explaining desired outcomes and future direction?
+    </li>
+
+    <li>
+        <strong>Roadmap coverage</strong> –
+        Does the roadmap describe how the product will evolve over time?
+    </li>
+
+    <li>
+        <strong>Architecture content</strong> –
+        Are significant architectural activities, dependencies, decisions and milestones represented?
+    </li>
+
+    <li>
+        <strong>Maintenance</strong> –
+        Is the roadmap regularly reviewed and updated?
+    </li>
+
+    <li>
+        <strong>Governance and use</strong> –
+        Is the roadmap used in planning, prioritisation, investment or governance discussions?
+    </li>
+
+    <li>
+        <strong>Alignment</strong> –
+        Is the roadmap consistent with wider organisational strategy and delivery objectives?
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally means that a vision and roadmap exist and are
+used by the team, but some areas lack detail, ownership, governance review or regular maintenance.
+</p>
+
+<p>
+A score of <strong>4</strong> normally requires the roadmap to be actively maintained,
+linked to architectural planning and used to support delivery and governance decisions.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that the vision and roadmap drive
+decision-making across stakeholders, architecture and investment processes and are
+continually reviewed and improved. The roadmap should demonstrate clear traceability
+between strategic outcomes and architectural evolution.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+<ul>
+    <li>Product vision documents</li>
+    <li>Architecture roadmaps</li>
+    <li>Capability evolution plans</li>
+    <li>Quarterly planning roadmaps</li>
+    <li>Architecture transition states</li>
+    <li>Dependency maps</li>
+    <li>Milestone plans</li>
+    <li>Architecture debt remediation timelines</li>
+    <li>Portfolio roadmaps</li>
+</ul>
 
 
 
