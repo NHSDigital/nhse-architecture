@@ -1,10 +1,10 @@
 {% set pageTitle = "RU01 - Appropriateness" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Reuse Principles and Development of Shared Services" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "If reusing existing capabilities, we should have confidence that any additional functionality required can be sensibly and cost effectively added to the existing service i.e. we are not bending something out of shape." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,197 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that existing platforms, products or shared services are only reused where they remain a good fit for the business need.
+</p>
+
+<p>
+Reuse is generally encouraged, but it should not result in excessive customisation, architectural complexity, technical debt, degraded service quality or disproportionate cost. Teams should assess whether extending an existing capability remains practical and sustainable.
+</p>
+
+<p>
+The decision to reuse should be supported by evidence that the capability can be adapted without compromising its primary purpose or introducing unreasonable risk.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Reuse existing services where it makes sense, but do not force them to support requirements they were never designed to meet.
+</p>
+
+<h2>Scoring rubric table – RU01 Appropriate Reuse of Existing Capabilities</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that reuse suitability has been assessed. Existing services are selected or extended without understanding impacts, limitations or cost.
+</td>
+<td class="nhsuk-table__cell">
+No reuse assessment.<br>
+No options analysis.<br>
+No stakeholder engagement.<br>
+No evidence of capability evaluation.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Existing services may be forced beyond their intended purpose, resulting in complexity, instability or excessive cost.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of reuse assessment. Decisions are largely based on assumptions or convenience rather than structured analysis.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+High-level solution proposals.<br>
+Limited consideration of impacts.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Reuse decisions may create long-term technical debt or operational challenges.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some reuse analysis has been completed and there is evidence of consideration of service suitability, but assessment is incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial options appraisal.<br>
+Basic impact assessment.<br>
+Limited stakeholder engagement.<br>
+Some architecture rationale.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Cost, scalability, operational impacts or future extensibility may not be fully understood.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the reuse decision is supported by evidence. The team has assessed whether the functionality can be added without significant distortion of the existing service.
+</td>
+<td class="nhsuk-table__cell">
+Options assessment.<br>
+Documented architecture rationale.<br>
+Solution impact assessment.<br>
+Stakeholder consultation.<br>
+Cost or delivery considerations.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some assumptions about future demand, complexity, supportability or costs require additional validation.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most reuse decisions are supported by thorough assessment. There is clear evidence that additional functionality can be delivered through the existing capability in a sensible and cost-effective manner.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive reuse assessment.<br>
+Documented trade-offs.<br>
+Cost-benefit analysis.<br>
+Service owner agreement.<br>
+Impact assessments covering operational, technical and delivery considerations.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining uncertainties present limited risk and are actively managed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar reuse evaluation. Reuse decisions are evidence-based, strategically aligned and demonstrate clear value while preserving service integrity.
+</td>
+<td class="nhsuk-table__cell">
+Detailed reuse strategy.<br>
+Structured options analysis.<br>
+Quantified cost and benefit assessment.<br>
+Architecture governance approval.<br>
+Evidence that the reused capability continues to meet user and service objectives after extension.<br>
+Lessons learned incorporated into future reuse decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Reuse decisions improve consistency, efficiency and service sustainability without compromising architecture quality.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Suitability assessment</strong> – Has the team assessed whether the existing capability is genuinely suitable for the new requirement?
+</li>
+
+<li>
+<strong>Cost effectiveness</strong> – Is there evidence that reuse is more cost-effective than alternative approaches?
+</li>
+
+<li>
+<strong>Impact on the existing service</strong> – Has the impact on functionality, performance, supportability and maintainability been considered?
+</li>
+
+<li>
+<strong>Architecture fit</strong> – Does the proposed enhancement align with the purpose and design of the reused service?
+</li>
+
+<li>
+<strong>Stakeholder agreement</strong> – Have service owners, architects and relevant stakeholders supported the reuse approach?
+</li>
+
+<li>
+<strong>Long-term sustainability</strong> – Will the service remain coherent, maintainable and manageable after the new functionality is added?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means that reuse has been reasonably assessed and justified, but some uncertainty remains regarding cost, service impact, future scalability or long-term maintainability.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a clear and well-documented assessment demonstrating that reuse is both sensible and cost-effective. The impacts on the existing service are understood and supported by stakeholders.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence that reuse decisions are strategically driven, fully assessed and actively governed. The organisation can demonstrate that extending the existing capability delivers lasting value without creating architectural compromise or technical debt.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Options appraisals comparing reuse versus new capability development</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Cost-benefit assessments</li>
+<li>Service impact assessments</li>
+<li>Capacity and scalability assessments</li>
+<li>Service owner approvals</li>
+<li>Architecture review outputs</li>
+<li>Business case documentation</li>
+<li>Solution Design Overview documents</li>
+<li>Governance or Design Authority decisions</li>
+</ul>
 
 
 

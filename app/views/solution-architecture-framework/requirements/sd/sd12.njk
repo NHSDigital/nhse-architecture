@@ -1,10 +1,10 @@
 {% set pageTitle = "SD12 - Well Architected Framework" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The relevant cloud 'Well Architected Framework' should be followed, and the solutions assessed against it." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,175 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about ensuring cloud-hosted solutions are designed, reviewed and maintained using the relevant cloud provider's Well-Architected Framework.
+</p>
+
+<p>
+The focus is not simply using cloud services. The solution should be assessed against the appropriate framework and demonstrate that architectural decisions have considered areas such as reliability, security, operational excellence, performance, cost optimisation and sustainability where applicable.
+</p>
+
+<p>
+The assessment should show that risks have been identified, recommendations have been considered and improvement actions are being managed.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>Design cloud solutions using recognised cloud architecture best practice and periodically assess compliance against the relevant Well-Architected Framework.</strong>
+</p>
+
+<h2>Scoring rubric table – Cloud Well-Architected Assessment</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence that a Well-Architected Framework has been considered or applied.
+            </td>
+            <td class="nhsuk-table__cell">
+                No assessment, no architecture review, no documented consideration of cloud architecture principles.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant service risk. Cloud architecture quality cannot be demonstrated and major risks may be unidentified.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited awareness of Well-Architected principles. Some cloud design decisions have been made but there is little formal assessment evidence.
+            </td>
+            <td class="nhsuk-table__cell">
+                Informal discussions, isolated architecture artefacts, undocumented assumptions regarding cloud services.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Architectural weaknesses may exist across security, resilience, performance or operational management.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some elements of the relevant Well-Architected Framework have been considered and partially assessed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Partial assessment records, architecture documentation, evidence that selected framework principles have been reviewed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps. Assessment coverage is incomplete and findings may not be tracked or acted upon.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Much of the framework has been assessed and there is acceptable evidence that recommendations have informed the solution design.
+            </td>
+            <td class="nhsuk-table__cell">
+                Well-Architected review outputs, architecture decisions linked to assessment findings, documented risks, actions and mitigations.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain. Some framework areas have not been fully assessed, remediation actions may be incomplete, or review activities are not regularly repeated.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                Most applicable Well-Architected principles have been assessed with clear evidence that findings are actively managed through architecture and governance processes.
+            </td>
+            <td class="nhsuk-table__cell">
+                Completed assessments, documented remediation plans with owners, governance review records, regular reassessment activities, architectural evidence demonstrating implementation of recommendations.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Remaining weaknesses are understood, documented and managed through agreed action plans.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar adoption of Well-Architected practices. Assessments are routinely performed, findings drive continuous improvement and architectural decisions are demonstrably aligned to framework principles.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained assessment history, measurable improvement plans, evidence of completed remediation activities, governance oversight, architecture metrics and regular reassessment against framework recommendations.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Framework selection</strong> – Evidence that the solution uses the appropriate cloud provider's Well-Architected Framework. 
+    </li>
+
+    <li>
+        <strong>Formal assessment</strong> – Evidence that a structured assessment has been completed rather than relying solely on architectural judgement.
+    </li>
+
+    <li>
+        <strong>Coverage of framework domains</strong> – Evidence that relevant areas such as security, reliability, operational excellence, performance and cost considerations have been reviewed.
+    </li>
+
+    <li>
+        <strong>Management of findings</strong> – Evidence that identified weaknesses have owners, actions and review arrangements.
+    </li>
+
+    <li>
+        <strong>Governance</strong> – Evidence that assessment outcomes are visible within architecture governance and risk management processes.
+    </li>
+
+    <li>
+        <strong>Continuous improvement</strong> – Evidence that assessments are repeated periodically and used to improve the solution over time.
+    </li>
+
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> usually indicates that a meaningful Well-Architected assessment has been completed and that findings have influenced parts of the solution design. However, there are still notable gaps in coverage, governance, ownership of actions or remediation progress.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that assessment findings are actively managed. Actions have owners, governance reviews occur, remediation activity is tracked and most framework recommendations have been addressed or formally accepted.
+</p>
+
+<p>
+A score of <strong>5</strong> requires evidence of a mature and repeatable process. Assessments are routinely performed, findings are used to drive continuous improvement, governance oversight is visible and architectural decisions can be traced back to framework recommendations.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+    <li>AWS Well-Architected Review outputs</li>
+    <li>Azure Well-Architected Review outputs</li>
+    <li>Architecture assessment reports</li>
+    <li>Cloud risk registers</li>
+    <li>Remediation plans with owners and target dates</li>
+    <li>Architecture Decision Records influenced by assessment findings</li>
+    <li>Design authority review papers</li>
+    <li>Governance dashboards tracking remediation progress</li>
+    <li>Evidence of reassessment following major architectural changes</li>
+</ul>
 
 
 

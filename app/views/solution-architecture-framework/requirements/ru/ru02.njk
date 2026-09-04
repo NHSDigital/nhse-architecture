@@ -1,10 +1,10 @@
 {% set pageTitle = "RU02 - Identification" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Reuse Principles and Development of Shared Services" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "For new capabilities we should identify/recognise the potential reuse opportunities which may drive design decisions, benefits etc." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,197 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that new capabilities are designed with future reuse in mind.
+</p>
+
+<p>
+When developing a new capability, teams should consider whether the functionality, services, APIs, components, data products or patterns being created could be reused elsewhere across NHS England or the wider NHS ecosystem.
+</p>
+
+<p>
+Reuse opportunities should be identified early enough to influence architecture decisions. This may affect solution boundaries, API design, data models, deployment patterns, funding decisions and ownership models.
+</p>
+
+<p>
+The objective is to maximise the value of investments by creating capabilities that can be reused where appropriate, rather than repeatedly building similar functionality.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+When creating something new, teams should think about whether other services could benefit from using it in the future.
+</p>
+
+<h2>Scoring rubric table – RU02 Identification of Reuse Opportunities</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that future reuse opportunities have been considered during design or delivery.
+</td>
+<td class="nhsuk-table__cell">
+No reuse assessment.<br>
+No architecture rationale regarding reuse.<br>
+No consideration of wider organisational needs.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Duplicate capabilities may be created, increasing cost, complexity and inconsistency across the estate.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of reuse opportunities. Reuse is discussed informally but does not influence architecture decisions.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Unstructured meeting notes.<br>
+Undocumented assumptions about future reuse.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Potential reuse opportunities may be missed and design decisions may lock in service-specific approaches.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some consideration has been given to potential reuse opportunities, but assessments are incomplete or inconsistently applied.
+</td>
+<td class="nhsuk-table__cell">
+Partial reuse analysis.<br>
+Early architecture discussions.<br>
+Some documentation identifying possible consumers or future use cases.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Reuse potential is not fully understood and may not influence key design decisions.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the capability's reuse potential has been assessed. Architecture decisions demonstrate consideration of future consumers and wider organisational benefit.
+</td>
+<td class="nhsuk-table__cell">
+Documented reuse assessment.<br>
+Architecture Decision Records.<br>
+Solution design documents identifying reusable components.<br>
+Stakeholder engagement regarding reuse opportunities.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Future adoption, ownership, funding or governance of reusable capabilities may not yet be fully defined.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most significant reuse opportunities have been identified and have influenced architecture design decisions where appropriate.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive reuse assessment.<br>
+Documented reusable services, APIs or components.<br>
+Evidence of architecture decisions made to support reuse.<br>
+Stakeholder agreement on reuse potential.<br>
+Governance consideration of cross-service value.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining uncertainties are low risk and unlikely to affect future reuse significantly.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar identification of reuse opportunities. Reuse considerations are embedded in architecture design and actively influence strategic decisions.
+</td>
+<td class="nhsuk-table__cell">
+Formal reuse strategy.<br>
+Cross-organisational engagement.<br>
+Documented reusable capability models.<br>
+Evidence that services are designed for potential future adoption.<br>
+Governance support for shared capability development.<br>
+Clear demonstration of organisational value from reuse-focused design.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Reuse opportunities are proactively identified and translated into architecture and investment decisions.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Reuse identification</strong> – Has the team actively assessed whether new capabilities could be reused elsewhere?
+</li>
+
+<li>
+<strong>Design influence</strong> – Have reuse opportunities influenced solution structure, APIs, services, data models or architecture decisions?
+</li>
+
+<li>
+<strong>Organisational perspective</strong> – Has the team considered needs beyond the immediate project or programme?
+</li>
+
+<li>
+<strong>Evidence of analysis</strong> – Is there documented reasoning explaining why capabilities are or are not suitable for reuse?
+</li>
+
+<li>
+<strong>Stakeholder engagement</strong> – Have architects, service owners or potential consumers been involved where appropriate?
+</li>
+
+<li>
+<strong>Future sustainability</strong> – Is there evidence that reuse opportunities could realistically be adopted and maintained?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means reuse opportunities have been recognised and documented, but there is limited evidence that they have materially influenced architecture decisions or wider organisational planning.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that identified reuse opportunities have driven design choices and that stakeholders understand the potential value of the capability beyond the immediate service.
+</p>
+
+<p>
+A score of <strong>5</strong> requires reuse thinking to be embedded within the architecture process. The organisation actively designs capabilities with future consumers in mind and can demonstrate how reuse considerations shape governance, investment and architecture decisions.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Reuse assessments or reuse opportunity analyses</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Solution Design Overview documents</li>
+<li>Capability models highlighting reusable services</li>
+<li>API design documentation</li>
+<li>Cross-programme architecture reviews</li>
+<li>Business case documentation discussing reuse benefits</li>
+<li>Governance papers evaluating shared capability opportunities</li>
+<li>Architecture roadmaps showing future consumers</li>
+<li>Stakeholder workshops discussing reuse potential</li>
+</ul>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "DM03 - Risk and Issues" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Architecture risks and issues should be managed effectively with the appropriate level of visibility and ownership." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,198 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with the identification, ownership, monitoring and management of architecture-related risks and issues.
+</p>
+
+<p>
+Architecture risks and issues should be visible to the appropriate stakeholders, regularly reviewed, and managed through agreed governance processes. Significant risks should not depend on individual knowledge or informal communication.
+</p>
+
+<p>
+Ownership should be clear, mitigation actions tracked, and escalation routes used where required.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Known architecture risks and issues should be documented, owned, visible and actively managed until they are resolved or formally accepted.
+</p>
+
+<h2>Scoring rubric table – DM03 Architecture Risk and Issue Management</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that architecture risks or issues are identified or managed.
+</td>
+<td class="nhsuk-table__cell">
+No RAID log.<br>
+No architecture risk register.<br>
+No documented ownership.<br>
+No governance reporting.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Architecture weaknesses may remain unknown, unmanaged or unresolved.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of architecture risks and issues. Management activities are informal and inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Occasional discussion in meetings.<br>
+Informal notes.<br>
+Verbal awareness of risks.<br>
+Actions not formally tracked.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Risks may be overlooked, forgotten or managed inconsistently.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some architecture risks and issues are documented and tracked, but coverage and management are inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial RAID log.<br>
+Some assigned owners.<br>
+Risk descriptions recorded.<br>
+Limited evidence of reviews.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important risks may be missing, poorly quantified or lack mitigation plans.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the architecture risk position is understood and actively managed. Most significant risks and issues are documented and reviewed.
+</td>
+<td class="nhsuk-table__cell">
+Maintained architecture risk or RAID register.<br>
+Named owners.<br>
+Documented impact assessments.<br>
+Mitigation actions recorded.<br>
+Evidence of governance review.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some risks may lack target dates, escalation paths, acceptance decisions or regular review.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most architecture risks and issues are effectively controlled through established governance and management processes.
+</td>
+<td class="nhsuk-table__cell">
+Maintained risk and issue register.<br>
+Regular review cadence.<br>
+Clearly assigned ownership.<br>
+Defined mitigation plans.<br>
+Governance reporting.<br>
+Evidence of escalation where appropriate.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining weaknesses present limited risk and are actively monitored.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar architecture risk management. Risks and issues are proactively identified, managed and used to inform decision-making.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive risk management process.<br>
+Architecture-specific risk reporting.<br>
+Evidence of trend analysis.<br>
+Governance dashboards.<br>
+Documented risk acceptance decisions.<br>
+Clear linkage between risks, roadmap activities and investment decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Risk management is embedded within delivery and governance processes.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Identification</strong> – Are architecture risks and issues formally documented and maintained?
+</li>
+
+<li>
+<strong>Ownership</strong> – Does every significant risk or issue have a clearly assigned owner?
+</li>
+
+<li>
+<strong>Visibility</strong> – Are risks visible to the appropriate stakeholders, governance groups and decision-makers?
+</li>
+
+<li>
+<strong>Mitigation</strong> – Are actions defined, tracked and reviewed to reduce or manage risk?
+</li>
+
+<li>
+<strong>Governance</strong> – Is there evidence that significant risks and issues are reviewed, escalated or accepted through appropriate governance processes?
+</li>
+
+<li>
+<strong>Lifecycle management</strong> – Are risks regularly reviewed, updated and closed when appropriate?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> normally means that the majority of important risks and issues are identified and being managed, but weaknesses remain in governance, ownership, consistency, visibility or review frequency.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that risk and issue management is established, maintained and routinely embedded within governance processes. Ownership, mitigation and review activities should be consistent and demonstrable.
+</p>
+
+<p>
+A score of <strong>5</strong> requires risk management to be proactive rather than reactive. Risks are used to influence architecture decisions, prioritisation, investment planning and roadmap development. Evidence should show continuous monitoring and improvement rather than simple record keeping.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture risk register</li>
+<li>RAID log containing architecture risks and issues</li>
+<li>Programme or portfolio risk reports</li>
+<li>Governance and Design Authority papers</li>
+<li>Risk review meeting minutes</li>
+<li>Architecture remediation plans</li>
+<li>Escalation records</li>
+<li>Risk acceptance decisions</li>
+<li>Product roadmap items linked to risk mitigation</li>
+<li>Management dashboards or reporting packs</li>
+</ul>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "SD05 - Commodities" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Solutions should focus on commodity products and services where possible/sensible." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,197 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that solution teams make effective use of established commodity products and services before developing bespoke capabilities.
+</p>
+
+<p>
+Commodity products are typically widely adopted, proven, supported and cost-effective solutions that address common business needs. Examples may include shared platforms, SaaS products, commercial off-the-shelf services and standard enterprise capabilities. The SAF does not require commodity products to be used in all circumstances, but expects them to be considered where sensible and appropriate. 
+</p>
+
+<p>
+The objective is to reduce unnecessary custom development, minimise duplication, improve maintainability and enable delivery teams to focus effort on genuinely differentiating requirements. 
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Use proven off-the-shelf or shared solutions where they adequately meet the need, and only build custom solutions when there is a clear justification.
+</p>
+
+<h2>Scoring rubric table – SD05 Use of Commodity Products and Services</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that commodity products or services have been considered. Bespoke solutions have been selected by default.
+</td>
+<td class="nhsuk-table__cell">
+No options assessment.<br>
+No buy-versus-build analysis.<br>
+No market evaluation.<br>
+No architecture rationale.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The service may incur unnecessary development, operational and support costs while duplicating existing capabilities.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence that commodity options were considered. Decisions appear driven by local preference or existing implementation choices.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+Limited supplier review.<br>
+Weak architecture justification.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Suitable commodity solutions may have been overlooked.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some commodity options have been assessed, but evaluation is incomplete or inconsistently documented.
+</td>
+<td class="nhsuk-table__cell">
+Partial options appraisal.<br>
+Basic market scan.<br>
+Some architecture decision records.<br>
+Limited cost comparison.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. It is unclear whether the most appropriate solution approach was selected.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates consideration of commodity products and services. Where bespoke functionality exists, there is generally evidence supporting the decision.
+</td>
+<td class="nhsuk-table__cell">
+Buy-versus-build assessment.<br>
+Architecture Decision Records.<br>
+Supplier evaluations.<br>
+Solution design documentation.<br>
+Documented rationale for custom development.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some decisions may lack sufficient evidence regarding long-term cost, supportability or alternative options.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most opportunities for commodity adoption have been assessed and the solution makes effective use of commodity products where appropriate.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive options appraisal.<br>
+Cost-benefit analysis.<br>
+Documented evaluation criteria.<br>
+Governance review records.<br>
+Clearly justified exceptions where bespoke development was chosen.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining custom components are understood and supported by clear business or technical rationale.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar use of commodity products and services. Buy-versus-build decisions are evidence-based, strategically aligned and consistently governed.
+</td>
+<td class="nhsuk-table__cell">
+Formal sourcing and architecture assessments.<br>
+Comprehensive business case evidence.<br>
+Governance-supported technology decisions.<br>
+Demonstrable reduction in custom development.<br>
+Evidence that commodity adoption improves cost, supportability and time-to-value.<br>
+Regular review of emerging commodity capabilities.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Commodity adoption is embedded within architecture decision-making and contributes to efficient, sustainable delivery.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Buy-versus-build assessment</strong> – Has the team evaluated commodity alternatives before choosing bespoke delivery?
+</li>
+
+<li>
+<strong>Evidence-based decision-making</strong> – Is there documented rationale supporting the selected approach?
+</li>
+
+<li>
+<strong>Cost and value</strong> – Have whole-life costs, implementation effort and operational implications been considered?
+</li>
+
+<li>
+<strong>Capability fit</strong> – Can commodity solutions satisfy the business and user requirements without excessive customisation?
+</li>
+
+<li>
+<strong>Governance</strong> – Have decisions been reviewed through appropriate architecture or investment governance processes?
+</li>
+
+<li>
+<strong>Exception management</strong> – Where bespoke development has been selected, is the justification clearly documented?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that commodity options have been considered and that there is evidence supporting key decisions, but assessments may be incomplete or lack sufficient commercial, operational or governance rigour.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a structured evaluation of commodity alternatives with clear evidence that the selected approach represents a sensible balance of capability, cost, supportability and risk.
+</p>
+
+<p>
+A score of <strong>5</strong> requires commodity-first thinking to be embedded within architecture and delivery practices. Decisions should be evidence-based, consistently governed and demonstrably focused on maximising value while minimising unnecessary custom development.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Buy-versus-build assessments</li>
+<li>Options appraisal documents</li>
+<li>Business cases</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Supplier and market evaluations</li>
+<li>Cost-benefit assessments</li>
+<li>Governance review papers</li>
+<li>Technology selection reports</li>
+<li>Commercial evaluation outputs</li>
+<li>Solution Design Overview (SDO) documents</li>
+</ul>
 
 
 

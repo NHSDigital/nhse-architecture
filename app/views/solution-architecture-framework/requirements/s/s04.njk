@@ -1,10 +1,10 @@
 {% set pageTitle = "S04 - Meeting Needs" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Strategic Alignment, Vision, and Roadmap" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The solution design should be able to meet the stated user needs and overall business objectives/drivers." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,238 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement assesses whether the solution has been designed to address the
+needs of its intended users whilst supporting the wider objectives of the organisation,
+programme or service.
+</p>
+
+<p>
+The architecture should provide a clear line of sight between identified user needs,
+business drivers and solution design decisions. There should be evidence that needs
+have been understood, validated and translated into architecture, product and delivery
+decisions.
+</p>
+
+<p>
+The solution does not need to satisfy every need perfectly, but there should be clear
+evidence that trade-offs have been understood and consciously managed.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Can the team demonstrate that the solution has been designed to solve the right
+problem for users whilst supporting the intended business outcomes?
+</p>
+
+<h2>Scoring rubric table – User Needs and Business Objectives Alignment</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">
+                No evidence that user needs or business objectives have informed the
+                solution design. Architectural decisions appear disconnected from the
+                intended outcomes.
+            </td>
+            <td class="nhsuk-table__cell">
+                No documented user needs.<br>
+                No business objectives.<br>
+                No rationale linking design decisions to outcomes.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant service risk.<br>
+                Solution may fail to deliver value or solve the intended problem.<br>
+                High risk of costly rework.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">
+                Limited evidence that the solution is aligned to user needs or business
+                drivers. Understanding exists largely through assumptions or informal discussion.
+            </td>
+            <td class="nhsuk-table__cell">
+                Verbal stakeholder feedback.<br>
+                High-level aspirations.<br>
+                Informal notes or assumptions.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps in validation and traceability.<br>
+                User and business expectations may not be aligned.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">
+                Some user needs and business objectives have been identified and reflected
+                within parts of the solution design. Significant gaps remain.
+            </td>
+            <td class="nhsuk-table__cell">
+                User stories.<br>
+                Requirements documents.<br>
+                Business case objectives.<br>
+                Partial mapping between needs and solution components.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant number of notable gaps.<br>
+                Some design areas cannot be linked to validated needs.<br>
+                Success measures may be unclear.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">
+                Much of the solution design can be traced back to documented user needs
+                and business objectives. The overall alignment is reasonable but notable
+                risks or gaps remain.
+            </td>
+            <td class="nhsuk-table__cell">
+                Defined user needs.<br>
+                Architecture vision or design documentation.<br>
+                Evidence of stakeholder engagement.<br>
+                Requirements linked to major architecture decisions.<br>
+                Identified trade-offs and assumptions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Some needs are not fully addressed.<br>
+                Validation may be incomplete.<br>
+                Certain architectural decisions may lack clear outcome-based justification.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">
+                Most design decisions can be clearly linked to validated user needs and
+                business drivers. The relationship between architecture, product outcomes
+                and organisational objectives is well understood.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained user research outputs.<br>
+                Agreed business objectives.<br>
+                Traceability between needs, requirements and architecture artefacts.<br>
+                Stakeholder review records.<br>
+                Evidence of architecture decisions being assessed against objectives.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only.<br>
+                Risks are largely understood and managed.<br>
+                Remaining needs have agreed mitigations or roadmap actions.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">
+                Comprehensive evidence shows the solution is strongly aligned to user
+                needs and business outcomes. User-centred and outcome-driven decision
+                making is embedded throughout the lifecycle and represents exemplar practice.
+            </td>
+            <td class="nhsuk-table__cell">
+                Traceability from user needs through to architecture, delivery and outcomes.<br>
+                Regular user and stakeholder feedback loops.<br>
+                Clear measures of success and outcome tracking.<br>
+                Evidence that roadmap and architecture decisions evolve based on learning.<br>
+                Governance review demonstrating ongoing alignment.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal gaps.<br>
+                Risks are monitored continuously.<br>
+                Strong evidence that the solution remains aligned as needs evolve.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>User needs are understood</strong> –
+        Evidence that intended users, their needs and pain points have been identified.
+    </li>
+
+    <li>
+        <strong>Business objectives are defined</strong> –
+        Clear understanding of the outcomes, drivers and goals the solution is expected to support.
+    </li>
+
+    <li>
+        <strong>Traceability exists</strong> –
+        Architectural decisions can be linked to user needs, requirements and business objectives.
+    </li>
+
+    <li>
+        <strong>Stakeholder involvement</strong> –
+        Relevant users, product owners and business stakeholders have contributed to shaping the solution.
+    </li>
+
+    <li>
+        <strong>Trade-offs are understood</strong> –
+        Design compromises are documented and justified against objectives and needs.
+    </li>
+
+    <li>
+        <strong>Ongoing validation</strong> –
+        The team can demonstrate that the solution continues to meet evolving needs and priorities.
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means there is reasonable evidence that user
+needs and business objectives have influenced the solution design, but the links are
+not always complete, maintained or consistently evidenced.
+</p>
+
+<p>
+A score of <strong>4</strong> typically requires clear traceability between user needs,
+requirements, architecture decisions and business outcomes, supported by ongoing review
+and stakeholder engagement.
+</p>
+
+<p>
+A score of <strong>5</strong> requires strong evidence that user needs and business
+objectives actively drive architecture decisions throughout the lifecycle, with
+continuous validation, outcome measurement and adaptation. The approach should be
+considered an exemplar for other teams.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+    <li>User research reports</li>
+    <li>Service assessments</li>
+    <li>Personas</li>
+    <li>User journeys</li>
+    <li>Business cases</li>
+    <li>Objectives and key results (OKRs)</li>
+    <li>Architecture vision documents</li>
+    <li>Requirements catalogues</li>
+    <li>Architecture decision records</li>
+    <li>Benefits realisation plans</li>
+    <li>Roadmap reviews</li>
+</ul>
 
 
 

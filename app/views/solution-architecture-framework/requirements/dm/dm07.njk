@@ -1,10 +1,10 @@
 {% set pageTitle = "DM07 - Decision Records" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "All architecture decisions should be documented with a lightweight Architecture Decision Record (ADR), including options considered and clear rationale (e.g. SEQF Any Decision Record Template)." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,196 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
 
+<p>
+This requirement is concerned with ensuring that significant architecture decisions are documented, understood and traceable.
+</p>
+
+<p>
+Architecture decisions should not be stored solely in emails, meeting notes or individual knowledge. The reasoning behind decisions should be recorded, including the options considered, trade-offs assessed and rationale for the selected approach.
+</p>
+
+<p>
+The objective is to ensure future teams can understand why decisions were made, challenge assumptions where necessary and avoid repeatedly analysing the same problems.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Important architecture decisions should be documented in a consistent format that explains what was decided, what alternatives were considered and why the decision was taken.
+</p>
+
+<h2>Scoring rubric table – DM07 Architecture Decision Records (ADRs)</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that architecture decisions are formally documented.
+</td>
+<td class="nhsuk-table__cell">
+No ADRs.<br>
+No decision records.<br>
+Decisions only reflected in conversations, emails or undocumented agreements.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Rationale is lost over time and decisions cannot be effectively reviewed, challenged or revisited.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of decision documentation. A small number of decisions may be recorded but there is no consistent approach.
+</td>
+<td class="nhsuk-table__cell">
+Informal notes.<br>
+Meeting minutes.<br>
+Incomplete decision records.<br>
+Unstructured documentation.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Important context is missing and decision history is difficult to reconstruct.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some architecture decisions are documented and there is evidence of a decision recording approach, but coverage is incomplete and inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial ADR set.<br>
+Some documented options and rationale.<br>
+Decision logs missing key decisions.<br>
+Inconsistent templates.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Many architecture decisions cannot be traced to documented reasoning.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the significant architecture decision-making is documented. Most major decisions include rationale and supporting information.
+</td>
+<td class="nhsuk-table__cell">
+Maintained ADR repository.<br>
+Documented decision rationale.<br>
+Options considered for major decisions.<br>
+Links to architecture artefacts and governance discussions.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some important decisions may be missing, lack alternatives analysis or have outdated records.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most significant architecture decisions are documented using a consistent approach. Records are maintained and provide sufficient context for future review.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive ADR library.<br>
+Consistent ADR template usage.<br>
+Documented options and trade-offs.<br>
+Governance references.<br>
+Architecture artefact traceability.<br>
+Review dates where appropriate.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Missing records are limited and do not significantly affect architectural understanding.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar architecture decision management. ADRs are embedded within delivery and governance processes and actively used throughout the solution lifecycle.
+</td>
+<td class="nhsuk-table__cell">
+Complete and maintained ADR repository.<br>
+Consistent decision recording across teams.<br>
+Clear options analysis and business rationale.<br>
+Integration with architecture governance activities.<br>
+Architecture decisions linked to roadmaps, standards and delivery outcomes.<br>
+Periodic review and update of key decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Decision history is transparent, reusable and supports continuous improvement.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Decision coverage</strong> – Are significant architecture decisions formally documented?
+</li>
+
+<li>
+<strong>Options analysis</strong> – Do records show alternative approaches that were considered?
+</li>
+
+<li>
+<strong>Decision rationale</strong> – Is the reasoning behind decisions clearly explained?
+</li>
+
+<li>
+<strong>Consistency</strong> – Are decisions recorded using a repeatable format or template?
+</li>
+
+<li>
+<strong>Maintainability</strong> – Are decision records maintained and accessible to the delivery team?
+</li>
+
+<li>
+<strong>Traceability</strong> – Can decisions be linked to architecture artefacts, governance activities, requirements, risks or standards?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically means that many significant decisions are documented and rationale is generally available, but coverage is incomplete or the quality of records varies between decisions.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a consistent and maintained ADR approach. Most significant decisions are recorded, alternatives are documented and decision records can be traced to governance and architecture artefacts.
+</p>
+
+<p>
+A score of <strong>5</strong> requires ADRs to be embedded within the delivery lifecycle. Decision records are routinely created, maintained and actively used to support governance, future design work, technical debt management and architecture evolution.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture Decision Records (ADRs)</li>
+<li>SEQF Any Decision Record templates</li>
+<li>Decision logs or registers</li>
+<li>Architecture repository entries</li>
+<li>Design Authority outputs linked to ADRs</li>
+<li>Governance review records referencing decisions</li>
+<li>Solution Design Overview documents referencing ADRs</li>
+<li>Architecture roadmaps linked to decisions</li>
+<li>Technical debt records referencing prior decisions</li>
+<li>Knowledge repositories containing maintained decision records</li>
+</ul>
 
 
 {% endblock %}

@@ -1,10 +1,10 @@
 {% set pageTitle = "SD06 - API First" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "An API First design methodology should be followed, where APIs are at the forefront of the design process, functionality and data is exposed via APIs and the needs of the API consumer have been considered." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,196 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that solutions adopt an API First approach when designing and exposing functionality and data.
+</p>
+
+<p>
+API First means that interfaces are designed deliberately and early in the solution lifecycle rather than being treated as a technical implementation detail. API consumers should be considered from the outset, and solutions should expose capabilities in a consistent, reusable and interoperable manner. 
+</p>
+
+<p>
+The objective is to improve interoperability, reuse, integration quality and consumer experience whilst reducing tightly coupled point-to-point integrations. 
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Design APIs before building functionality, and ensure they meet the needs of the systems and users that consume them.
+</p>
+
+<h2>Scoring rubric table – SD06 API First Design</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence of API First design. APIs are absent, treated as an afterthought, or functionality is exposed only through tightly coupled interfaces.
+</td>
+<td class="nhsuk-table__cell">
+No API specifications.<br>
+No API design evidence.<br>
+No consumer analysis.<br>
+No integration strategy.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Integration becomes difficult, reuse is limited, and solutions may become tightly coupled.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited use of APIs and little evidence of API First thinking. API design occurs late in delivery and consumer needs are poorly understood.
+</td>
+<td class="nhsuk-table__cell">
+Basic API documentation.<br>
+Informal interface definitions.<br>
+Undocumented integration assumptions.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. APIs may not accurately support consumer requirements and interoperability can suffer.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some API First practices are evident, but application is inconsistent or incomplete.
+</td>
+<td class="nhsuk-table__cell">
+Partial API specifications.<br>
+Some consumer requirements captured.<br>
+Limited API review activity.<br>
+Inconsistent interface design.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. API quality, consistency and reuse opportunities may be reduced.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates an API First approach. APIs are documented and most significant consumers have been considered during design.
+</td>
+<td class="nhsuk-table__cell">
+API specifications.<br>
+Consumer requirements.<br>
+Architecture Decision Records.<br>
+Integration documentation.<br>
+API design reviews.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some interfaces may have evolved after implementation, consumer needs may not be fully represented, or documentation may be incomplete.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most solution capabilities are designed using API First principles. API consumers, interoperability needs and reuse opportunities are clearly considered.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive API specifications.<br>
+Consumer journey or integration analysis.<br>
+API governance review records.<br>
+Consistent API design standards.<br>
+Traceability between business requirements and APIs.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining deficiencies are low risk and unlikely to significantly affect integration quality.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar API First design. APIs drive architecture decisions, provide reusable capabilities and deliver a strong consumer experience.
+</td>
+<td class="nhsuk-table__cell">
+API-led architecture documentation.<br>
+Comprehensive API catalogue.<br>
+Strong consumer engagement.<br>
+API governance and lifecycle management.<br>
+Evidence of API reuse across services.<br>
+Continuous improvement driven by consumer feedback and usage data.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. APIs are strategic assets that support interoperability, reuse and long-term architectural sustainability.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>API First approach</strong> – Were APIs designed before or alongside implementation rather than after the solution was built?
+</li>
+
+<li>
+<strong>Consumer focus</strong> – Have API consumer requirements been identified and incorporated into the design?
+</li>
+
+<li>
+<strong>Reusable interfaces</strong> – Are APIs designed to support reuse and interoperability beyond a single use case?
+</li>
+
+<li>
+<strong>API documentation</strong> – Are specifications, contracts and integration requirements documented and maintained?
+</li>
+
+<li>
+<strong>Governance and consistency</strong> – Are APIs designed using consistent standards and subject to architecture review?
+</li>
+
+<li>
+<strong>Integration quality</strong> – Does the API approach reduce coupling and support sustainable integration patterns?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that APIs are recognised as important design artefacts and most significant integrations are documented, but API design may not consistently drive solution design decisions.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that API First principles are being applied consistently across the solution. Consumer needs, design standards and interoperability considerations should be visible in architecture artefacts and governance processes.
+</p>
+
+<p>
+A score of <strong>5</strong> requires API First thinking to be embedded throughout architecture and delivery practices. APIs are treated as reusable organisational assets, are actively governed and demonstrate measurable value through reuse, interoperability and consumer satisfaction.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>OpenAPI / Swagger specifications</li>
+<li>API catalogues and developer portals</li>
+<li>API consumer requirements</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Solution Design Overview (SDO) documents</li>
+<li>Integration architecture diagrams</li>
+<li>API lifecycle management artefacts</li>
+<li>API governance review records</li>
+<li>Consumer onboarding documentation</li>
+<li>API usage and adoption metrics</li>
+</ul>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "DM05 - Governance Process" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The solution design and architecture decisions should be managed through a tiered governance process, ultimately leading, if appropriate, to TRG." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,223 @@
 
 {% block bodyContent %}
 
+<h2>Requirement</h2>
 
+<blockquote>
+<p>
+<strong>DM05</strong> : The solution design and architecture decisions should be managed through a tiered governance process, ultimately leading, if appropriate, to TRG.
+</p>
+
+<p>
+The decision process:
+</p>
+
+<ul>
+<li>Decisions should be made at the lowest possible level, with the appropriate stakeholders involved.</li>
+<li>All decisions should follow local governance processes, such as a programme design authority.</li>
+<li>If the solution requires assessment against Principles, Policies, Patterns and Standards then presentation to PDG or TRG would be appropriate.</li>
+<li>At the appropriate stages of the lifecycle, all large items must go to TRG.</li>
+<li>The relevant Lead Architects and Subject Matter Experts (SMEs) should be engaged and supportive.</li>
+</ul>
+</blockquote>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that architecture decisions are governed through an appropriate and proportionate governance structure.
+</p>
+
+<p>
+Decisions should be made at the lowest practical level, but with appropriate oversight. Local governance forums should be used where possible, with escalation to wider architecture governance bodies when required by risk, complexity, strategic importance or policy assessment.
+</p>
+
+<p>
+The governance process should be transparent, documented and supported by the appropriate architects, SMEs and stakeholders.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Architecture decisions should follow an agreed governance path, involve the right people and be escalated to the appropriate governance forums when required.
+</p>
+
+<h2>Scoring rubric table – DM05 Architecture Governance Process</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence of architecture governance. Decisions are made without review, challenge or formal approval processes.
+</td>
+<td class="nhsuk-table__cell">
+No governance records.<br>
+No Design Authority engagement.<br>
+No architecture review evidence.<br>
+No documented approvals.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Decisions may conflict with organisational strategy, policy, standards or architecture direction.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited governance activity exists but is informal, inconsistent or dependent on individuals.
+</td>
+<td class="nhsuk-table__cell">
+Ad hoc reviews.<br>
+Informal discussions.<br>
+Occasional architecture challenge sessions.<br>
+No consistent governance route.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Governance coverage is inconsistent and key decisions may bypass review and scrutiny.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some governance processes are followed, but coverage is incomplete and application is inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial governance records.<br>
+Evidence of some Design Authority reviews.<br>
+Limited architecture approval records.<br>
+Incomplete decision traceability.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important decisions may not receive appropriate review or escalation.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Most significant architecture decisions follow recognised governance processes. Appropriate stakeholders are generally involved and governance forums are being used.
+</td>
+<td class="nhsuk-table__cell">
+Programme Design Authority reviews.<br>
+Architecture review records.<br>
+Meeting minutes.<br>
+Evidence of SME involvement.<br>
+Governance actions and approvals.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Governance routes may not always be consistently applied, documented or completed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most architecture decisions are managed through a defined governance process with clear escalation criteria and governance evidence.
+</td>
+<td class="nhsuk-table__cell">
+Governance framework documentation.<br>
+Design Authority approvals.<br>
+TRG or equivalent submissions where required.<br>
+SME engagement records.<br>
+Documented governance decisions and actions.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Governance is generally effective and consistently applied.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar governance arrangements. Governance is embedded in delivery practices and consistently drives informed architecture outcomes.
+</td>
+<td class="nhsuk-table__cell">
+Well-defined governance model.<br>
+Clear decision authorities.<br>
+Comprehensive governance audit trail.<br>
+Evidence of timely escalation.<br>
+Regular engagement with architects and SMEs.<br>
+Governance outcomes influencing roadmap and investment decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Governance processes are mature, proportionate and continuously improved.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Governance pathway</strong> – Is there a clear route through which architecture decisions are reviewed and approved?
+</li>
+
+<li>
+<strong>Appropriate escalation</strong> – Are decisions escalated to the correct governance forum based on risk, scope, strategic importance or policy assessment requirements?
+</li>
+
+<li>
+<strong>Stakeholder participation</strong> – Are architects, SMEs and relevant stakeholders involved in decision-making?
+</li>
+
+<li>
+<strong>Decision traceability</strong> – Can key decisions be traced to governance discussions, approvals and actions?
+</li>
+
+<li>
+<strong>Consistency</strong> – Is governance applied consistently across significant architecture decisions?
+</li>
+
+<li>
+<strong>Evidence of challenge</strong> – Is there evidence that governance forums provide scrutiny, review and informed challenge rather than simply ratifying decisions?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically indicates that governance processes exist and are being used for most major decisions, but governance may be inconsistent, poorly documented or dependent on individual behaviours.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a clearly defined and consistently applied governance model. Evidence should show that decisions are reviewed through appropriate forums, escalation paths are understood and governance outcomes are documented.
+</p>
+
+<p>
+A score of <strong>5</strong> requires governance to be embedded within normal delivery activities. Architecture decisions are reliably routed through appropriate governance structures, stakeholders and SMEs are routinely engaged, and governance evidence demonstrates measurable influence over solution outcomes.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Architecture governance framework documents</li>
+<li>Programme Design Authority papers and minutes</li>
+<li>TRG submission packs and outcomes</li>
+<li>PDG review records</li>
+<li>Architecture review board outputs</li>
+<li>Governance decision logs</li>
+<li>Approval records</li>
+<li>Action and recommendation trackers</li>
+<li>SME review comments and responses</li>
+<li>Governance escalation records</li>
+</ul>
+
+<h2>Additional Info</h2>
+
+<p>
+The requirement describes a tiered governance approach and references local governance, PDG, TRG, Lead Architects and SMEs, but it does not prescribe a mandatory governance structure, review frequency, approval workflow or minimum set of artefacts. Assessors should therefore focus on whether architecture decisions are governed through an appropriate and proportionate process rather than expecting a specific governance model. 
+</p>
 
 
 {% endblock %}

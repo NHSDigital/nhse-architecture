@@ -1,10 +1,10 @@
 {% set pageTitle = "DM04 - Stakeholder Involvement" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Decision Making & Governance" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "There should be effective and commensurate stakeholder involvement with respect to solution design and architecture decisions." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,198 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that the right stakeholders are involved in architecture and solution design decisions at the right time and to the appropriate degree.
+</p>
+
+<p>
+Stakeholder engagement should be proportionate to the scale, complexity, risk and impact of the solution. Relevant business, delivery, technical, operational, security and governance stakeholders should have opportunities to contribute to decisions that affect them.
+</p>
+
+<p>
+The objective is not to involve everyone in every decision, but to ensure decisions are informed, understood and supported by those with a legitimate interest.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Architecture decisions should not be made in isolation. The right people should be involved, consulted or informed throughout the solution lifecycle.
+</p>
+
+<h2>Scoring rubric table – DM04 Stakeholder Involvement</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that stakeholders are involved in solution design or architecture decisions.
+</td>
+<td class="nhsuk-table__cell">
+No stakeholder analysis.<br>
+No engagement records.<br>
+No evidence of consultation.<br>
+Decisions made by individuals without wider input.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Decisions may not reflect business needs, operational realities, delivery constraints or organisational priorities.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited stakeholder involvement. Engagement is informal, inconsistent and dependent on personal relationships.
+</td>
+<td class="nhsuk-table__cell">
+Ad hoc meetings.<br>
+Informal discussions.<br>
+Unstructured feedback.<br>
+Limited record of stakeholder engagement.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Important perspectives may be missed and decision support may be weak.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some stakeholder groups are involved in decision-making, but engagement is incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial stakeholder lists.<br>
+Project meeting records.<br>
+Some review or consultation activity.<br>
+Evidence of engagement with selected groups.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Key stakeholders may be excluded or engaged too late to influence outcomes effectively.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the required stakeholder engagement is taking place. Most relevant groups have opportunities to review, influence or understand key decisions.
+</td>
+<td class="nhsuk-table__cell">
+Stakeholder registers.<br>
+Workshop outputs.<br>
+Architecture review sessions.<br>
+Decision records showing consultation.<br>
+Governance meeting records.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some stakeholder groups may not be consistently engaged or the rationale for decisions may not be widely communicated.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most architecture and solution design decisions involve appropriate stakeholders through defined and repeatable engagement processes.
+</td>
+<td class="nhsuk-table__cell">
+Maintained stakeholder map.<br>
+Regular engagement forums.<br>
+Governance review records.<br>
+Documented feedback and responses.<br>
+Evidence that stakeholder input is considered within decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Any missed engagement is low risk and unlikely to materially affect outcomes.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar stakeholder engagement. Stakeholder involvement is proactive, proportionate and demonstrably improves solution outcomes.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive stakeholder management approach.<br>
+Evidence of collaborative decision-making.<br>
+Feedback incorporated into designs.<br>
+Clear communication of key decisions.<br>
+Regular reviews of stakeholder needs and representation.<br>
+Strong governance participation across affected communities.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Stakeholder engagement is embedded within delivery and architecture practices.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Stakeholder identification</strong> – Have all relevant stakeholder groups been identified and considered?
+</li>
+
+<li>
+<strong>Appropriate engagement</strong> – Is the level of engagement proportionate to the scale, risk and complexity of the solution?
+</li>
+
+<li>
+<strong>Evidence of involvement</strong> – Can the team demonstrate that stakeholders have been consulted, informed or involved in decision-making?
+</li>
+
+<li>
+<strong>Influence on decisions</strong> – Is there evidence that stakeholder feedback has been considered and addressed where appropriate?
+</li>
+
+<li>
+<strong>Governance participation</strong> – Are relevant governance, architecture and specialist communities engaged when required?
+</li>
+
+<li>
+<strong>Communication</strong> – Are significant architecture decisions communicated to affected stakeholders?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that most key stakeholders are involved and there is reasonable evidence of consultation, but engagement remains inconsistent, reactive or dependent on individuals.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a structured and repeatable approach to stakeholder engagement. The appropriate stakeholders are routinely involved, feedback is documented and engagement supports governance and decision-making.
+</p>
+
+<p>
+A score of <strong>5</strong> requires stakeholder engagement to be embedded within the delivery model. Evidence should show active collaboration, broad support for decisions and measurable influence on architecture outcomes rather than consultation as a compliance exercise.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Stakeholder maps or stakeholder registers</li>
+<li>Workshop outputs and consultation records</li>
+<li>Architecture review meeting minutes</li>
+<li>Design Authority papers and actions</li>
+<li>Decision records showing stakeholder input</li>
+<li>Governance forum attendance records</li>
+<li>Solution review presentations</li>
+<li>Feedback logs and responses</li>
+<li>Communication plans</li>
+<li>Programme and delivery board papers</li>
+</ul>
 
 
 

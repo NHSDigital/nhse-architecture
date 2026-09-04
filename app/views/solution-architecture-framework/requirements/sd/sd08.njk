@@ -1,10 +1,10 @@
 {% set pageTitle = "SD08 - Patterns" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "We should select the correct patterns for the use case, and any trade-offs justified and agreed." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,7 +14,156 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is about selecting appropriate architectural, integration, data and solution design patterns for the business problem being solved.
+</p>
+
+<p>
+Architects should demonstrate that alternative approaches have been considered, that the chosen pattern is suitable for functional and non-functional requirements, and that any compromises have been consciously evaluated, documented and agreed.
+</p>
+
+<p>
+In simple terms:<br/>
+<strong>Use the right architectural pattern for the problem and be clear about why it was chosen over other options.</strong>
+</p>
+
+<h2>Scoring rubric table – Pattern Selection and Trade-off Management</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">0</td>
+            <td class="nhsuk-table__cell">
+                No evidence that architectural patterns have been consciously selected. Design choices appear arbitrary or driven solely by technology preference.
+            </td>
+            <td class="nhsuk-table__cell">
+                No design rationale, no options analysis, no architectural decisions recorded.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant risk that the solution is unsuitable, difficult to maintain, costly to change, or unable to meet requirements.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">1</td>
+            <td class="nhsuk-table__cell">
+                Limited evidence that patterns have been considered. Selection is largely informal and relies on individual opinion or historical precedent.
+            </td>
+            <td class="nhsuk-table__cell">
+                Informal discussions, unsupported assumptions, undocumented solution decisions.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-risk gaps. Alternative approaches have not been assessed and trade-offs are not understood.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">2</td>
+            <td class="nhsuk-table__cell">
+                Some patterns are identifiable and partially aligned to the use case. Limited assessment of alternatives has been completed.
+            </td>
+            <td class="nhsuk-table__cell">
+                High-level architecture diagrams, partial design documentation, informal option appraisal.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant notable gaps. Non-functional impacts, complexity implications or future constraints are not fully understood.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">3</td>
+            <td class="nhsuk-table__cell">
+                Appropriate patterns have generally been selected and there is acceptable evidence explaining why. Trade-offs are identified but may not be consistently documented or governed.
+            </td>
+            <td class="nhsuk-table__cell">
+                Architecture documentation, design reviews, option assessment records, Architecture Decision Records (ADRs), identified risks and dependencies.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain. Some decisions lack documented rationale, stakeholder agreement, or mitigation of identified compromises.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">
+                Pattern selection is clearly linked to user needs, business objectives and non-functional requirements. Trade-offs are documented, reviewed and agreed with appropriate stakeholders.
+            </td>
+            <td class="nhsuk-table__cell">
+                Maintained ADRs, option assessments with evaluation criteria, governance review records, architecture principles mapping, documented stakeholder approval.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only. Remaining compromises are understood, accepted and subject to monitoring or remediation where necessary.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">5</td>
+            <td class="nhsuk-table__cell">
+                Comprehensive and exemplar approach to pattern selection. Decision-making is evidence-based, repeatable and consistently applied across the solution. Trade-offs are actively managed throughout the lifecycle.
+            </td>
+            <td class="nhsuk-table__cell">
+                Structured decision framework, multiple option evaluations, traceability from requirements to design decisions, regularly reviewed ADRs, governance records, lessons learned and continuous improvement activities.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal or no significant gaps identified.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Appropriate pattern selection</strong> – Evidence that the chosen architectural, integration, data or deployment patterns are suitable for the problem being solved.
+    </li>
+
+    <li>
+        <strong>Consideration of alternatives</strong> – Evidence that realistic options were evaluated before selecting an approach.
+    </li>
+
+    <li>
+        <strong>Documented trade-offs</strong> – Evidence showing impacts on cost, risk, performance, scalability, security, operability, maintainability or delivery timescales.
+    </li>
+
+    <li>
+        <strong>Alignment to requirements</strong> – Clear traceability between requirements, non-functional needs and the chosen pattern.
+    </li>
+
+    <li>
+        <strong>Stakeholder agreement</strong> – Evidence that relevant stakeholders understand and accept the chosen approach and associated compromises.
+    </li>
+
+    <li>
+        <strong>Governance</strong> – Evidence that significant architectural decisions have been reviewed through appropriate architecture governance processes.
+    </li>
+</ol>
 
 
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically shows that reasonable patterns have been chosen and there is acceptable supporting evidence, but decision-making is not consistently documented, reviewed or governed.
+</p>
+
+<p>
+A score of <strong>4</strong> requires clear evidence that architectural choices were evaluated against requirements, that trade-offs were documented, and that stakeholders formally agreed the resulting decisions.
+</p>
+
+<p>
+A score of <strong>5</strong> requires a mature and repeatable approach where architectural decisions are traceable, actively reviewed, consistently governed and demonstrably influence delivery outcomes.
+</p>
 
 {% endblock %}

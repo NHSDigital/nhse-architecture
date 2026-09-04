@@ -1,10 +1,10 @@
 {% set pageTitle = "SD03 - Standards Compliance" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The solution should be compliant with relevant standards." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,197 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that the solution complies with the technical, architectural, security, interoperability, data, regulatory and industry standards that apply to the service.
+</p>
+
+<p>
+Compliance should be actively assessed and evidenced rather than assumed. Relevant standards may originate from NHS England, central government, regulatory bodies, technology suppliers, industry best practice or statutory obligations.
+</p>
+
+<p>
+The standards selected should be appropriate to the nature of the solution and its operating environment. Any exceptions or departures should be documented, understood and appropriately governed.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+The solution should demonstrate compliance with the standards that apply to it and be able to justify any exceptions.
+</p>
+
+<h2>Scoring rubric table – SD03 Compliance with Relevant Standards</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that applicable standards have been identified or assessed.
+</td>
+<td class="nhsuk-table__cell">
+No compliance assessments.<br>
+No standards register.<br>
+No governance review.<br>
+No documented compliance activity.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The solution may breach mandatory requirements, create interoperability problems, or introduce security and operational weaknesses.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited awareness of relevant standards. Compliance is largely assumed rather than demonstrated.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+Limited references to standards.<br>
+No structured compliance assessment.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Important requirements may not have been identified or validated.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some standards have been identified and assessed, but coverage is incomplete or inconsistently evidenced.
+</td>
+<td class="nhsuk-table__cell">
+Partial compliance assessment.<br>
+Limited traceability to standards.<br>
+Some architecture review activity.<br>
+Basic governance involvement.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. Important standards may not have been considered or compliance evidence may be weak.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution demonstrates compliance with relevant standards and supporting evidence exists for most significant areas.
+</td>
+<td class="nhsuk-table__cell">
+Compliance assessments.<br>
+Architecture review outputs.<br>
+Solution documentation.<br>
+Standards mapping exercises.<br>
+Documented remediation activities where gaps exist.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some standards may not have been fully assessed, evidence may be incomplete, or remediation activities remain outstanding.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most relevant standards have been assessed and the solution demonstrates strong compliance. Deviations are documented and governed.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive standards compliance assessment.<br>
+Traceability between standards and solution design.<br>
+Governance review records.<br>
+Approved exceptions.<br>
+Compliance remediation tracking.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining non-compliance is understood, documented and actively managed.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar standards compliance. Compliance activities are embedded within design, governance and delivery processes.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive compliance evidence.<br>
+Regular standards reviews.<br>
+Proactive monitoring of standards changes.<br>
+Governance oversight.<br>
+Clearly managed exception process.<br>
+Evidence that standards compliance directly influences architecture decisions.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Compliance is continuously managed and contributes to high-quality architecture outcomes.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Identification of standards</strong> – Has the team identified the standards that apply to the solution?
+</li>
+
+<li>
+<strong>Compliance assessment</strong> – Has compliance been formally assessed and evidenced?
+</li>
+
+<li>
+<strong>Traceability</strong> – Can compliance claims be traced to architecture artefacts, requirements or technical implementation?
+</li>
+
+<li>
+<strong>Exception management</strong> – Are deviations documented, justified and approved through governance?
+</li>
+
+<li>
+<strong>Governance involvement</strong> – Has compliance been reviewed through appropriate architecture or assurance processes?
+</li>
+
+<li>
+<strong>Ongoing compliance</strong> – Is compliance reviewed as standards, technologies or solution designs evolve?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that most significant standards have been considered and there is acceptable evidence of compliance, but gaps remain in coverage, evidence quality, governance or ongoing monitoring.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a structured and comprehensive compliance approach. Relevant standards are assessed, compliance evidence is maintained, and any exceptions are documented and governed.
+</p>
+
+<p>
+A score of <strong>5</strong> requires standards compliance to be embedded within architecture and delivery practices. Compliance is actively monitored, changes in standards are tracked, and evidence demonstrates continuous improvement beyond basic compliance expectations.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Standards compliance assessments</li>
+<li>Architecture review reports</li>
+<li>Solution Design Overview (SDO) documents</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Technical standards mappings</li>
+<li>Security and interoperability assessments</li>
+<li>Governance and Design Authority review outputs</li>
+<li>Approved waivers or exception records</li>
+<li>Compliance remediation plans</li>
+<li>Assurance and audit reports</li>
+</ul>
 
 
 

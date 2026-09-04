@@ -1,10 +1,10 @@
 {% set pageTitle = "T01 - Tech Radar" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Technology Choices" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "Technology choices should be made in line with the NHS England Technology Radar, corporate direction and wider industry trends using the associated processes to support decision making. (Note there are overlaps with the Engineering red lines; ensure a consistent response and do not repeat assessments)" %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -14,6 +14,198 @@
 
 {% block bodyContent %}
 
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that technology selections are made deliberately and with appropriate reference to NHS England strategic direction, the NHS England Technology Radar, and relevant industry developments.
+</p>
+
+<p>
+Technology choices should not be based solely on individual preference, supplier recommendation or familiarity. Decisions should be informed by recognised governance processes, technology strategy, architectural objectives and evidence-based evaluation.
+</p>
+
+<p>
+The objective is to improve consistency, reduce unnecessary technology proliferation, and encourage adoption of technologies that are supportable, sustainable and aligned with organisational goals.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Technology decisions should be aligned to NHS England strategy and informed by both the Technology Radar and wider market knowledge.
+</p>
+
+<h2>Scoring rubric table – T01 Technology Selection and Strategic Alignment</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that technology choices have been assessed against organisational direction, technology strategy or industry practice.
+</td>
+<td class="nhsuk-table__cell">
+No technology assessment.<br>
+No architecture rationale.<br>
+No options analysis.<br>
+No reference to strategic direction.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. Technology choices may be unsupported, inconsistent with organisational direction or difficult to sustain.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of technology evaluation. Decisions appear to be influenced primarily by individual preference, supplier recommendation or existing familiarity.
+</td>
+<td class="nhsuk-table__cell">
+Informal discussions.<br>
+Undocumented assumptions.<br>
+Limited architecture justification.<br>
+Technology selection without structured review.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Technologies may conflict with strategic direction or increase support and integration challenges.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some consideration has been given to technology strategy and industry trends, but evaluation is incomplete or inconsistently documented.
+</td>
+<td class="nhsuk-table__cell">
+Partial options appraisal.<br>
+Limited architecture assessment.<br>
+Basic market review.<br>
+Some evidence of technology governance engagement.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. It is unclear whether selected technologies represent the most appropriate strategic choice.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the technology selection process is supported by documented analysis and alignment considerations. Technology choices are broadly aligned with organisational direction.
+</td>
+<td class="nhsuk-table__cell">
+Options assessments.<br>
+Architecture Decision Records.<br>
+Technology evaluations.<br>
+References to strategic direction.<br>
+Evidence of governance review.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some technologies may lack clear justification, roadmap alignment or documented consideration of alternatives.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most technology choices are supported by structured evaluation and clear alignment to organisational strategy, the Technology Radar and recognised industry practice.
+</td>
+<td class="nhsuk-table__cell">
+Comprehensive technology assessments.<br>
+Documented options analysis.<br>
+References to Technology Radar recommendations.<br>
+Governance approval records.<br>
+Technology lifecycle and support considerations.<br>
+Documented rationale for exceptions.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining concerns are understood and unlikely to present significant architectural risk.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar technology decision-making. Technology choices demonstrate strong strategic alignment, market awareness and active governance.
+</td>
+<td class="nhsuk-table__cell">
+Formal technology strategy alignment assessments.<br>
+Comprehensive options analysis.<br>
+Evidence of Technology Radar engagement.<br>
+Documented review of industry trends.<br>
+Governance oversight.<br>
+Technology decisions actively influencing architecture roadmaps and investment planning.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. Technology choices are well justified, sustainable and support long-term organisational objectives.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Strategic alignment</strong> – Are technology decisions aligned with NHS England direction and objectives?
+</li>
+
+<li>
+<strong>Technology Radar consideration</strong> – Has the NHS England Technology Radar been considered as part of the decision process?
+</li>
+
+<li>
+<strong>Options evaluation</strong> – Have realistic technology alternatives been assessed before selection?
+</li>
+
+<li>
+<strong>Industry awareness</strong> – Is there evidence that wider industry practices and market developments have been considered?
+</li>
+
+<li>
+<strong>Decision governance</strong> – Have technology selections been reviewed through appropriate architecture and governance processes?
+</li>
+
+<li>
+<strong>Documented rationale</strong> – Can the team explain why the chosen technology was selected over other options?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally means there is evidence that technology decisions have been considered and justified, but the assessment may not be comprehensive, consistently documented or clearly aligned with strategic guidance.
+</p>
+
+<p>
+A score of <strong>4</strong> requires evidence that technology choices are routinely assessed against organisational direction, Technology Radar recommendations and alternative options. Governance and architecture review activities should support the decisions.
+</p>
+
+<p>
+A score of <strong>5</strong> requires technology selection to be embedded within a mature decision-making process. Evidence should demonstrate proactive evaluation of emerging technologies, strong strategic alignment, well-documented trade-offs and governance-supported decision-making that influences future architecture direction.
+</p>
+
+<h2>Suggested evidence examples (not SAF-mandated artefacts)</h2>
+
+<ul>
+<li>Technology options assessments</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Technology Radar review outputs</li>
+<li>Solution Design Overview documents</li>
+<li>Architecture governance papers</li>
+<li>Technology standards assessments</li>
+<li>Market or supplier evaluations</li>
+<li>Technical strategy documents</li>
+<li>Design Authority review records</li>
+<li>Technology roadmap documentation</li>
+</ul>
 
 
 

@@ -1,10 +1,10 @@
 {% set pageTitle = "SD01 - Design Methodology" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "An appropriate design methodology should be followed e.g. Domain Driven Design and should include NHS/CDDO Service Design and Secure by Design principles and methods." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
-{% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
+{% set dateUpdated = "04 September 2026 (SAF Version 1.1)" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -13,6 +13,186 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement is concerned with ensuring that solution design follows recognised and appropriate design methods rather than being developed in an ad hoc manner.
+</p>
+
+<p>
+The selected design methodology should be suitable for the type of service being delivered and should incorporate service design, user-centred design and security considerations from the outset. The SAF specifically references approaches such as Domain Driven Design and requires consideration of NHS/CDDO Service Design and Secure by Design principles.
+</p>
+
+<p>
+The objective is to ensure that solutions are designed systematically, with a clear understanding of user needs, business domains, operational requirements and security considerations.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Use recognised design methods and ensure service design and security are built into the solution from the beginning.
+</p>
+
+<h2>Scoring rubric table – SD01 Design Methodology and Design Principles</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+<thead role="rowgroup" class="nhsuk-table__head">
+<tr role="row">
+<th role="columnheader" class="" scope="col">Score</th>
+<th role="columnheader" class="" scope="col">What it looks like</th>
+<th role="columnheader" class="" scope="col">Typical evidence</th>
+<th role="columnheader" class="" scope="col">Key gaps / risks</th>
+</tr>
+</thead>
+<tbody class="nhsuk-table__body">
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>0</strong></td>
+<td class="nhsuk-table__cell">
+No evidence that a design methodology has been followed. Solution design appears ad hoc or driven solely by implementation considerations.
+</td>
+<td class="nhsuk-table__cell">
+No design approach defined.<br>
+No service design evidence.<br>
+No security-by-design evidence.<br>
+No documented design activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant service risk. The solution may fail to meet user needs, business objectives or security requirements.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>1</strong></td>
+<td class="nhsuk-table__cell">
+Limited evidence of structured design activity. Some design discussions may have taken place, but recognised methodologies are not consistently applied.
+</td>
+<td class="nhsuk-table__cell">
+Informal workshops.<br>
+Undocumented solution discussions.<br>
+Limited service design activity.<br>
+Minimal security consideration.
+</td>
+<td class="nhsuk-table__cell">
+High-risk gaps. Design decisions may not be evidence-based and security or usability requirements may be overlooked.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>2</strong></td>
+<td class="nhsuk-table__cell">
+Some elements of an appropriate design methodology have been applied, but adoption is incomplete or inconsistent.
+</td>
+<td class="nhsuk-table__cell">
+Partial service design outputs.<br>
+Some design artefacts.<br>
+Limited domain modelling.<br>
+Basic security assessments.<br>
+Evidence of some structured design activities.
+</td>
+<td class="nhsuk-table__cell">
+Significant notable gaps. User needs, domain understanding or security considerations may not be fully reflected in the design.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>3</strong></td>
+<td class="nhsuk-table__cell">
+Much of the solution design follows a recognised methodology. Service design and security considerations are visible within the design process.
+</td>
+<td class="nhsuk-table__cell">
+Design methodology documentation.<br>
+User research outputs.<br>
+Service design artefacts.<br>
+Domain models.<br>
+Architecture design workshops.<br>
+Security requirements captured during design.
+</td>
+<td class="nhsuk-table__cell">
+Notable gaps remain. Some design decisions may lack traceability to user needs, domain models or security principles.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>4</strong></td>
+<td class="nhsuk-table__cell">
+Most design activities follow a defined and appropriate methodology. Service design and Secure by Design practices are integrated into solution development.
+</td>
+<td class="nhsuk-table__cell">
+Documented design approach.<br>
+Comprehensive service design artefacts.<br>
+Domain-driven design outputs where appropriate.<br>
+Threat modelling or security design activities.<br>
+Traceability between user needs and solution design.<br>
+Governance review of design outputs.
+</td>
+<td class="nhsuk-table__cell">
+Minor gaps only. Remaining issues are understood and unlikely to materially affect design quality.
+</td>
+</tr>
+
+<tr role="row" class="nhsuk-table__row">
+<td class="nhsuk-table__cell"><strong>5</strong></td>
+<td class="nhsuk-table__cell">
+Comprehensive and exemplar application of design methodologies. Service design, domain modelling and security practices are embedded throughout the solution lifecycle.
+</td>
+<td class="nhsuk-table__cell">
+Mature and well-documented design approach.<br>
+Strong integration of service design and architecture activities.<br>
+Comprehensive domain models.<br>
+Security-by-design embedded throughout delivery.<br>
+Evidence of iterative improvement based on user feedback.<br>
+Design decisions consistently informed by structured methods.
+</td>
+<td class="nhsuk-table__cell">
+Minimal or no significant gaps. The design process is repeatable, evidence-based and continuously improved.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+<li>
+<strong>Design methodology</strong> – Has an appropriate and recognised design methodology been adopted?
+</li>
+
+<li>
+<strong>Service design integration</strong> – Is there evidence that user needs and service design activities have informed the solution?
+</li>
+
+<li>
+<strong>Secure by Design</strong> – Have security requirements and design principles been considered from the outset?
+</li>
+
+<li>
+<strong>Domain understanding</strong> – Where appropriate, has the business domain been modelled and understood through structured techniques?
+</li>
+
+<li>
+<strong>Traceability</strong> – Can key design decisions be linked to user needs, business requirements or design activities?
+</li>
+
+<li>
+<strong>Consistency</strong> – Is the methodology applied consistently throughout the design process?
+</li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> generally indicates that recognised design practices have been adopted and there is evidence of service design and security consideration, but application is inconsistent or incomplete.
+</p>
+
+<p>
+A score of <strong>4</strong> requires a clearly defined and consistently applied design methodology, with good evidence that service design and Secure by Design principles are influencing architecture decisions.
+</p>
+
+<p>
+A score of <strong>5</strong> requires design methodology, service design and security practices to be embedded throughout the lifecycle. Evidence should demonstrate mature, repeatable and well-governed design practices that actively improve solution outcomes.
+</p>
 
 
 
