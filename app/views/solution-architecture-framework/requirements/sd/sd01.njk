@@ -1,7 +1,7 @@
 {% set pageTitle = "SD01 - Design Methodology" %}
 {% set pageSection = "Solution Architecture Framework - Requirements" %}
 {% set subSection = "Requirements - Solution Design & Methods" %}
-{% set pageDescription = "" %}
+{% set pageDescription = "The solution should be aligned to stated strategy approved at an executive level. e.g. TD Design Authority, P&amp;P DA etc." %}
 {% set beta = true %}
 {% set hideContact = "false" %}
 {% set dateUpdated = "07 August 2026 (SAF Version 1.1)" %}
@@ -13,6 +13,186 @@
 {% endblock %}
 
 {% block bodyContent %}
+
+<h1>SAF Requirement S01 Scoring Rubric</h1>
+
+<h2>Requirement description</h2>
+
+<p>
+This requirement assesses whether the solution is demonstrably supporting an approved strategic direction rather than evolving independently of organisational objectives.
+</p>
+
+<p>
+The solution should be traceable to one or more documented strategies, principles, policy positions, roadmaps or architecture directions that have executive sponsorship and approval.
+</p>
+
+<p>
+<strong>In simple terms:</strong><br>
+Can the team clearly demonstrate that the solution exists to deliver an agreed organisational strategy and that architectural decisions remain aligned to it?
+</p>
+
+<h2>Scoring rubric – Strategic Alignment</h2>
+
+<table class="nhsuk-table" aria-label="Scoring rubric">
+    <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">Score</th>
+            <th role="columnheader" class="" scope="col">What it looks like</th>
+            <th role="columnheader" class="" scope="col">Typical evidence</th>
+            <th role="columnheader" class="" scope="col">Key gaps / risks</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>0</strong></td>
+            <td class="nhsuk-table__cell">
+                No identifiable strategy alignment. The team cannot explain which approved strategy the solution supports.
+            </td>
+            <td class="nhsuk-table__cell">
+                No strategy documents.<br>
+                No approval evidence.<br>
+                No linkage between solution and strategic objectives.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant risk of investment being misaligned with organisational priorities.<br>
+                Architecture decisions may be arbitrary or contradictory.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>1</strong></td>
+            <td class="nhsuk-table__cell">
+                Informal references to strategic intent exist, but alignment is largely assumed rather than evidenced.
+            </td>
+            <td class="nhsuk-table__cell">
+                Verbal statements.<br>
+                Meeting discussions.<br>
+                Unapproved drafts.
+            </td>
+            <td class="nhsuk-table__cell">
+                High risk that strategic assumptions are incorrect or outdated.<br>
+                Limited governance oversight.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>2</strong></td>
+            <td class="nhsuk-table__cell">
+                Some strategic alignment is documented, but coverage is incomplete or inconsistently applied.
+            </td>
+            <td class="nhsuk-table__cell">
+                Strategy documents referenced in project artefacts.<br>
+                Partial mapping between objectives and solution scope.
+            </td>
+            <td class="nhsuk-table__cell">
+                Significant gaps in traceability.<br>
+                Unclear stakeholder agreement.<br>
+                Some solution elements cannot be justified against strategy.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>3</strong></td>
+            <td class="nhsuk-table__cell">
+                Much of the solution can be linked to documented strategic direction and stakeholders generally agree with the alignment.
+            </td>
+            <td class="nhsuk-table__cell">
+                Architecture vision.<br>
+                Business case references.<br>
+                Strategic objectives mapped to key solution capabilities.<br>
+                Evidence of review by directorate-level governance.
+            </td>
+            <td class="nhsuk-table__cell">
+                Notable gaps remain.<br>
+                Some strategic links are weak or undocumented.<br>
+                Changes in strategy may not be reflected promptly.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>4</strong></td>
+            <td class="nhsuk-table__cell">
+                Strategic alignment is clearly evidenced and actively maintained throughout delivery.
+            </td>
+            <td class="nhsuk-table__cell">
+                Approved strategy documents.<br>
+                Traceability between strategy, roadmap and solution design.<br>
+                Governance reviews.<br>
+                Documented rationale for major architectural decisions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minor gaps only.<br>
+                Residual risks are understood and managed.
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>5</strong></td>
+            <td class="nhsuk-table__cell">
+                Alignment is comprehensive, demonstrable and exemplar. The solution actively helps realise strategic goals and informs future strategic planning.
+            </td>
+            <td class="nhsuk-table__cell">
+                Executive-approved strategy.<br>
+                Maintained traceability model.<br>
+                Roadmaps aligned across portfolios.<br>
+                Regular governance review.<br>
+                Evidence that strategy directly influences prioritisation and architecture decisions.
+            </td>
+            <td class="nhsuk-table__cell">
+                Minimal gaps.<br>
+                Strategic alignment is embedded in governance, delivery and investment decisions.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>What assessors should look for</h2>
+
+<ol>
+    <li>
+        <strong>Documented strategy alignment</strong> –
+        Is there a recognised strategy, policy or architectural direction that the solution is supporting?
+    </li>
+    <li>
+        <strong>Executive approval</strong> –
+        Has the referenced strategy been approved through appropriate executive governance?
+    </li>
+    <li>
+        <strong>Traceability</strong> –
+        Can architectural features, roadmap items or major decisions be linked back to strategic objectives?
+    </li>
+    <li>
+        <strong>Ongoing governance</strong> –
+        Is alignment periodically reviewed rather than assumed?
+    </li>
+    <li>
+        <strong>Stakeholder understanding</strong> –
+        Do delivery and business stakeholders have a consistent understanding of how the solution supports strategy?
+    </li>
+</ol>
+
+<h2>What separates a 3 from a 4 or 5</h2>
+
+<p>
+A score of <strong>3</strong> typically means the team can demonstrate reasonable strategic alignment, but evidence is incomplete, not consistently maintained, or dependent on stakeholder knowledge.
+</p>
+
+<p>
+A score of <strong>4</strong> normally requires clear traceability from strategy through to architecture and roadmap, supported by governance evidence.
+</p>
+
+<p>
+A score of <strong>5</strong> requires alignment to be actively managed, widely understood, regularly reviewed, and demonstrably influencing investment, prioritisation and architectural decision-making.
+</p>
+
+<div class="note">
+    S01 does not prescribe mandatory artefacts or evidence sources. Therefore assessors should focus on demonstrating the outcome of strategic alignment rather than requiring a specific document format.
+</div>
+
+<div class="note">
+    Suggested evidence examples (not source material):
+    Strategy papers, architecture vision documents, roadmaps, design authority approvals, business cases, investment papers, architecture decision records and strategic traceability mappings.
+</div>
 
 
 
